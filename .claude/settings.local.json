@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd \"C:\\\\Users\\\\Tim.Jones\\\\Documents\\\\Claude\\\\FLCL_1\" && npx prettier --check \"force-app/main/default/lwc/flEventTeam/**\" \"force-app/main/default/lwc/flEventTeamResponses/**\" 2>&1)",
+      "Bash(head:*)",
+      "mcp__Salesforce__deploy_metadata"
+    ]
+  }
+}

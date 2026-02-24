@@ -42,6 +42,9 @@ $RECYCLE.BIN/
 # Local environment variables
 .env
 
+# MCP server config (Windows-specific, not cross-platform)
+.mcp.json
+
 # Python Salesforce Functions
 **/__pycache__/
 **/.venv/
