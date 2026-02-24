@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>D_Rep_2__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>On Dennis Shared caseload</description>
+    <inlineHelpText>Is this donor on a shared caseload with Dennis Rainey?</inlineHelpText>
+    <label>D-Rep 2</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

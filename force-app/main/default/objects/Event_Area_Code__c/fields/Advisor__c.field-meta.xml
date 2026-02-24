@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Advisor__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>September 2019 The Advisor name was changed to Relationship Rep. In order to keep DB Sync working properly because 3 Apex classes were pulling from this field we relabeled the field to Relationship Rep but keep the API to Advisor since it was their previous name.</description>
+    <label>Advisor</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Event_Area_Codes</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

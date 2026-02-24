@@ -1,0 +1,79 @@
+<template>
+  <lightning-card title="Submit a Marriage Question">
+    <lightning-button
+      label="Back"
+      slot="actions"
+      icon-name="utility:back"
+      onclick={handleBack}
+      disabled={isLoading}
+      variant="base"
+    >
+    </lightning-button>
+
+    <div class="slds-p-around_medium">
+      <template lwc:if={showForm}>
+        <lightning-textarea
+          name="question"
+          label="Have a question about marriage? Write it here. It's confidential but might be used in the panel discussion on Sunday morning"
+          value={questionText}
+          onchange={handleQuestionChange}
+          placeholder="Type your question here..."
+          required
+          class="slds-m-bottom_small"
+        >
+        </lightning-textarea>
+
+        <lightning-radio-group
+          name="gender"
+          label="Gender"
+          options={genderOptions}
+          value={gender}
+          onchange={handleGenderChange}
+          type="radio"
+          required
+          class="slds-m-bottom_medium"
+        >
+        </lightning-radio-group>
+
+        <lightning-button
+          label="Submit Question"
+          variant="brand"
+          onclick={handleSubmit}
+          disabled={isSubmitDisabled}
+          class="slds-button_stretch"
+        >
+        </lightning-button>
+
+        <template if:true={isLoading}>
+          <div class="slds-m-top_small">
+            <lightning-spinner
+              alternative-text="Submitting..."
+              size="small"
+            ></lightning-spinner>
+          </div>
+        </template>
+
+        <template if:true={error}>
+          <div class="slds-m-top_small slds-text-color_error">{error}</div>
+        </template>
+      </template>
+
+      <template lwc:if={showSuccess}>
+        <div
+          class="slds-align_absolute-center slds-text-color_success"
+          style="min-height: 150px"
+        >
+          <lightning-icon
+            icon-name="utility:success"
+            alternative-text="Success"
+            variant="success"
+            size="small"
+          ></lightning-icon>
+          <span class="slds-m-left_small">
+            <strong>Thank you! Your question has been submitted.</strong>
+          </span>
+        </div>
+      </template>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Relationship_Maturity_Cycle__c</fullName>
+    <description>Used by Development</description>
+    <label>Relationship Maturity Cycle</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>RM1 On-line Research  - family, business &amp; relationship connections</fullName>
+                <default>true</default>
+                <label>RM1 On-line Research  - family, business &amp; relationship connections</label>
+            </value>
+            <value>
+                <fullName>RM2 Understanding Passions and Life Stages</fullName>
+                <default>false</default>
+                <label>RM2 Understanding Passions and Life Stages</label>
+            </value>
+            <value>
+                <fullName>RM3 Introduce &amp; Deliver a Virtual Tour of FL Value</fullName>
+                <default>false</default>
+                <label>RM3 Introduce &amp; Deliver a Virtual Tour of FL Value</label>
+            </value>
+            <value>
+                <fullName>RM4 Deepen Relationship Personal One on One visits</fullName>
+                <default>false</default>
+                <label>RM4 Deepen Relationship Personal One on One visits</label>
+            </value>
+            <value>
+                <fullName>RM5 Introduce to Advanced Stewardship Strategies</fullName>
+                <default>false</default>
+                <label>RM5 Introduce to Advanced Stewardship Strategies</label>
+            </value>
+            <value>
+                <fullName>RM6 Understand Structure of Wealth/Strategies of Giving</fullName>
+                <default>false</default>
+                <label>RM6 Understand Structure of Wealth/Strategies of Giving</label>
+            </value>
+            <value>
+                <fullName>RM7 Develop a Annual &amp; Planned Giving plan for FL</fullName>
+                <default>false</default>
+                <label>RM7 Develop a Annual &amp; Planned Giving plan for FL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

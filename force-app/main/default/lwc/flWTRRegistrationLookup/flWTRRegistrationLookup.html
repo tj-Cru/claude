@@ -1,0 +1,80 @@
+<template>
+  <lightning-card title="Verify Your Registration">
+    <lightning-button
+      label="Back"
+      slot="actions"
+      icon-name="utility:back"
+      onclick={handleBack}
+      disabled={isLoading}
+      variant="base"
+    >
+    </lightning-button>
+
+    <div class="slds-p-around_medium">
+      <template lwc:if={showForm}>
+        <p class="slds-m-bottom_small">
+          To continue, please enter your registration details.
+        </p>
+        <lightning-input
+          label="Last Name"
+          value={lastName}
+          onchange={handleLastNameChange}
+          required
+          class="slds-m-bottom_small"
+        >
+        </lightning-input>
+        <lightning-input
+          label="Zip/Postal Code"
+          value={zipCode}
+          onchange={handleZipChange}
+          required
+          class="slds-m-bottom_small"
+        >
+        </lightning-input>
+        <lightning-button
+          label="Find Me"
+          variant="brand"
+          onclick={handleFind}
+          disabled={isFindDisabled}
+          class="slds-button_stretch"
+        >
+        </lightning-button>
+      </template>
+
+      <template lwc:if={showMultiChoice}>
+        <lightning-radio-group
+          name="regChoice"
+          label="We found multiple registrations. Please select yours."
+          options={choices}
+          value={selectedRegId}
+          onchange={handleChoiceChange}
+          type="radio"
+          required
+          class="slds-m-bottom_small wtr-radio-label"
+        >
+        </lightning-radio-group>
+        <lightning-button
+          label="Confirm Selection"
+          variant="brand"
+          onclick={handleConfirm}
+          disabled={isConfirmDisabled}
+          class="slds-button_stretch"
+        >
+        </lightning-button>
+      </template>
+
+      <template if:true={isLoading}>
+        <div class="slds-align_absolute-center slds-m-top_small">
+          <lightning-spinner
+            alternative-text="Loading..."
+            size="small"
+          ></lightning-spinner>
+        </div>
+      </template>
+
+      <template if:true={error}>
+        <div class="slds-m-top_small slds-text-color_error">{error}</div>
+      </template>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,67 @@
+<template>
+  <lightning-card title="Be a Marriage on Mission">
+    <lightning-button
+      label="Back"
+      slot="actions"
+      icon-name="utility:back"
+      onclick={handleBack}
+      disabled={isLoading}
+      variant="base"
+    >
+    </lightning-button>
+
+    <div class="slds-p-around_medium">
+      <template lwc:if={showForm}>
+        <lightning-checkbox-group
+          name="missionChoice"
+          label="Please make a selection (select all that apply)"
+          options={options}
+          value={selectedValues}
+          onchange={handleOptionChange}
+          required
+          class="slds-m-bottom_small wtr-radio-label"
+        >
+        </lightning-checkbox-group>
+
+        <lightning-button
+          label="Submit Response"
+          variant="brand"
+          onclick={handleSubmit}
+          disabled={isSubmitDisabled}
+          class="slds-button_stretch"
+        >
+        </lightning-button>
+
+        <template if:true={isLoading}>
+          <div class="slds-m-top_small">
+            <lightning-spinner
+              alternative-text="Submitting..."
+              size="small"
+            ></lightning-spinner>
+          </div>
+        </template>
+
+        <template if:true={error}>
+          <div class="slds-m-top_small slds-text-color_error">{error}</div>
+        </template>
+      </template>
+
+      <template lwc:if={showSuccess}>
+        <div
+          class="slds-align_absolute-center slds-text-color_success"
+          style="min-height: 150px"
+        >
+          <lightning-icon
+            icon-name="utility:success"
+            alternative-text="Success"
+            variant="success"
+            size="small"
+          ></lightning-icon>
+          <span class="slds-m-left_small">
+            <strong>Thank you! Your response has been submitted.</strong>
+          </span>
+        </div>
+      </template>
+    </div>
+  </lightning-card>
+</template>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Date_Modified_Current_Preferred_Email_Op__c</fullName>
+    <description>Field requested by Pete Offerman to capture the date the all emails opt out check box aka &quot;Current Preferred Email Opt Out&quot; was changed. This is to report that if check box is true then date to report on the dates where the email opt outs were changed to the true value</description>
+    <label>Date Modified Current Preferred Email Op</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

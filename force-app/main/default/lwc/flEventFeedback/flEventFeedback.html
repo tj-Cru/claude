@@ -1,0 +1,163 @@
+<template>
+    <div class="child-container">
+        <div class="child-header">
+            <div class="header-content slds-grid slds-grid_align-spread slds-grid_vertical-align-center">
+                <h2>{eventName} Feedback</h2>
+                
+                <div class="header-actions">
+                    <lightning-button-icon 
+                        icon-name="utility:back" 
+                        variant="border-filled" 
+                        alternative-text="Back" 
+                        onclick={handleBack}
+                        class="slds-m-right_x-small back-header-icon">
+                    </lightning-button-icon>
+
+                    <lightning-button-icon 
+                        icon-name="utility:refresh" 
+                        variant="border-filled" 
+                        alternative-text="Refresh List" 
+                        onclick={handleRefresh}
+                        class="refresh-button">
+                    </lightning-button-icon>
+                </div>
+            </div>
+        </div>
+
+        <div class="child-body">
+            
+            <div class="filters-container slds-grid slds-wrap slds-gutters_x-small slds-p-bottom_medium">
+                <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-3">
+                    <lightning-input 
+                        type="text" 
+                        label="Name" 
+                        value={filterName} 
+                        data-filter="name" 
+                        onchange={handleFilterChange}
+                        variant="label-stacked">
+                    </lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-3">
+                    <lightning-input 
+                        type="text" 
+                        label="Attendee"
+                        value={filterAttendee} 
+                        data-filter="attendee" 
+                        onchange={handleFilterChange}
+                        variant="label-stacked">
+                    </lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-1 slds-medium-size_1-of-3">
+                    <lightning-combobox
+                        label="Type"
+                        value={filterType}
+                        placeholder="All Types"
+                        options={typeOptions}
+                        onchange={handleFilterChange}
+                        data-filter="type"
+                        variant="label-stacked">
+                    </lightning-combobox>
+                </div>
+            </div>
+
+            <template lwc:if={isLoading}>
+                <div class="slds-is-relative slds-p-around_large">
+                    <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <template lwc:else>
+                <div class="results-container table-wrapper">
+                    <template lwc:if={hasResults}>
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="slds-is-sortable slds-is-resizable" scope="col" onclick={handleSort} data-id="Name">
+                                        <a href="#" class="slds-th__action slds-text-link_reset" tabindex="0">
+                                            <span class="slds-assistive-text">Sort by: </span>
+                                            <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                                                <span class="slds-truncate" title="Name">Name</span>
+                                                <template lwc:if={sortedBy}>
+                                                    <template lwc:if={isNameSort}>
+                                                        <lightning-icon icon-name={sortIconName} size="xx-small" class="slds-m-left_xx-small"></lightning-icon>
+                                                    </template>
+                                                </template>
+                                            </div>
+                                        </a>
+                                    </th>
+                                    <th class="slds-is-sortable slds-is-resizable" scope="col" onclick={handleSort} data-id="Type__c">
+                                        <a href="#" class="slds-th__action slds-text-link_reset" tabindex="0">
+                                            <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                                                <span class="slds-truncate" title="Type">Type</span>
+                                                <template lwc:if={sortedBy}>
+                                                    <template lwc:if={isTypeSort}>
+                                                        <lightning-icon icon-name={sortIconName} size="xx-small" class="slds-m-left_xx-small"></lightning-icon>
+                                                    </template>
+                                                </template>
+                                            </div>
+                                        </a>
+                                    </th>
+                                    <th class="slds-is-sortable slds-is-resizable" scope="col" onclick={handleSort} data-id="AttendeeName">
+                                        <a href="#" class="slds-th__action slds-text-link_reset" tabindex="0">
+                                            <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                                                <span class="slds-truncate" title="Attendee">Attendee</span>
+                                                <template lwc:if={sortedBy}>
+                                                    <template lwc:if={isAttendeeSort}>
+                                                        <lightning-icon icon-name={sortIconName} size="xx-small" class="slds-m-left_xx-small"></lightning-icon>
+                                                    </template>
+                                                </template>
+                                            </div>
+                                        </a>
+                                    </th>
+                                    <th class="slds-is-sortable slds-is-resizable" scope="col" onclick={handleSort} data-id="HouseholdName">
+                                        <a href="#" class="slds-th__action slds-text-link_reset" tabindex="0">
+                                            <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                                                <span class="slds-truncate" title="Household">Household</span>
+                                                <template lwc:if={sortedBy}>
+                                                    <template lwc:if={isHouseholdSort}>
+                                                        <lightning-icon icon-name={sortIconName} size="xx-small" class="slds-m-left_xx-small"></lightning-icon>
+                                                    </template>
+                                                </template>
+                                            </div>
+                                        </a>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template for:each={filteredRecords} for:item="rec">
+                                    <tr key={rec.Id} class="slds-hint-parent">
+                                        <td data-label="Name">
+                                            <div class="slds-truncate" title={rec.Name}>
+                                                <a href="#" onclick={handleNameClick} data-record-id={rec.Id} class="wtr-link">{rec.Name}</a>
+                                            </div>
+                                        </td>
+                                        <td data-label="Type">
+                                            <div class="slds-truncate" title={rec.Type__c}>
+                                                <span class="slds-badge status-badge">{rec.Type__c}</span>
+                                            </div>
+                                        </td>
+                                        <td data-label="Attendee">
+                                            <div class="slds-truncate" title={rec.AttendeeName}>
+                                                <template lwc:if={rec.Attendee__c}>
+                                                    <a href="#" onclick={handleAttendeeClick} data-record-id={rec.Attendee__c} class="wtr-link">{rec.AttendeeName}</a>
+                                                </template>
+                                            </div>
+                                        </td>
+                                        <td data-label="Household">
+                                            <div class="slds-truncate" title={rec.HouseholdName}>{rec.HouseholdName}</div>
+                                        </td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                    </template>
+                    <template lwc:else>
+                        <div class="slds-text-align_center slds-p-around_medium text-weak">
+                            <p>No feedback records found matching criteria.</p>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

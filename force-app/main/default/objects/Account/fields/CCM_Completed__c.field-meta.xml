@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCM_Completed__c</fullName>
+    <label>CCM Completed</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CCM 1 - DON&apos;T KNOW</fullName>
+                <default>false</default>
+                <label>CCM 1 - DON&apos;T KNOW</label>
+            </value>
+            <value>
+                <fullName>CCM 2 - CONTACT INFO</fullName>
+                <default>false</default>
+                <label>CCM 2 - CONTACT INFO</label>
+            </value>
+            <value>
+                <fullName>CCM 3 - TIME &amp; EFFORT</fullName>
+                <default>false</default>
+                <label>CCM 3 - TIME &amp; EFFORT</label>
+            </value>
+            <value>
+                <fullName>CCM 4 - FIRST TRANS</fullName>
+                <default>false</default>
+                <label>CCM 4 - FIRST TRANS</label>
+            </value>
+            <value>
+                <fullName>CCM 5 - REPEAT TRANS</fullName>
+                <default>false</default>
+                <label>CCM 5 - REPEAT TRANS</label>
+            </value>
+            <value>
+                <fullName>CCM 6 - CROSSOVER</fullName>
+                <default>false</default>
+                <label>CCM 6 - CROSSOVER</label>
+            </value>
+            <value>
+                <fullName>CCM 7 - REPEAT CROSSOVER</fullName>
+                <default>false</default>
+                <label>CCM 7 - REPEAT CROSSOVER</label>
+            </value>
+            <value>
+                <fullName>CCM 8 - ALL THREE TYPES</fullName>
+                <default>false</default>
+                <label>CCM 8 - ALL THREE TYPES</label>
+            </value>
+            <value>
+                <fullName>CCM 9 - PROCLAIM</fullName>
+                <default>false</default>
+                <label>CCM 9 - PROCLAIM</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

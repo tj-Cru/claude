@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Type__c</fullName>
+    <inlineHelpText>This should be WTR - Weekend to Remember. Currently WTR is the only event type that can fully leverage this object. Blended and Cruises are occasionally used but until they are fully built out, results will vary.</inlineHelpText>
+    <label>Event Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Choose a Type</fullName>
+                <default>false</default>
+                <label>Choose a Type</label>
+            </value>
+            <value>
+                <fullName>AMC</fullName>
+                <default>false</default>
+                <label>AMC-Alumni Marriage Conference</label>
+            </value>
+            <value>
+                <fullName>AOM</fullName>
+                <default>false</default>
+                <label>AOM-Art of Marriage Live</label>
+            </value>
+            <value>
+                <fullName>BFE</fullName>
+                <default>false</default>
+                <label>BFE-Blended Family Event</label>
+            </value>
+            <value>
+                <fullName>CCC</fullName>
+                <default>false</default>
+                <label>CCC-Couple Checkup Conference</label>
+            </value>
+            <value>
+                <fullName>CRU</fullName>
+                <default>false</default>
+                <label>CRU-Cruise - Love Like You Mean It</label>
+            </value>
+            <value>
+                <fullName>DLE</fullName>
+                <default>false</default>
+                <label>DLE-Donor Live Event</label>
+            </value>
+            <value>
+                <fullName>FCE</fullName>
+                <default>false</default>
+                <label>FCE-FamilyLife Co-Sponsored Event</label>
+            </value>
+            <value>
+                <fullName>FLS</fullName>
+                <default>false</default>
+                <label>FLS-FamilyLife Staff</label>
+            </value>
+            <value>
+                <fullName>FLW</fullName>
+                <default>false</default>
+                <label>FLW-FamilyLife Workshop</label>
+            </value>
+            <value>
+                <fullName>ISD</fullName>
+                <default>false</default>
+                <label>ISD-I Still Do</label>
+            </value>
+            <value>
+                <fullName>LTR</fullName>
+                <default>false</default>
+                <label>LTR-Leadership Training</label>
+            </value>
+            <value>
+                <fullName>MMW</fullName>
+                <default>false</default>
+                <label>MMW-Marriage Ministry Workshop</label>
+            </value>
+            <value>
+                <fullName>MPR</fullName>
+                <default>false</default>
+                <label>MPR-Ministry Preview</label>
+            </value>
+            <value>
+                <fullName>NFE</fullName>
+                <default>false</default>
+                <label>NFE-Non-FamilyLife Event</label>
+            </value>
+            <value>
+                <fullName>SPK</fullName>
+                <default>false</default>
+                <label>SPK-Speaker Retreats</label>
+            </value>
+            <value>
+                <fullName>STO</fullName>
+                <default>false</default>
+                <label>STO-FamilyLife Store</label>
+            </value>
+            <value>
+                <fullName>WLE</fullName>
+                <default>false</default>
+                <label>WLE-Women&apos;s Live Event</label>
+            </value>
+            <value>
+                <fullName>WTR</fullName>
+                <default>true</default>
+                <label>WTR-Weekend to Remember</label>
+            </value>
+            <value>
+                <fullName>YCO</fullName>
+                <default>false</default>
+                <label>YCO-Your Church and the Orphan (HFO)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

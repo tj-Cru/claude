@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Site_Selection_Firm__c</fullName>
+    <defaultValue>&quot;FamilyLife&quot;</defaultValue>
+    <label>Site Selection Firm</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>FamilyLife</fullName>
+                <default>true</default>
+                <label>FamilyLife</label>
+            </value>
+            <value>
+                <fullName>HelmsBrisco</fullName>
+                <default>false</default>
+                <label>HelmsBrisco</label>
+            </value>
+            <value>
+                <fullName>Arrowhead</fullName>
+                <default>false</default>
+                <label>Arrowhead</label>
+            </value>
+            <value>
+                <fullName>Innovative Events</fullName>
+                <default>false</default>
+                <label>Innovative Events</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

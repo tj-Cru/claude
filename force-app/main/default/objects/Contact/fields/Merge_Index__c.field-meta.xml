@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Merge_Index__c</fullName>
+    <externalId>false</externalId>
+    <formula>Account.Merge_Index__c + IF( SF_User_Id__c != Null, 50, IF( Is_Attendee__c = TRUE, 40, IF( Donor_Caseload__c != Null, 20,IF( Account.Giving_Count__c &gt;0,10,0))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Merge Index</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

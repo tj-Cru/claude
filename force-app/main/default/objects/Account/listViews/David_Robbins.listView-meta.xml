@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>David_Robbins</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.SITE</columns>
+    <columns>Primary_Relationship__c</columns>
+    <columns>Donor_Caseload_Lookup__c</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>Donor_Classification_Level__c</columns>
+    <columns>Cru_PID__c</columns>
+    <columns>DD_Family_ID__c</columns>
+    <columns>Legacy_Partner__c</columns>
+    <columns>ICP_Tier__c</columns>
+    <columns>IPP_Tier__c</columns>
+    <columns>Giving_Count__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Donor_Caseload_Lookup__c</field>
+        <operation>equals</operation>
+        <value>David Robbins</value>
+    </filters>
+    <label>David Robbins</label>
+    <sharedTo>
+        <group>Donor_Ops</group>
+    </sharedTo>
+</ListView>

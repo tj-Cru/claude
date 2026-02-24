@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteers_Awards_Due</fullName>
+    <columns>NAME</columns>
+    <columns>Role__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Next_Award__c</columns>
+    <columns>Next_Due__c</columns>
+    <columns>Volunteer_Area_Code__c</columns>
+    <columns>Last_Award_Generated__c</columns>
+    <columns>MR_Email__c</columns>
+    <columns>Total_Years__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Event_Worker__c.Volunteer</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Current</value>
+    </filters>
+    <filters>
+        <field>Next_Due__c</field>
+        <operation>equals</operation>
+        <value>NEXT_N_DAYS:60</value>
+    </filters>
+    <label>Volunteers Awards Due</label>
+</ListView>

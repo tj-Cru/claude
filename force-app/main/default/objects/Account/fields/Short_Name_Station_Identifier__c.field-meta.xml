@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Short_Name_Station_Identifier__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Common or abbreviated name of the Account. In the case of a radio station, enter the station number and call letter.</inlineHelpText>
+    <label>Short Name / Station Identifier</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

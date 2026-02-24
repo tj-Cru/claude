@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WTR_Rep_on_Contact_User_Phone__c</fullName>
+    <externalId>false</externalId>
+    <formula>Contact.Account.Event_Zip_Code_Look_Up__r.Event_Area_Code__r.Ministry_Rep__r.Phone</formula>
+    <label>WTR Rep on Contact - User Phone</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

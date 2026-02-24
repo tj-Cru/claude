@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Ministry_Description__c</fullName>
+    <description>Used by Global Only Country Account Screen</description>
+    <label>Current Ministry Description</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1. Customers have purchased FL resources</fullName>
+                <default>false</default>
+                <label>1. Customers have purchased FL resources</label>
+            </value>
+            <value>
+                <fullName>2. Individuals using FL resources</fullName>
+                <default>false</default>
+                <label>2. Individuals using FL resources</label>
+            </value>
+            <value>
+                <fullName>3. FL radio broadcast from within cntry</fullName>
+                <default>false</default>
+                <label>3. FL radio broadcast from within cntry</label>
+            </value>
+            <value>
+                <fullName>4. Organized min development w/ leadrshp</fullName>
+                <default>false</default>
+                <label>4. Organized min development w/ leadrshp</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>8</visibleLines>
+</CustomField>

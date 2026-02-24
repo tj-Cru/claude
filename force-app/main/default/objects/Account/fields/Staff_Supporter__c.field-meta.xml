@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Staff_Supporter__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Created to indicate Household or Account that financially supports a FamilyLife staff member.</description>
+    <inlineHelpText>Check box to indicate if the Household/Account supports a FamilyLife staff member with information being provided by CRU.</inlineHelpText>
+    <label>Staff Supporter</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

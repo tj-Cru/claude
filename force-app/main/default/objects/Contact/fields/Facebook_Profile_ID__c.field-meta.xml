@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Facebook_Profile_ID__c</fullName>
+    <description>Contact&apos;s Facebook Profile Page</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the complete URL to a person&apos;s Facebook page.  To locate a URL, search for the person on Facebook.  Once their profile page appears, click About &gt; Contacts and Basic Info. Under &quot;Contact Information&quot;, copy &amp; paste the Facebook URL into this field.</inlineHelpText>
+    <label>Facebook Profile ID</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

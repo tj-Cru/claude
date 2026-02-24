@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_On_Caseload</fullName>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.SITE</columns>
+    <columns>Donor_Caseload_Lookup__c</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>ACCOUNT.LAST_UPDATE</columns>
+    <columns>ACCOUNT.LAST_ACTIVITY</columns>
+    <columns>Donor_Level__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>notEqual</operation>
+        <value>Account.Country_Account_Global_Use_Only,Account.Former_Household,Account.Business_Account</value>
+    </filters>
+    <filters>
+        <field>Donor_Caseload_Lookup__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Accounts on Caseload</label>
+</ListView>

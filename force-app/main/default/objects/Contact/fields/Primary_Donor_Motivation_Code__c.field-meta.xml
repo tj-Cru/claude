@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Donor_Motivation_Code__c</fullName>
+    <description>Primary Donor Motivation reason given during donor calls</description>
+    <inlineHelpText>Primary motivation for donations.</inlineHelpText>
+    <label>Primary Motivation Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Impacted by radio</fullName>
+                <default>false</default>
+                <label>Impacted by radio</label>
+            </value>
+            <value>
+                <fullName>Impacted by WTR</fullName>
+                <default>false</default>
+                <label>Impacted by WTR</label>
+            </value>
+            <value>
+                <fullName>Impacted by AOM</fullName>
+                <default>false</default>
+                <label>Impacted by AOM</label>
+            </value>
+            <value>
+                <fullName>Impacted by SU</fullName>
+                <default>false</default>
+                <label>Impacted by SU</label>
+            </value>
+            <value>
+                <fullName>Impacted by Passport to Purity</fullName>
+                <default>false</default>
+                <label>Impacted by Passport to Purity</label>
+            </value>
+            <value>
+                <fullName>Impacted by another resource/event</fullName>
+                <default>false</default>
+                <label>Impacted by another resource/event</label>
+            </value>
+            <value>
+                <fullName>Family member/friend impacted by FL</fullName>
+                <default>false</default>
+                <label>Family member/friend impacted by FL</label>
+            </value>
+            <value>
+                <fullName>Know/support FamilyLife staff person</fullName>
+                <default>false</default>
+                <label>Know/support FamilyLife staff person</label>
+            </value>
+            <value>
+                <fullName>Passion for marriage</fullName>
+                <default>false</default>
+                <label>Passion for marriage</label>
+            </value>
+            <value>
+                <fullName>Support the spread of the Gospel</fullName>
+                <default>false</default>
+                <label>Support the spread of the Gospel</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

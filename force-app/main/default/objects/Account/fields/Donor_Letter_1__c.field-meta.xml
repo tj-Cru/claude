@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Donor_Letter_1__c</fullName>
+    <description>Development mail code for appeal letters (ask &amp; no ask versions).</description>
+    <inlineHelpText>High Urgency Campaigns</inlineHelpText>
+    <label>Dec/May/Aug Appeal</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hold</fullName>
+                <default>false</default>
+                <label>Hold</label>
+            </value>
+            <value>
+                <fullName>Dec/May</fullName>
+                <default>false</default>
+                <label>Dec/May</label>
+            </value>
+            <value>
+                <fullName>Dec/May/Aug</fullName>
+                <default>false</default>
+                <label>Dec/May/Aug</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

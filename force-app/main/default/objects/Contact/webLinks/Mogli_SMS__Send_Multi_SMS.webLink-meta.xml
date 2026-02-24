@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mogli_SMS__Send_Multi_SMS</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Send Selected SMS</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/apex.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/connection.js&quot;)}
+
+
+var pageUrl; 
+
+if(&apos;{!$Label.mogli_sms__namespace}&apos; === &quot;none&quot;){
+pageUrl=&quot;/apex/&quot; + &quot;SendSMS&quot;; 
+} else { 
+pageUrl=&quot;/apex/&quot; + &apos;{!$Label.mogli_sms__namespace}&apos; + &quot;SendSMS&quot;; 
+}
+
+
+
+
+
+var recordIds = {!GETRECORDIDS( $ObjectType.Contact )};
+
+if (recordIds[0] == null){
+alert(&quot;Please select at least one record to send.&quot;)
+}
+else{
+pageUrl = pageUrl+&apos;?ids=&apos;+recordIds;
+parent.location.href = pageUrl;
+}</url>
+</WebLink>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Shipping_Vacant__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>From the USPS, have delivered mail, but marked vacant after nobody picked up for
+a certain amount of days</inlineHelpText>
+    <label>Shipping Vacant</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Race__c</fullName>
+    <description>Purchasing and Storing Race &amp; Ethnicity Data
+(Jan 14, 2016: Gene H, Bruce M, Lee H, Steve B, Robert C, Shanna R)
+Cru’s goal to become more “ethnically diverse” has prompted FamilyLife’s leaders to do the same. As part of measuring that goal, MinOps has been commissioned to collect ethnicity data on our volunteers, hosts, etc.
+While working with a vendor to purchase ethnicity data, we discovered the difference between ethnicity and race. Ethnicity is cultural; race is physical.
+SE will mirror Salesforce race field
+Vendor data (specifically, WealthEngine) “White/Other” will map to “White”
+Business Rule: most recent entry will override existing data in database (SE vs SF; vendor supplied vs constituent supplied)</description>
+    <label>Race</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Asian</fullName>
+                <default>false</default>
+                <label>Asian</label>
+            </value>
+            <value>
+                <fullName>African American</fullName>
+                <default>false</default>
+                <label>African American</label>
+            </value>
+            <value>
+                <fullName>Hispanic</fullName>
+                <default>false</default>
+                <label>Hispanic</label>
+            </value>
+            <value>
+                <fullName>White</fullName>
+                <default>false</default>
+                <label>White</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

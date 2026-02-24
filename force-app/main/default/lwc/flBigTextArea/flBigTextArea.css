@@ -1,0 +1,3 @@
+.big-textarea {
+    --sds-c-textarea-sizing-min-height: 250px; /* Or standard is approx 20px per row */
+}

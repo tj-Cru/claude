@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Workers</fullName>
+    <columns>NAME</columns>
+    <columns>Role__c</columns>
+    <columns>Working_Event__c</columns>
+    <columns>Primary_Email__c</columns>
+    <columns>Phone__c</columns>
+    <columns>Comments__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CREATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Event_Worker__c.Worker</value>
+    </filters>
+    <label>All Workers</label>
+</ListView>

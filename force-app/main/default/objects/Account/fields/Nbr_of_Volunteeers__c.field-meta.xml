@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Nbr_of_Volunteeers__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>GLOBAL DEPT USE:  Estimated number of volunteers working in the country.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How many (estimated) volunteers are working in the country?</inlineHelpText>
+    <label>Nbr of Volunteeers</label>
+    <precision>6</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Global_Training_Notes__c</fullName>
+    <inlineHelpText>Use this area to log information pertaining to their training history such as dates of specific training or information as to why their training is out of usual order.</inlineHelpText>
+    <label>Global Training Notes</label>
+    <length>2000</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>10</visibleLines>
+</CustomField>

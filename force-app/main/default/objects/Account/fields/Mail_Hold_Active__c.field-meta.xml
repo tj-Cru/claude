@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mail_Hold_Active__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>NOT FOR LAYOUT: Field added by Chris Collins, 11/9/2019 for syncing Mail Hold status with MDM (Semarchy). Current logic dictates a pass through of true/false and original Mail Hold field was text/picklist. This field will be populated via formula/process that will based off of original mail hold field. Anything other than &quot;None&quot; and this field will be true.</description>
+    <label>Mail Hold Active</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

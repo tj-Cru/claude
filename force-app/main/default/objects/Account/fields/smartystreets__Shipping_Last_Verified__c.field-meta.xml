@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>smartystreets__Shipping_Last_Verified__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Last date the shipping address was verified</description>
+    <inlineHelpText>Last date the shipping address was verified</inlineHelpText>
+    <label>Shipping Last Verified</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>DateTime</type>
+</CustomField>

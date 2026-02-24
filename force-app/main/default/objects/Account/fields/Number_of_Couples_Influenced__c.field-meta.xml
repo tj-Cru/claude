@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Number_of_Couples_Influenced__c</fullName>
+    <label># of Couples Influenced</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - 1000</fullName>
+                <default>false</default>
+                <label>1 - 1000</label>
+            </value>
+            <value>
+                <fullName>1001 - 5000</fullName>
+                <default>false</default>
+                <label>1001 - 5000</label>
+            </value>
+            <value>
+                <fullName>5000+</fullName>
+                <default>false</default>
+                <label>5000+</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

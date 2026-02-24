@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Next_Steps_for_Country__c</fullName>
+    <description>Global Dept Use:  Country&apos;s short term goals</description>
+    <inlineHelpText>What does the country want to accomplish in the short term? What help or training do they need next? What do they need to demonstrate before the training is offered?</inlineHelpText>
+    <label>Next Steps</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

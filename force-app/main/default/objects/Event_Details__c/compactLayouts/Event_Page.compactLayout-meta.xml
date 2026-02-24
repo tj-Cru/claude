@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Page</fullName>
+    <fields>Name</fields>
+    <fields>Divisional_Manager__c</fields>
+    <fields>Ministry_Rep_A__c</fields>
+    <fields>WTR_Director__c</fields>
+    <fields>Weeks__c</fields>
+    <fields>Days__c</fields>
+    <fields>Attending__c</fields>
+    <label>Event Page</label>
+</CompactLayout>

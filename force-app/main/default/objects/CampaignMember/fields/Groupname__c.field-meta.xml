@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Groupname__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>Group Name Lookup field implemented in conjunction with Cvent Connector Go Live.</description>
+    <label>Groupname</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Group__c.Status__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Group__c</referenceTo>
+    <relationshipLabel>Cvent Event Registrations</relationshipLabel>
+    <relationshipName>Campaign_Members</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

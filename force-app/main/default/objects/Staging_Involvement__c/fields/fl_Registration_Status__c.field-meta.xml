@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>fl_Registration_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( NOT(ISNULL(Date_Check_In__c)), &quot;A - Attended&quot;,IF( NOT(ISNULL( Date_Cancelled__c)), &quot;X - Cancelled&quot;,&quot;C - Confirmed&quot; )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>fl Registration_Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

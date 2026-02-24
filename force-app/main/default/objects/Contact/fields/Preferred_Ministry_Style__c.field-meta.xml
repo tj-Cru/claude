@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Ministry_Style__c</fullName>
+    <inlineHelpText>May select more than one option.</inlineHelpText>
+    <label>Preferred Ministry Style</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>One to one</fullName>
+                <default>false</default>
+                <label>One to one</label>
+            </value>
+            <value>
+                <fullName>One to some</fullName>
+                <default>false</default>
+                <label>One to some</label>
+            </value>
+            <value>
+                <fullName>One to many</fullName>
+                <default>false</default>
+                <label>One to many</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

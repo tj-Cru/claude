@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HomeBuilder_Type__c</fullName>
+    <inlineHelpText>Select all Home Builder Types that relate to this Contact.</inlineHelpText>
+    <label>HomeBuilder Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Donor</fullName>
+                <default>false</default>
+                <label>Donor</label>
+            </value>
+            <value>
+                <fullName>Host</fullName>
+                <default>false</default>
+                <label>Host</label>
+            </value>
+            <value>
+                <fullName>Mentor</fullName>
+                <default>false</default>
+                <label>Mentor</label>
+            </value>
+            <value>
+                <fullName>Exceptional Group Coordinator/Leader</fullName>
+                <default>false</default>
+                <label>Exceptional Group Coordinator/Leader</label>
+            </value>
+            <value>
+                <fullName>Exceptional Volunteer</fullName>
+                <default>false</default>
+                <label>Exceptional Volunteer</label>
+            </value>
+            <value>
+                <fullName>Influencer - High Level (1000+)</fullName>
+                <default>false</default>
+                <label>Influencer - High Level (1000+)</label>
+            </value>
+            <value>
+                <fullName>Influencer - Mid Level (500-999)</fullName>
+                <default>false</default>
+                <label>Influencer - Mid Level (500-999)</label>
+            </value>
+            <value>
+                <fullName>Influencer - Low Level (&lt;500)</fullName>
+                <default>false</default>
+                <label>Influencer - Low Level (&lt;500)</label>
+            </value>
+            <value>
+                <fullName>Influencer - Strategic Alliance</fullName>
+                <default>false</default>
+                <label>Influencer - Strategic Alliance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

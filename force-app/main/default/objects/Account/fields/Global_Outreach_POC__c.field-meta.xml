@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Global_Outreach_POC__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Global Dept Use:  Country Point of Contact (POC)</description>
+    <inlineHelpText>Who is the FamilyLife Global Outreach Team Member who is the Point of Contact (POC) for this country ?</inlineHelpText>
+    <label>Global Outreach POC</label>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Accounts / Households (Global Outreach POC)</relationshipLabel>
+    <relationshipName>Global_Outreach_POC</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Global_Training__c</fullName>
+    <inlineHelpText>Please choose all the training that applies to this Contact</inlineHelpText>
+    <label>Global Training</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>HB Small Group Leader Train the Trainer</fullName>
+                <default>false</default>
+                <label>HB Small Group Leader Train the Trainer</label>
+            </value>
+            <value>
+                <fullName>HB Small Group Leader Training</fullName>
+                <default>false</default>
+                <label>HB Small Group Leader Training</label>
+            </value>
+            <value>
+                <fullName>Leadership Team training - Advanced</fullName>
+                <default>false</default>
+                <label>Leadership Team training - Advanced</label>
+            </value>
+            <value>
+                <fullName>Leadership Team training - Follow-up/Ref</fullName>
+                <default>false</default>
+                <label>Leadership Team training - Follow-up/Ref</label>
+            </value>
+            <value>
+                <fullName>Leadership Team training - Initial Basic</fullName>
+                <default>false</default>
+                <label>Leadership Team training - Initial Basic</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other Training - Describe</fullName>
+                <default>false</default>
+                <label>Other Training - Describe</label>
+            </value>
+            <value>
+                <fullName>Speaker, Advanced</fullName>
+                <default>false</default>
+                <label>Speaker, Advanced</label>
+            </value>
+            <value>
+                <fullName>Speaker, Basic</fullName>
+                <default>false</default>
+                <label>Speaker, Basic</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

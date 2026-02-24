@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Group_Leader__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>AOPMemberGroupLeader in SPOP</description>
+    <label>Is Group Leader</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

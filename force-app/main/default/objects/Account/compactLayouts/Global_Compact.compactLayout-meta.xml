@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Global_Compact</fullName>
+    <fields>Name</fields>
+    <fields>Type</fields>
+    <fields>Country_Manager__c</fields>
+    <fields>Global_Region__c</fields>
+    <fields>Country_Level__c</fields>
+    <label>Global Compact</label>
+</CompactLayout>

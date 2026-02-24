@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mail_Hold__c</fullName>
+    <label>Mail Hold</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Constituent Request</fullName>
+                <default>false</default>
+                <label>Constituent Request</label>
+            </value>
+            <value>
+                <fullName>Bad Address</fullName>
+                <default>false</default>
+                <label>Bad Address</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

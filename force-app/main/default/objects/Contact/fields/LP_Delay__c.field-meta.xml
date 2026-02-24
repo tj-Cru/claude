@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LP_Delay__c</fullName>
+    <description>This field is used in a process to delay the sending of a Legacy Partner Welcome email so any duplicate account have time to merge.</description>
+    <externalId>false</externalId>
+    <label>LP Delay</label>
+    <length>5</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

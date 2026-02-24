@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Functional_Role__c</fullName>
+    <inlineHelpText>Select the role that most represents this person&apos;s role in the organization.</inlineHelpText>
+    <label>Functional Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Accounts Payable</fullName>
+                <default>false</default>
+                <label>Accounts Payable</label>
+            </value>
+            <value>
+                <fullName>Catering Manager</fullName>
+                <default>false</default>
+                <label>Catering Manager</label>
+            </value>
+            <value>
+                <fullName>Catering Sales Manager</fullName>
+                <default>false</default>
+                <label>Catering Sales Manager</label>
+            </value>
+            <value>
+                <fullName>Church Leader</fullName>
+                <default>false</default>
+                <label>Church Leader</label>
+            </value>
+            <value>
+                <fullName>Church Staff - Non-Pastoral</fullName>
+                <default>false</default>
+                <label>Church Staff - Non-Pastoral</label>
+            </value>
+            <value>
+                <fullName>Convention Servicing Manager</fullName>
+                <default>false</default>
+                <label>Convention Servicing Manager</label>
+            </value>
+            <value>
+                <fullName>Director of Marketing</fullName>
+                <default>false</default>
+                <label>Director of Marketing</label>
+            </value>
+            <value>
+                <fullName>Director of Sales</fullName>
+                <default>false</default>
+                <label>Director of Sales</label>
+            </value>
+            <value>
+                <fullName>Events Organizer</fullName>
+                <default>false</default>
+                <label>Events Organizer</label>
+            </value>
+            <value>
+                <fullName>Executive</fullName>
+                <default>false</default>
+                <label>Executive</label>
+            </value>
+            <value>
+                <fullName>General Manager</fullName>
+                <default>false</default>
+                <label>General Manager</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Operations</fullName>
+                <default>false</default>
+                <label>Operations</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Pastor / Rev / Minister / Father</fullName>
+                <default>false</default>
+                <label>Pastor / Rev / Minister / Father</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Sales Manager</fullName>
+                <default>false</default>
+                <label>Sales Manager</label>
+            </value>
+            <value>
+                <fullName>Station Manager</fullName>
+                <default>false</default>
+                <label>Station Manager</label>
+            </value>
+            <value>
+                <fullName>Volunteer</fullName>
+                <default>false</default>
+                <label>Volunteer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

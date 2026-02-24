@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MR_Match__c</fullName>
+    <formula>AND(
+Event_Area_Code__c!= NULL, 
+CASESAFEID(Event_Area_Code__r.Ministry_Rep__c)=CASESAFEID(Ministry_Rep__r.Id)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>MR Match</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

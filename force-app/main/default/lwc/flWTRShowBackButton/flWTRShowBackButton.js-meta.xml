@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <isExposed>true</isExposed>
+    <description>WTR Show Back Button for exception cases</description>
+    <masterLabel>WTR Show Back Button</masterLabel>
+    <targets>
+        <target>lightning__FlowScreen</target>
+        <target>lightningCommunity__Default</target>
+        <target>lightningCommunity__Page</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property
+        name="showButton"
+        type="Boolean"
+        label="Show Cancel Button"
+        role="inputOnly"
+      />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

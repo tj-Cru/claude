@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WE_FW8_NP__Score_Batch_Is_Error_Found__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <label>Score Batch Is Error Found</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

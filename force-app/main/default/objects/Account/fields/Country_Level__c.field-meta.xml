@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Country_Level__c</fullName>
+    <description>Country Level as assessed by Global Dept</description>
+    <inlineHelpText>Use the Global Ministry Classification button above to access Google Sheet Instructions.</inlineHelpText>
+    <label>Country Level</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0 - No Known Presence</fullName>
+                <default>true</default>
+                <label>0 - No Known Presence</label>
+            </value>
+            <value>
+                <fullName>1 - Presence</fullName>
+                <default>false</default>
+                <label>1 - Presence</label>
+            </value>
+            <value>
+                <fullName>2 - Activities</fullName>
+                <default>false</default>
+                <label>2 - Activities</label>
+            </value>
+            <value>
+                <fullName>3 - Organized</fullName>
+                <default>false</default>
+                <label>3 - Organized</label>
+            </value>
+            <value>
+                <fullName>4 - Expanded</fullName>
+                <default>false</default>
+                <label>4 - Expanded</label>
+            </value>
+            <value>
+                <fullName>5 - Model</fullName>
+                <default>false</default>
+                <label>5 - Model</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

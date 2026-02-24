@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>smartystreets__Verify_Addresses_Classic</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>page</linkType>
+    <masterLabel>Verify Addresses</masterLabel>
+    <openType>replace</openType>
+    <page>smartystreets__VerifyAddressesAccount</page>
+    <protected>false</protected>
+</WebLink>

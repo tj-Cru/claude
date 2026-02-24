@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Country_Development_Phase__c</fullName>
+    <description>Used by Global Only for Country Accounts</description>
+    <label>Country Development Phase</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Launching</fullName>
+                <default>false</default>
+                <label>Launching</label>
+            </value>
+            <value>
+                <fullName>Developing</fullName>
+                <default>false</default>
+                <label>Developing</label>
+            </value>
+            <value>
+                <fullName>Maturing</fullName>
+                <default>false</default>
+                <label>Maturing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

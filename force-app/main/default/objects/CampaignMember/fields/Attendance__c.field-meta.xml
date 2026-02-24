@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attendance__c</fullName>
+    <formula>IF( AND(Event__r.End_Date__c &lt; TODAY(), TEXT(Status) = &apos;A - Attended&apos;), TRUE, IF (AND(Event__r.End_Date__c  &gt;= TODAY(),  TEXT(Status) = &apos;C - Confirmed&apos;),TRUE,FALSE))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Attendance</label>
+    <type>Checkbox</type>
+</CustomField>

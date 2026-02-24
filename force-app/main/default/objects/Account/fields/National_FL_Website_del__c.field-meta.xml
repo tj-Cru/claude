@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>National_FL_Website_del__c</fullName>
+    <inlineHelpText>Enter the website associated with FamilyLife in that Country. Websites for other ministries besides CRU belong under that Ministry&apos;s Account Page</inlineHelpText>
+    <label>National FL Website</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Url</type>
+</CustomField>

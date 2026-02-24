@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manual_Dedupe_Group__c</fullName>
+    <label>Manual Dedupe Group</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>GM Account Group 1</fullName>
+                <default>false</default>
+                <label>GM Account Group 1</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

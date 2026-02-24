@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Is_Counted__c</fullName>
+    <formula>OR(
+TEXT(Status) = &quot;A - Attended&quot;,
+TEXT(Status) = &quot;C - Confirmed&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Is Counted</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Room_Date__c</fullName>
+    <formula>CASE(CASE( MOD(Date__c - DATE(1900, 1, 7), 7), 0, &quot;Sunday&quot;, 1, &quot;Monday&quot;, 2, &quot;Tuesday&quot;, 3,
+&quot;Wednesday&quot;, 4, &quot;Thursday&quot;, 5, &quot;Friday&quot;, 6, &quot;Saturday&quot;,&quot;ERROR&quot;),
+&quot;Sunday&quot;, Date__c + 5,
+&quot;Monday&quot;, Date__c + 4,
+&quot;Tuesday&quot;, Date__c + 3,
+&quot;Wednesday&quot;, Date__c + 2,
+&quot;Thursday&quot;, Date__c + 1,
+&quot;Friday&quot;, Date__c,
+&quot;Saturday&quot;, Date__c + 6,
+null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Room Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

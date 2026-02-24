@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <name>Church_Account_Matched</name>
+        <label>Church Account Matched</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>varChurchId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Church_Search.Id</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Existing_Ministry_Rep</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Contact_MR</name>
+        <label>Set Contact MR</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>txtMRId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>Registration.Household__r.Event_Zip_Code_Look_Up__r.Event_Area_Code__r.Ministry_Rep__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Registration</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_Default_MR</name>
+        <label>Set Default MR</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>txtMRId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>0053q00000AdxhNAAR</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Registration</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <name>Decision_2</name>
+        <label>Existing Church Account</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Create_Church</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Create Church</defaultConnectorLabel>
+        <rules>
+            <name>Yes_Existing_Church</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Church_Search.Id</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Church_Account_Matched</targetReference>
+            </connector>
+            <label>Yes Existing Church</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>Existing_Ministry_Rep</name>
+        <label>Existing Ministry Rep</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>Set_Default_MR</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Yes_MR_Present</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>Registration.Household__r.Event_Zip_Code_Look_Up__r.Event_Area_Code__r.Ministry_Rep__c</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_Contact_MR</targetReference>
+            </connector>
+            <label>Yes MR Present</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Create a filter here so only records that need this logic fire and is ignored if not</description>
+        <name>Run_Logic</name>
+        <label>Run Logic</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>No</defaultConnectorLabel>
+        <rules>
+            <name>Yes</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Process__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>New Registration</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Registration_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Pastor</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Registrant_Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Couple</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Registration</targetReference>
+            </connector>
+            <label>Yes</label>
+        </rules>
+    </decisions>
+    <description>Manage the Pastor Registration Operations
+Polish Run</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>forDueDate</name>
+        <dataType>Date</dataType>
+        <expression>TODAY()+2</expression>
+    </formulas>
+    <formulas>
+        <name>forTaskDescription</name>
+        <dataType>String</dataType>
+        <expression>&quot;First Name: &quot; &amp; {!Registration.First_Name__c} &amp; BR() &amp;
+&quot;Last Name: &quot;  &amp; {!Registration.Last_Name__c} &amp; BR() &amp;
+&quot;Contact Cell Phone #: &quot; &amp; {!Registration.Mobile_Phone__c} &amp; BR() &amp;
+&quot;Email: &quot;  &amp; {!Registration.Email__c} &amp; BR() &amp;
+&quot;Spouse Name: &quot;  &amp;{!Spouse_Registration.First_Name__c} &amp; BR() &amp;
+&quot;Spouse Email: &quot;  &amp; {!Spouse_Registration.Email_Address__c}  &amp; BR() &amp;
+&quot;Spouse Cell: &quot;  &amp;  {!Spouse_Registration.Local_Phone_Number__c}  &amp; BR() &amp;
+&quot;Mailing Street: &quot;  &amp; {!Registration.Street__c} &amp; BR() &amp;
+&quot;Mailing City: &quot; &amp; {!Registration.City__c} &amp; BR() &amp; 
+&quot;Mailing State: &quot;  &amp; {!Registration.State__c}  &amp; BR() &amp;
+&quot;Mailing Zip: &quot;  &amp; {!Registration.Zip_Code__c} &amp; BR() &amp;
+&quot;Church Name: &quot;  &amp; {!Registration.Church_Name__c} &amp; BR() &amp;
+&quot;Church Street: &quot;  &amp; {!Registration.Church_Street__c} &amp; BR() &amp;
+&quot;Church City: &quot;  &amp; {!Registration.Church_City__c} &amp; BR() &amp;
+&quot;Church State: &quot;  &amp; {!Registration.Church_State__c} &amp; BR() &amp;
+&quot;Church Zip: &quot;  &amp; {!Registration.Church_Postal_Code__c} &amp; BR() &amp;
+&quot;Church Phone: &quot;  &amp; {!Registration.Church_Phone__c} &amp; BR() &amp;
+&quot;Church Website: &quot;  &amp; {!Registration.Church_Website__c} &amp; BR() &amp;
+&quot;Church Position: &quot;  &amp; {!Registration.Church_Position__c}  &amp; BR() &amp;
+&quot;Attendance: &quot;  &amp; {!Registration.Church_Attendance__c} &amp; BR() &amp;
+&quot;Involvement with FamilyLife: &quot;  &amp; {!Registration.FL_Involvement__c} &amp; BR() &amp;
+&quot;Attended Before: &quot;  &amp; IF({!Registration.Attended_WTR__c}=TRUE,&quot;Yes&quot;,&quot;No&quot;) &amp; BR() &amp;
+&quot;Event City: &quot;  &amp; {!Registration.Event_Detail__r.City_1__c} &amp; BR() &amp;
+&quot;Start Date: &quot;  &amp; TEXT({!Registration.Event_Detail__r.Start_Date__c}) &amp; BR() &amp;
+&quot;Group Name: &quot;  &amp; {!Registration.Ministry_Group__r.Name} &amp; BR() &amp;
+&quot;ERT Id: &quot; &amp; {!Registration.External_Registration_Id__c}</expression>
+    </formulas>
+    <formulas>
+        <name>forTaskSubject</name>
+        <dataType>String</dataType>
+        <expression>&quot;Cvent Pastor Registration Pending for &quot; &amp;  {!Registration.Contact__r.FirstName} &amp; &quot; &quot; &amp; {!Registration.Contact__r.LastName} &amp; &quot; - &quot; &amp;  {!$Record.Event_Name__c} &amp; &quot; &quot; &amp; TEXT({!$Record.Event_Start__c}) &amp; &quot; &quot; &amp; {!Registration.Contact_Zip__c}</expression>
+    </formulas>
+    <interviewLabel>Registration PE | Subscriber TEMPLATE | Create a Task {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Registration PE | Subscriber | Pastor Processing New</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordCreates>
+        <name>Create_Church</name>
+        <label>Create Church</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignRecordIdToReference>varChurchId</assignRecordIdToReference>
+        <connector>
+            <targetReference>Existing_Ministry_Rep</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>BillingCity</field>
+            <value>
+                <elementReference>Registration.Church_City__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>BillingPostalCode</field>
+            <value>
+                <elementReference>Registration.Church_Postal_Code__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>BillingState</field>
+            <value>
+                <elementReference>Registration.Church_State__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>BillingStreet</field>
+            <value>
+                <elementReference>Registration.Church_Street__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>Registration.Church_Name__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Phone</field>
+            <value>
+                <elementReference>Registration.Church_Phone__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>012i0000000xEz5AAE</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Website</field>
+            <value>
+                <elementReference>Registration.Church_Website__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Account</object>
+    </recordCreates>
+    <recordCreates>
+        <name>Create_Task</name>
+        <label>Create Task</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>ActivityDate</field>
+            <value>
+                <elementReference>forDueDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Description</field>
+            <value>
+                <elementReference>forTaskDescription</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>txtMRId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Priority</field>
+            <value>
+                <stringValue>Normal</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>RecordTypeId</field>
+            <value>
+                <stringValue>0123q000001EURLAA4</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Send_Notification_Email__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Status</field>
+            <value>
+                <stringValue>Not Started</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <elementReference>forTaskSubject</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>TaskSubtype</field>
+            <value>
+                <stringValue>Task</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Type</field>
+            <value>
+                <stringValue>WTR/ISD Alumni Pastor Call</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhatId</field>
+            <value>
+                <elementReference>$Record.Registration__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>WhoId</field>
+            <value>
+                <elementReference>$Record.Contact__c</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Task</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordCreates>
+    <recordLookups>
+        <name>Church_Search</name>
+        <label>Church Search</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Decision_2</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>RecordTypeId</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>012i0000000xEz5AAE</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Name</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Church_Name__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>BillingPostalCode</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Church_Zip__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Account</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Registration</name>
+        <label>Registration</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Spouse_Registration</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>External_Registration_Id__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.External_Reg_Id__c</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Registrant_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Registrant_Type__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Registration__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordLookups>
+        <name>Spouse_Registration</name>
+        <label>Spouse Registration</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Church_Search</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>FL_Registrant_Type__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Spouse</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Involvement_External_Id__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.External_Reg_Id__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Staging_Involvement__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Registration</name>
+        <label>Update Registration</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Create_Task</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Registration__c</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Pastor_Church__c</field>
+            <value>
+                <elementReference>varChurchId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Publish__c</field>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Registration__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Run_Logic</targetReference>
+        </connector>
+        <flowRunAsUser>TriggeringUser</flowRunAsUser>
+        <object>Registration_PE__e</object>
+        <triggerType>PlatformEvent</triggerType>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>recChurchAccount</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Account</objectType>
+    </variables>
+    <variables>
+        <name>txtMRId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>varChurchId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

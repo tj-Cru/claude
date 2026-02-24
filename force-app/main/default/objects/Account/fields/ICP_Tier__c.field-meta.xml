@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ICP_Tier__c</fullName>
+    <description>Where does this household fit in the ideal customer profile?</description>
+    <label>ICP Tier</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tier 1 – Young &amp; Growing Married Families</fullName>
+                <default>false</default>
+                <label>Tier 1 – Young &amp; Growing Married Families</label>
+            </value>
+            <value>
+                <fullName>Tier 2 – Newly Married &amp; Maturing Families</fullName>
+                <default>false</default>
+                <label>Tier 2 – Newly Married &amp; Maturing Families</label>
+            </value>
+            <value>
+                <fullName>Tier 3 – Transitioning &amp; Legacy Families</fullName>
+                <default>false</default>
+                <label>Tier 3 – Transitioning &amp; Legacy Families</label>
+            </value>
+            <value>
+                <fullName>Tier 4 – Singles</fullName>
+                <default>false</default>
+                <label>Tier 4 – Singles</label>
+            </value>
+            <value>
+                <fullName>Tier 4 - Commerce Partner</fullName>
+                <default>false</default>
+                <label>Tier 4 - Commerce Partner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Couples_Needed__c</fullName>
+    <externalId>false</externalId>
+    <formula>CEILING(Needed__c/2)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Needed registrations / 2 rounded up . this is used to drive the progress bar on the community
+It Represents the number of paid couples that still need to register with the group name to reach the next eligible couple</inlineHelpText>
+    <label>Couples Needed</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

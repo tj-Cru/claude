@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prior_Event_Attended__c</fullName>
+    <label>Prior Event(s) Attended</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Blended and Blessed Summit</fullName>
+                <default>false</default>
+                <label>Blended and Blessed Summit</label>
+            </value>
+            <value>
+                <fullName>I Still Do</fullName>
+                <default>false</default>
+                <label>I Still Do</label>
+            </value>
+            <value>
+                <fullName>Love Like You Mean It</fullName>
+                <default>false</default>
+                <label>Love Like You Mean It</label>
+            </value>
+            <value>
+                <fullName>Smart Step Family</fullName>
+                <default>false</default>
+                <label>Smart Step Family</label>
+            </value>
+            <value>
+                <fullName>Stepping Up</fullName>
+                <default>false</default>
+                <label>Stepping Up</label>
+            </value>
+            <value>
+                <fullName>The Art of Marriage</fullName>
+                <default>false</default>
+                <label>The Art of Marriage</label>
+            </value>
+            <value>
+                <fullName>Weekend to Remember</fullName>
+                <default>false</default>
+                <label>Weekend to Remember</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

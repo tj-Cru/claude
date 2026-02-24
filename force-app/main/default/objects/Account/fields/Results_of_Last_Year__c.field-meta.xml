@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Results_of_Last_Year__c</fullName>
+    <description>Global Dept Use:  Highlights of last year&apos;s country activities</description>
+    <inlineHelpText>Summary highlights of last year of ministry. Consider training, scope of small group ministry, events, expansion, etc.</inlineHelpText>
+    <label>Results of Last Year</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

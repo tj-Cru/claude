@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CV_Attendee__c</fullName>
+    <description>Temporary field used to get the Group Name on the Campaign Member during the Cvent Go Live process.  Can be deleted after all &quot;In Progress&quot; Cvent events are moved to Salesforce.</description>
+    <externalId>false</externalId>
+    <label>CV Attendee #</label>
+    <length>50</length>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>ERT</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>forName</name>
+        <dataType>String</dataType>
+        <expression>IF({!$Record.Contact__r.FirstName}!=NULL,{!$Record.Contact__r.FirstName} &amp; &quot; &quot; &amp;{!$Record.Event_Detail__r.EventCode__c},{!$Record.Event_Detail__r.EventCode__c}) &amp; &quot; &quot;  &amp;TEXT({!$Record.Type__c})</expression>
+    </formulas>
+    <interviewLabel>Survey Response | Before Insert Update | Set Values {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Survey Response | Before Insert Update | Set Values</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Set_Event_Area_from_Contact</name>
+        <label>Set Event Area from Contact</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <inputAssignments>
+            <field>Event_Area__c</field>
+            <value>
+                <elementReference>$Record.Household__r.Event_Zip_Code_Look_Up__r.Event_Area_Code__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>forName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Set_Event_Area_from_Contact</targetReference>
+        </connector>
+        <object>Survey_Response__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

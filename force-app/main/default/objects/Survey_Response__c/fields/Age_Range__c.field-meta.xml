@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Age_Range__c</fullName>
+    <description>ERT</description>
+    <label>Age Range</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>18-24</fullName>
+                <default>false</default>
+                <label>18-24</label>
+            </value>
+            <value>
+                <fullName>25-34</fullName>
+                <default>false</default>
+                <label>25-34</label>
+            </value>
+            <value>
+                <fullName>35-4445-54</fullName>
+                <default>false</default>
+                <label>35-4445-54</label>
+            </value>
+            <value>
+                <fullName>55-64</fullName>
+                <default>false</default>
+                <label>55-64</label>
+            </value>
+            <value>
+                <fullName>65+</fullName>
+                <default>false</default>
+                <label>65+</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

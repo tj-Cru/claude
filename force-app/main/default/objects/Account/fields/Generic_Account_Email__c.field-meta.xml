@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Generic_Account_Email__c</fullName>
+    <description>This was added as per CCB decision 12/4/2014:  The purpose of this email is to capture generic non-Contact specific emails such as infor@familylife.com</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter only email addresses that are genric in nature, not tied to a specific Contact.  An example would be info@familylife.com.  If the email goes to a specific person, then it should be entered under the Contact&apos;s record.</inlineHelpText>
+    <label>Generic Non-Personal Email</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Email</type>
+    <unique>false</unique>
+</CustomField>

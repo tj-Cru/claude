@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quick_Notes__c</fullName>
+    <description>Quick place to jot notes/memory joggers when creating a contact in the field.  ***Not intended for permanent data storage.***</description>
+    <inlineHelpText>Use to quickly jot notes when creating a Contact &quot;on the fly&quot;. (Search before Creating!)  This field is NOT for permanent storage of data. A task will be created and assigned to you based on your input here, and this field will be emptied immediately.</inlineHelpText>
+    <label>Quick Temp Notes</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

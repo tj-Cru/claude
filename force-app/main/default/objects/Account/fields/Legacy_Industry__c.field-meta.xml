@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Legacy_Industry__c</fullName>
+    <inlineHelpText>For Dynamics Data Migration only</inlineHelpText>
+    <label>!Legacy Industry</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agriculture and Non-petrol Natural Resource Extraction</fullName>
+                <default>false</default>
+                <label>Agriculture and Non-petrol Natural Resource Extraction</label>
+            </value>
+            <value>
+                <fullName>Broadcasting Printing and Publishing</fullName>
+                <default>false</default>
+                <label>Broadcasting Printing and Publishing</label>
+            </value>
+            <value>
+                <fullName>Business Services</fullName>
+                <default>false</default>
+                <label>Business Services</label>
+            </value>
+            <value>
+                <fullName>Design, Direction and Creative Management</fullName>
+                <default>false</default>
+                <label>Design, Direction and Creative Management</label>
+            </value>
+            <value>
+                <fullName>Doctor&apos;s Offices and Clinics</fullName>
+                <default>false</default>
+                <label>Doctor&apos;s Offices and Clinics</label>
+            </value>
+            <value>
+                <fullName>Durable Manufacturing</fullName>
+                <default>false</default>
+                <label>Durable Manufacturing</label>
+            </value>
+            <value>
+                <fullName>Eating and Drinking Places</fullName>
+                <default>false</default>
+                <label>Eating and Drinking Places</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+            <value>
+                <fullName>Entertainment Retail</fullName>
+                <default>false</default>
+                <label>Entertainment Retail</label>
+            </value>
+            <value>
+                <fullName>Financial</fullName>
+                <default>false</default>
+                <label>Financial</label>
+            </value>
+            <value>
+                <fullName>Government/Federal</fullName>
+                <default>false</default>
+                <label>Government/Federal</label>
+            </value>
+            <value>
+                <fullName>Government/State</fullName>
+                <default>false</default>
+                <label>Government/State</label>
+            </value>
+            <value>
+                <fullName>Legal Services</fullName>
+                <default>false</default>
+                <label>Legal Services</label>
+            </value>
+            <value>
+                <fullName>Petrochemical Extraction and Distribution</fullName>
+                <default>false</default>
+                <label>Petrochemical Extraction and Distribution</label>
+            </value>
+            <value>
+                <fullName>Religious/Church</fullName>
+                <default>false</default>
+                <label>Religious/Church</label>
+            </value>
+            <value>
+                <fullName>Religious/Military Church</fullName>
+                <default>false</default>
+                <label>Religious/Military Church</label>
+            </value>
+            <value>
+                <fullName>Religious/Para-Church</fullName>
+                <default>false</default>
+                <label>Religious/Para-Church</label>
+            </value>
+            <value>
+                <fullName>Service Retail</fullName>
+                <default>false</default>
+                <label>Service Retail</label>
+            </value>
+            <value>
+                <fullName>Social Services</fullName>
+                <default>false</default>
+                <label>Social Services</label>
+            </value>
+            <value>
+                <fullName>Specialty Realty</fullName>
+                <default>false</default>
+                <label>Specialty Realty</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

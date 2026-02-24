@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FY23_WTR_Events</fullName>
+    <columns>NAME</columns>
+    <columns>EventCode__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Weeks__c</columns>
+    <columns>Capacity__c</columns>
+    <columns>Sell_To__c</columns>
+    <columns>Attending__c</columns>
+    <columns>Address_1__c</columns>
+    <columns>Percent_Pickup__c</columns>
+    <columns>Total_Reserved__c</columns>
+    <columns>Sr_Planner__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>End_Date__c</field>
+        <operation>greaterThan</operation>
+        <value>8/31/2022</value>
+    </filters>
+    <filters>
+        <field>Start_Date__c</field>
+        <operation>lessThan</operation>
+        <value>9/1/2023</value>
+    </filters>
+    <label>FY23 WTR Events</label>
+</ListView>

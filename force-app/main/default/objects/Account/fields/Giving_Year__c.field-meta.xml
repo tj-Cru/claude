@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Giving_Year__c</fullName>
+    <inlineHelpText>Amount given over the current calendar year.</inlineHelpText>
+    <label>Giving Year</label>
+    <summarizedField>Donation__c.Gift_Amount__c</summarizedField>
+    <summaryFilterItems>
+        <field>Donation__c.Year__c</field>
+        <operation>equals</operation>
+        <value>2026</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Donation__c.Account_Household__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

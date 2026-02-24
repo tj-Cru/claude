@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>FL Record Detail Viewer</masterLabel>
+    <description>Displays read-only record details with branded styling.</description>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__HomePage</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightningCommunity__Default">
+            <property 
+                name="recordId" 
+                type="String" 
+                label="Record ID" 
+                description="Bind to {!recordId} or {!Item.Id}" 
+                default="{!recordId}"/>
+            <property 
+                name="objectApiName" 
+                type="String" 
+                label="Object API Name" 
+                description="e.g., Registration__c or Survey_Response__c" 
+                required="true"/>
+            <property 
+                name="fieldList" 
+                type="String" 
+                label="Fields (Comma Separated)" 
+                description="API names of fields to display" />
+            <property 
+                name="title" 
+                type="String" 
+                label="Component Title" 
+                default="Record Details" />
+            <property 
+                name="columns" 
+                type="Integer" 
+                label="Number of Columns" 
+                default="2" 
+                min="1" 
+                max="4"/>
+            <property 
+                name="showBackButton" 
+                type="Boolean" 
+                label="Show Back Button" 
+                default="false"/>
+            <property 
+                name="editFlowName" 
+                type="String" 
+                label="Edit Flow API Name" 
+                description="If provided, shows an Edit button that launches this Flow (e.g., Edit_Registration_Flow)"/>
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

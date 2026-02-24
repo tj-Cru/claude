@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Prevent_CM_Changes_on_Completed_Campaign</fullName>
+    <active>false</active>
+    <description>Prevent Campaign Members from being created (or having their records changed) for Campaigns in Completed Status</description>
+    <errorConditionFormula>ISPICKVAL(Campaign.Status, &quot;Completed&quot;)</errorConditionFormula>
+    <errorMessage>Campaign Member Records cannot be added to (or changed in) Campaigns in Completed Status.</errorMessage>
+</ValidationRule>

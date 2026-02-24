@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recommitted_Life_Actual__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Total attendees that recommitted their life to Jesus</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How many attendees recommitted their life to Jesus at this event?</inlineHelpText>
+    <label>Recommitted Life Actual</label>
+    <precision>6</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

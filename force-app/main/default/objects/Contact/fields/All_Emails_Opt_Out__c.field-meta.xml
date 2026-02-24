@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_Emails_Opt_Out__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>CAUTION:  Checking this box will prevent the Contact from receiving any email from FamilyLife.  The ONLY exception is an email manually sent for the purpose of one-to-one relationship by a staff member.</inlineHelpText>
+    <label>Current Preferred Email Opt Out</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

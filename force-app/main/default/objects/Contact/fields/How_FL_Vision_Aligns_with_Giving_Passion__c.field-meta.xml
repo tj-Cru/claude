@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>How_FL_Vision_Aligns_with_Giving_Passion__c</fullName>
+    <inlineHelpText>Used by Development</inlineHelpText>
+    <label>How FL Vision Aligns with Giving Passion</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

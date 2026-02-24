@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allow_Contact_Resolve__c</fullName>
+    <description>ERT</description>
+    <formula>IF(AND(Contact__c=NULL, TEXT(Type__c)!= &apos;Prayer&apos;, TEXT(Type__c)!= &apos;Question&apos;),TRUE,FALSE)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Allow Contact Resolve</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

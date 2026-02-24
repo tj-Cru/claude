@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ministry_Vision_Shared_With_Spouse__c</fullName>
+    <inlineHelpText>Please enter information here as to the shared vision and desire with a husband and wife (and kids if appropriate) of ministry.  Either they are currently working in or want to work in the future</inlineHelpText>
+    <label>Involved w/ Spouse In Ministry?</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

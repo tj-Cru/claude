@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Min_Rep_Mismatch</fullName>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Advisor__c</columns>
+    <columns>Advisor_Manager__c</columns>
+    <columns>Ministry_Rep__c</columns>
+    <columns>Ministry_Rep_2__c</columns>
+    <columns>Ministry_Rep_A__c</columns>
+    <columns>Ministry_Rep_B__c</columns>
+    <columns>Divisional_Manager__c</columns>
+    <columns>Donor_Rep__c</columns>
+    <columns>Event_Territory_Code__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>MR_Match__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Min Rep Mismatch</label>
+</ListView>

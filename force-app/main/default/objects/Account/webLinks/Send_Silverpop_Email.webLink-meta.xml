@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_Silverpop_Email</fullName>
+    <availability>online</availability>
+    <description>Send a email using Silverpop</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Send Silverpop Email</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/15.0/connection.js&quot;)}
+{
+var tempresult = sforce.connection.query(&quot;Select PersonContactId, Id, Name from Account where id= &apos;&quot;+&quot;{!Account.Id}&quot;+&quot;&apos; &quot;);
+var contacts = tempresult.getArray(&quot;records&quot;);
+var recordid = contacts[0].PersonContactId;
+var mySplitResult = recordid .substring(0, 15);
+window.open(&apos;/apex/silverpop__SP_EngageContactLogin?id=&apos;+mySplitResult , &apos;_blank&apos;, &apos;height=700,width=1024,location=0,resizable=0,toolbar=0,status=0,menubar=no,scrollbars=1&apos;);
+}else{
+alert(&apos;Send Silverpop Email is only supported for Leads, Contacts, Campaigns, and Person Accounts.&apos;);
+}</url>
+</WebLink>

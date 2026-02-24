@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WTR_Survey_Responded__c</fullName>
+    <formula>OR(
+Impact_Local__c = true,
+Invite__c = true,
+Lead_Small_Group__c = true
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>WTR Survey Responded</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description</fullName>
+    <inlineHelpText>Use this field to record data pertaining to family history, family dynamics...not to be used for specific transaction or event specific information. Ex: attended 15 WTR&apos;s, Second marriage, Not able to have children, is a ministry partner.</inlineHelpText>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+</CustomField>

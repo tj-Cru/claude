@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Do_Not_Text__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>When checked, the Contact has requested that FamilyLife *not* Text them (SMS Messages)</description>
+    <inlineHelpText>When checked, the Contact has requested that FamilyLife *not* Text them (SMS Messages)</inlineHelpText>
+    <label>Do Not Text</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

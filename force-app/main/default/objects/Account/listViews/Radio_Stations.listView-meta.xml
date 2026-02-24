@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Radio_Stations</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Longitude_and_Latitude__Latitude__s</columns>
+    <columns>Longitude_and_Latitude__Longitude__s</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>Radio_Call_Letters__c</columns>
+    <columns>Radio_Band__c</columns>
+    <columns>Radio_Frequency__c</columns>
+    <columns>Radio_Key__c</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>Subtype__c</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.TYPE</field>
+        <operation>equals</operation>
+        <value>Radio Station</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Business_Account</value>
+    </filters>
+    <label>Radio Stations</label>
+</ListView>

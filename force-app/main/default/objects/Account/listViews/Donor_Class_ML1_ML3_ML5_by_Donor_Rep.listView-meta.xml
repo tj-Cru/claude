@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Donor_Class_ML1_ML3_ML5_by_Donor_Rep</fullName>
+    <columns>Donor_Caseload_Lookup__c</columns>
+    <columns>ACCOUNT.SITE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Monthly_Touch__c</columns>
+    <columns>Next_Touch__c</columns>
+    <columns>ACCOUNT.LAST_ACTIVITY</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Donor_Classification_Level__c</field>
+        <operation>equals</operation>
+        <value>ML1,ML3,ML5</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Household_Account</value>
+    </filters>
+    <filters>
+        <field>Donor_Caseload_Lookup__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Donor Class = ML1, ML3, ML5 by Donor Rep</label>
+    <language>en_US</language>
+    <sharedTo></sharedTo>
+</ListView>

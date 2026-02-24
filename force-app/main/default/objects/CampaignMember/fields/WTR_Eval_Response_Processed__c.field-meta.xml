@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WTR_Eval_Response_Processed__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checked via flow (Campaign Member - WTR Eval Email Response Handler) when WTR Eval Responses have been processed.</description>
+    <label>WTR Eval Response Processed</label>
+    <type>Checkbox</type>
+</CustomField>

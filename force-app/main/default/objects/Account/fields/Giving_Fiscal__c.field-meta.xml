@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Giving_Fiscal__c</fullName>
+    <inlineHelpText>Total giving for the current Fiscal year beginning 9/1/25 and running until 8/31/26</inlineHelpText>
+    <label>Giving Fiscal</label>
+    <summarizedField>Donation__c.Transaction_Amount__c</summarizedField>
+    <summaryFilterItems>
+        <field>Donation__c.Fiscal_Year__c</field>
+        <operation>equals</operation>
+        <value>2026</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Donation__c.Account_Household__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

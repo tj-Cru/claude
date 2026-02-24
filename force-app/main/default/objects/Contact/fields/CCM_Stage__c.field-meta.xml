@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCM_Stage__c</fullName>
+    <description>CCM Stage Indicator</description>
+    <externalId>false</externalId>
+    <formula>IF(ISPICKVAL(CCM_Completed__c, &quot;CCM 1 - DON&apos;T KNOW&quot;), IMAGE(&quot;/servlet/servlet.FileDownload?file=015i0000005QC4a&quot;, &quot;CCM 1 - DON&apos;T KNOW&quot;,40,125),
+IF(ISPICKVAL(CCM_Completed__c, &quot;CCM 2 - CONTACT INFO&quot;), IMAGE (&quot;/servlet/servlet.FileDownload?file=015i0000005QC59&quot;, &quot;CCM 2 - CONTACT INFO&quot;,40,125),
+IF(ISPICKVAL(CCM_Completed__c, &quot;CCM 3 - TIME &amp; EFFORT&quot;), IMAGE(&quot;/servlet/servlet.FileDownload?file=015i0000005QC62&quot;, &quot;CCM 3 - TIME &amp; EFFORT&quot;,45,125),
+IF(ISPICKVAL(CCM_Completed__c, &quot;CCM 4 - FIRST TRANS&quot;), IMAGE(&quot;/servlet/servlet.FileDownload?file=015i0000005QC6H&quot;, &quot;CCM 4 - FIRST TRANS&quot;,45,125),
+IF(ISPICKVAL(CCM_Completed__c, &quot;CCM 5 - REPEAT TRANS&quot;), IMAGE(&quot;/servlet/servlet.FileDownload?file=015i0000005QC6R&quot;, &quot;CCM 5 - REPEAT TRANS&quot;,45,125),
+IF(ISPICKVAL(CCM_Completed__c, &quot;CCM 6 - CROSSOVER&quot;), IMAGE(&quot;/servlet/servlet.FileDownload?file=015i0000005QCCA&quot;, &quot;CCM 6 - CROSSOVER&quot;,45,125),
+IF(ISPICKVAL(CCM_Completed__c, &quot;CCM 7 - REPEAT CROSSOVER&quot;), IMAGE(&quot;/servlet/servlet.FileDownload?file=015i0000005QCEL&quot;, &quot;CCM 7 - REPEAT CROSSOVER&quot;,45,125),
+IF(ISPICKVAL(CCM_Completed__c, &quot;CCM 8 - ALL THREE TYPES&quot;), IMAGE(&quot;/servlet/servlet.FileDownload?file=015i0000005QCEV&quot;, &quot;CCM 8 - ALL THREE TYPES&quot;,45,125),
+IF(ISPICKVAL(CCM_Completed__c, &quot;CCM 9 - PROCLAIM&quot;), IMAGE(&quot;/servlet/servlet.FileDownload?file=015i0000005QCEf&quot;, &quot;CCM 9 - PROCLAIM&quot;,45,125),null)))))))))</formula>
+    <label>CCM Stage</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

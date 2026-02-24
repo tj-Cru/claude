@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bug_Fixed</fullName>
+    <columns>NAME</columns>
+    <columns>Contact__c</columns>
+    <columns>Confirmation_Number__c</columns>
+    <columns>Ministry_Group__c</columns>
+    <columns>Group_Name_Submitted__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>CV_Paid__c</columns>
+    <columns>Status__c</columns>
+    <columns>Qty_Eligible__c</columns>
+    <columns>Qty_Ineligible__c</columns>
+    <columns>Qty_Used__c</columns>
+    <columns>Registration_Type__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Registration_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Event_Type__c</field>
+        <operation>notEqual</operation>
+        <value>ADJ</value>
+    </filters>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>TODAY</value>
+    </filters>
+    <filters>
+        <field>CREATEDBY_USER</field>
+        <operation>equals</operation>
+        <value>Tim Jones</value>
+    </filters>
+    <label>Bug Fixed</label>
+</ListView>

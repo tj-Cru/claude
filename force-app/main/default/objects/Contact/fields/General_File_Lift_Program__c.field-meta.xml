@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>General_File_Lift_Program__c</fullName>
+    <formula>Account.General_File_Lift_Program__c</formula>
+    <inlineHelpText>Reflected from Household record</inlineHelpText>
+    <label>General File Lift Program</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

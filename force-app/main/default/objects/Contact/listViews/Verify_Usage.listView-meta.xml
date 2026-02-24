@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verify_Usage</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.PHONE3</columns>
+    <columns>Mogli_SMS__Mogli_Number__c</columns>
+    <columns>Mobile_Verified__c</columns>
+    <columns>Mobile_Line_Type__c</columns>
+    <columns>Mobile_Carrier__c</columns>
+    <columns>Mobile_Ver_Date__c</columns>
+    <columns>On_Caseload__c</columns>
+    <columns>Donor_Caseload__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Mobile_Ver_Date__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>7/29/2024 12:00 AM</value>
+    </filters>
+    <label>Verify Usage</label>
+    <sharedTo>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

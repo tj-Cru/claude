@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Verified_Phones</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>CONTACT.PHONE3</columns>
+    <columns>Mogli_SMS__Mogli_Number__c</columns>
+    <columns>Mobile_Verified__c</columns>
+    <columns>Mobile_Line_Type__c</columns>
+    <columns>Mobile_Carrier__c</columns>
+    <columns>Mobile_Ver_Date__c</columns>
+    <columns>On_Caseload__c</columns>
+    <columns>Donor_Caseload__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Mobile_Verified__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>On_Caseload__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Mogli_SMS__Mogli_Number__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>CONTACT.PHONE3</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Verify Phones Caseload</label>
+</ListView>

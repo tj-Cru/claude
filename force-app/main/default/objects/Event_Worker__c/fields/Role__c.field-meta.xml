@@ -1,0 +1,1106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role__c</fullName>
+    <label>Role</label>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Role_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CNT-DONOR</fullName>
+                <default>false</default>
+                <label>CNT-DONOR FL Donor Rep</label>
+            </value>
+            <value>
+                <fullName>CNT-MEDIA</fullName>
+                <default>false</default>
+                <label>CNT-MEDIA Media</label>
+            </value>
+            <value>
+                <fullName>CNT-PS</fullName>
+                <default>false</default>
+                <label>CNT-PS Press Staff</label>
+            </value>
+            <value>
+                <fullName>CNT-RSS</fullName>
+                <default>false</default>
+                <label>CNT-RSS Radio Station Staff</label>
+            </value>
+            <value>
+                <fullName>CNT-TS</fullName>
+                <default>false</default>
+                <label>CNT-TS Television Staff</label>
+            </value>
+            <value>
+                <fullName>Guide - FL Equip</fullName>
+                <default>false</default>
+                <label>Guide - FL Equip</label>
+            </value>
+            <value>
+                <fullName>Guide-EL</fullName>
+                <default>false</default>
+                <label>Guide - Event Leader</label>
+            </value>
+            <value>
+                <fullName>Guide - EX</fullName>
+                <default>false</default>
+                <label>Guide - Expansion</label>
+            </value>
+            <value>
+                <fullName>Guide - G</fullName>
+                <default>false</default>
+                <label>Guide - General</label>
+            </value>
+            <value>
+                <fullName>Guide - SGL</fullName>
+                <default>false</default>
+                <label>Guide - Small Group Leader</label>
+            </value>
+            <value>
+                <fullName>MST</fullName>
+                <default>false</default>
+                <label>MST Ministry Staff</label>
+            </value>
+            <value>
+                <fullName>PRO-HBCAT</fullName>
+                <default>false</default>
+                <label>PRO-HBCAT HB Catalyst</label>
+            </value>
+            <value>
+                <fullName>PRO-HBTS</fullName>
+                <default>false</default>
+                <label>PRO-HBTS HB Team Staff</label>
+            </value>
+            <value>
+                <fullName>PRO-PPTL Prayer Director</fullName>
+                <default>false</default>
+                <label>PRO-PPTL Prayer Director</label>
+            </value>
+            <value>
+                <fullName>PRO-PR</fullName>
+                <default>false</default>
+                <label>PRO-PR Ministry Rep (Key Contact)</label>
+            </value>
+            <value>
+                <fullName>PRO-PRONS</fullName>
+                <default>false</default>
+                <label>PRO-PRONS Ministry Rep Onsite</label>
+            </value>
+            <value>
+                <fullName>PRO-PRT</fullName>
+                <default>false</default>
+                <label>PRO-PRT Staff Rep Training</label>
+            </value>
+            <value>
+                <fullName>PRO-SM</fullName>
+                <default>false</default>
+                <label>PRO-SM Senior Manager</label>
+            </value>
+            <value>
+                <fullName>PRO-WTRD WTR Director</fullName>
+                <default>false</default>
+                <label>PRO-WTRD WTR Director</label>
+            </value>
+            <value>
+                <fullName>Select Role Detail</fullName>
+                <default>true</default>
+                <label>Select Role Detail</label>
+            </value>
+            <value>
+                <fullName>SPK-CPL</fullName>
+                <default>false</default>
+                <label>SPK-CPL Speaking as Couple</label>
+            </value>
+            <value>
+                <fullName>SPK-NEF</fullName>
+                <default>false</default>
+                <label>SPK-NEF Non Speaking Evaluator Female</label>
+            </value>
+            <value>
+                <fullName>SPK-NEM</fullName>
+                <default>false</default>
+                <label>SPK-NEM Non Speaking Evaluator Male</label>
+            </value>
+            <value>
+                <fullName>SPK-NSS</fullName>
+                <default>false</default>
+                <label>SPK-NSS Non Speaking Staff</label>
+            </value>
+            <value>
+                <fullName>SPK-EF</fullName>
+                <default>false</default>
+                <label>SPK-SEF Speaking Evaluator Female</label>
+            </value>
+            <value>
+                <fullName>SPK-EM</fullName>
+                <default>false</default>
+                <label>SPK-SEM Speaking Evaluator Male</label>
+            </value>
+            <value>
+                <fullName>SPK-SF</fullName>
+                <default>false</default>
+                <label>SPK-SF Female</label>
+            </value>
+            <value>
+                <fullName>SPK-SM</fullName>
+                <default>false</default>
+                <label>SPK-SM Male</label>
+            </value>
+            <value>
+                <fullName>SPK-SSEF</fullName>
+                <default>false</default>
+                <label>SPK-SSEF Senior Speaker Evaluator Female</label>
+            </value>
+            <value>
+                <fullName>SPK-SSEM</fullName>
+                <default>false</default>
+                <label>SPK-SSEM Senior Speaker Evaluator Male</label>
+            </value>
+            <value>
+                <fullName>SPK-SSF</fullName>
+                <default>false</default>
+                <label>SPK-SSF	 Senior Female</label>
+            </value>
+            <value>
+                <fullName>SPK-SSM</fullName>
+                <default>false</default>
+                <label>SPK-SSM Senior Male</label>
+            </value>
+            <value>
+                <fullName>STF-AP</fullName>
+                <default>false</default>
+                <label>STF-AP Associate Planner</label>
+            </value>
+            <value>
+                <fullName>STF-APT</fullName>
+                <default>false</default>
+                <label>STF-APT Associate Planner Training</label>
+            </value>
+            <value>
+                <fullName>STF-AV</fullName>
+                <default>false</default>
+                <label>STF-AV IMAG AV Tech</label>
+            </value>
+            <value>
+                <fullName>STF-AVT</fullName>
+                <default>false</default>
+                <label>STF-AVT IMAG AV Tech Training</label>
+            </value>
+            <value>
+                <fullName>STF-COACH</fullName>
+                <default>false</default>
+                <label>STF-COACH Ministry Advisor</label>
+            </value>
+            <value>
+                <fullName>STF-DEV</fullName>
+                <default>false</default>
+                <label>STF-DEV	Development Donor Rep</label>
+            </value>
+            <value>
+                <fullName>STF-GEN</fullName>
+                <default>false</default>
+                <label>STF-GEN General</label>
+            </value>
+            <value>
+                <fullName>STF-HR</fullName>
+                <default>false</default>
+                <label>STF-HR Human Resources Representative</label>
+            </value>
+            <value>
+                <fullName>STF-INS</fullName>
+                <default>false</default>
+                <label>STF-INS Inspection Trip</label>
+            </value>
+            <value>
+                <fullName>STF-LEADER</fullName>
+                <default>false</default>
+                <label>STF-LEADER Volunteer Leader</label>
+            </value>
+            <value>
+                <fullName>STF-MAONS</fullName>
+                <default>false</default>
+                <label>STF-MAONS Ministry Advisor Onsite</label>
+            </value>
+            <value>
+                <fullName>STF-PA</fullName>
+                <default>false</default>
+                <label>STF-PA Production Assistant</label>
+            </value>
+            <value>
+                <fullName>STF-PAT</fullName>
+                <default>false</default>
+                <label>STF-PAT Pastor Talk Host</label>
+            </value>
+            <value>
+                <fullName>STF-PM Planner Manager</fullName>
+                <default>false</default>
+                <label>STF-PM Planner Manager</label>
+            </value>
+            <value>
+                <fullName>STF-P</fullName>
+                <default>false</default>
+                <label>STF-P Planner</label>
+            </value>
+            <value>
+                <fullName>STF-SAS</fullName>
+                <default>false</default>
+                <label>STF-SAS Strategic Alliance Specialist</label>
+            </value>
+            <value>
+                <fullName>STF-SM</fullName>
+                <default>false</default>
+                <label>STF-SM Shop Manager</label>
+            </value>
+            <value>
+                <fullName>STF-SMT</fullName>
+                <default>false</default>
+                <label>STF-SMT Shop Manager Training</label>
+            </value>
+            <value>
+                <fullName>STF-SPOUSE</fullName>
+                <default>false</default>
+                <label>STF-SPOUSE Spouse</label>
+            </value>
+            <value>
+                <fullName>STF-SP</fullName>
+                <default>false</default>
+                <label>STF-SP Senior Planner</label>
+            </value>
+            <value>
+                <fullName>STF-SPT</fullName>
+                <default>false</default>
+                <label>STF-SPT Senior Planner Training</label>
+            </value>
+            <value>
+                <fullName>STF-TD</fullName>
+                <default>false</default>
+                <label>STF-TD Technical Director</label>
+            </value>
+            <value>
+                <fullName>VOL-CAT</fullName>
+                <default>false</default>
+                <label>VOL-CAT Catalyst</label>
+            </value>
+            <value>
+                <fullName>VOL-CMD</fullName>
+                <default>false</default>
+                <label>VOL-CMD City Ministry Director</label>
+            </value>
+            <value>
+                <fullName>VOL-CMT</fullName>
+                <default>false</default>
+                <label>VOL-CMT City Ministry Team</label>
+            </value>
+            <value>
+                <fullName>VOL-COACH</fullName>
+                <default>false</default>
+                <label>VOL-COACH WTR Coach</label>
+            </value>
+            <value>
+                <fullName>VOL-COM-CPTL</fullName>
+                <default>false</default>
+                <label>VOL-COM WTR Comm Plan Team Leader</label>
+            </value>
+            <value>
+                <fullName>VOL-CPTL</fullName>
+                <default>false</default>
+                <label>VOL-CPTL Church Plan Director</label>
+            </value>
+            <value>
+                <fullName>VOL-FOL</fullName>
+                <default>false</default>
+                <label>VOL-FOL Spiritual Follow</label>
+            </value>
+            <value>
+                <fullName>VOL-GEN</fullName>
+                <default>false</default>
+                <label>VOL-GEN General</label>
+            </value>
+            <value>
+                <fullName>VOL-HBCAT</fullName>
+                <default>false</default>
+                <label>VOL-HBCAT HomeBuilder Catalyst</label>
+            </value>
+            <value>
+                <fullName>VOL-HB</fullName>
+                <default>false</default>
+                <label>VOL-HB HomeBuilder</label>
+            </value>
+            <value>
+                <fullName>VOL-HBMS</fullName>
+                <default>false</default>
+                <label>VOL-HBMS Hosted Event Specialist</label>
+            </value>
+            <value>
+                <fullName>VOL-HBPD</fullName>
+                <default>false</default>
+                <label>VOL-HBPD HB Prayer Director</label>
+            </value>
+            <value>
+                <fullName>VOL-HBPT</fullName>
+                <default>false</default>
+                <label>VOL-HBPT Prayer Intercessor</label>
+            </value>
+            <value>
+                <fullName>VOL-HBSFD</fullName>
+                <default>false</default>
+                <label>VOL-HBSFD Spiritual Follow</label>
+            </value>
+            <value>
+                <fullName>VOL-HBT</fullName>
+                <default>false</default>
+                <label>VOL-HBT HomeBuilder Team Member</label>
+            </value>
+            <value>
+                <fullName>VOL-HED</fullName>
+                <default>false</default>
+                <label>VOL-HED Hosted Events Director</label>
+            </value>
+            <value>
+                <fullName>VOL-MED</fullName>
+                <default>false</default>
+                <label>VOL-MED Digital Media Coordinator</label>
+            </value>
+            <value>
+                <fullName>VOL-MIL</fullName>
+                <default>false</default>
+                <label>VOL-MIL HB Military Coordinator</label>
+            </value>
+            <value>
+                <fullName>VOL-PPTL</fullName>
+                <default>false</default>
+                <label>VOL-PPTL Prayer Director</label>
+            </value>
+            <value>
+                <fullName>VOL-SGLC</fullName>
+                <default>false</default>
+                <label>VOL-SGLC Small Group Leader Coach</label>
+            </value>
+            <value>
+                <fullName>VOL-WTRD</fullName>
+                <default>false</default>
+                <label>VOL-WTRD WTR Director</label>
+            </value>
+            <value>
+                <fullName>WKR-AP</fullName>
+                <default>false</default>
+                <label>WKR-AP Associate Planner</label>
+            </value>
+            <value>
+                <fullName>WKR-APT</fullName>
+                <default>false</default>
+                <label>WKR-APT Associate Planner Training</label>
+            </value>
+            <value>
+                <fullName>WKR-AV</fullName>
+                <default>false</default>
+                <label>WKR-AV AV Tech</label>
+            </value>
+            <value>
+                <fullName>WKR-CAM</fullName>
+                <default>false</default>
+                <label>WKR-CAM Camera Operator</label>
+            </value>
+            <value>
+                <fullName>WKR-GEN</fullName>
+                <default>false</default>
+                <label>WKR-GEN General</label>
+            </value>
+            <value>
+                <fullName>WKR-HBT</fullName>
+                <default>false</default>
+                <label>WKR-HBT HomeBuilders Table Host</label>
+            </value>
+            <value>
+                <fullName>WKR-PA</fullName>
+                <default>false</default>
+                <label>WKR-PA Production Assistant</label>
+            </value>
+            <value>
+                <fullName>WKR-REG</fullName>
+                <default>false</default>
+                <label>WKR-REG Registration</label>
+            </value>
+            <value>
+                <fullName>WKR-SM</fullName>
+                <default>false</default>
+                <label>WKR-SM Shop Manager</label>
+            </value>
+            <value>
+                <fullName>WKR-SMT</fullName>
+                <default>false</default>
+                <label>WKR-SMT Shop Manager Training</label>
+            </value>
+            <value>
+                <fullName>WKR-SW Shop Worker</fullName>
+                <default>false</default>
+                <label>WKR-SW Shop Worker</label>
+            </value>
+            <value>
+                <fullName>WKR-TD</fullName>
+                <default>false</default>
+                <label>WKR-TD Technical Director</label>
+            </value>
+            <value>
+                <fullName>(none)</fullName>
+                <default>false</default>
+                <label>(none)</label>
+            </value>
+            <value>
+                <fullName>CNT-MEDIA	 Media</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CNT-MEDIA	 Media</label>
+            </value>
+            <value>
+                <fullName>CNT-PS	         Press Staff</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CNT-PS	         Press Staff</label>
+            </value>
+            <value>
+                <fullName>CNT-RSS	 Radio Station Staff</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CNT-RSS	 Radio Station Staff</label>
+            </value>
+            <value>
+                <fullName>CNT-TS	         Television Staff</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CNT-TS	         Television Staff</label>
+            </value>
+            <value>
+                <fullName>MST	         Ministry Staff</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>MST	         Ministry Staff</label>
+            </value>
+            <value>
+                <fullName>PRO-HBCAT	 HB Catalyst</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PRO-HBCAT	 HB Catalyst</label>
+            </value>
+            <value>
+                <fullName>PRO-HBTS	 HB Team Staff</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PRO-HBTS	 HB Team Staff</label>
+            </value>
+            <value>
+                <fullName>PRO-PR	         Ministry Rep (Key Contact)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PRO-PR	         Ministry Rep (Key Contact)</label>
+            </value>
+            <value>
+                <fullName>PRO-PRONS	 Ministry Rep Onsite</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PRO-PRONS	 Ministry Rep Onsite</label>
+            </value>
+            <value>
+                <fullName>PRO-PRT	 Staff Rep Training</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PRO-PRT	 Staff Rep Training</label>
+            </value>
+            <value>
+                <fullName>PRO-SM	         Senior Manager</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PRO-SM	         Senior Manager</label>
+            </value>
+            <value>
+                <fullName>SPK-ALF	         Alumni Session (Female)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SPK-ALF	         Alumni Session (Female)</label>
+            </value>
+            <value>
+                <fullName>SPK-ALM	 Alumni Session (Male)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SPK-ALM	 Alumni Session (Male)</label>
+            </value>
+            <value>
+                <fullName>SPK-AOM	 Art of Marriage Live</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SPK-AOM	 Art of Marriage Live</label>
+            </value>
+            <value>
+                <fullName>SPK-CHILD	 Wife with Children at home</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SPK-CHILD	 Wife with Children at home</label>
+            </value>
+            <value>
+                <fullName>SPK-MC	         Emcee</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SPK-MC	         Emcee</label>
+            </value>
+            <value>
+                <fullName>SPK-STF	         Trainee (Female)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SPK-STF	         Trainee (Female)</label>
+            </value>
+            <value>
+                <fullName>SPK-STM	 Trainee (Male)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SPK-STM	 Trainee (Male)</label>
+            </value>
+            <value>
+                <fullName>SPK-TRF	         Trainer (Female)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SPK-TRF	         Trainer (Female)</label>
+            </value>
+            <value>
+                <fullName>SPK-TRM	 Trainer (Male)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>SPK-TRM	 Trainer (Male)</label>
+            </value>
+            <value>
+                <fullName>STF-APT	         Associate Planner Training</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>STF-APT	         Associate Planner Training</label>
+            </value>
+            <value>
+                <fullName>STF-AV	         IMAG AV Tech</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>STF-AV	         IMAG AV Tech</label>
+            </value>
+            <value>
+                <fullName>STF-AVT	         IMAG AV Tech Training</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>STF-AVT	         IMAG AV Tech Training</label>
+            </value>
+            <value>
+                <fullName>STF-COACH	 Ministry Advisor</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>STF-COACH	 Ministry Advisor</label>
+            </value>
+            <value>
+                <fullName>STF-DEV	         Development Donor Rep</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>STF-DEV	         Development Donor Rep</label>
+            </value>
+            <value>
+                <fullName>STF-GEN	 General</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>STF-GEN	 General</label>
+            </value>
+            <value>
+                <fullName>STF-HR	         Human Resources Representative</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>STF-HR	         Human Resources Representative</label>
+            </value>
+            <value>
+                <fullName>STF-INS	         Inspection Trip</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>STF-INS	         Inspection Trip</label>
+            </value>
+            <value>
+                <fullName>STF-LEADER	 Volunteer Leader</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>STF-LEADER	 Volunteer Leader</label>
+            </value>
+            <value>
+                <fullName>STF-MAONS	 Ministry Advisor Onsite</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>STF-MAONS	 Ministry Advisor Onsite</label>
+            </value>
+            <value>
+                <fullName>STF-PA	         Production Assistant</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>STF-PA	         Production Assistant</label>
+            </value>
+            <value>
+                <fullName>STF-PAT	         Pastor Talk Host</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>STF-PAT	         Pastor Talk Host</label>
+            </value>
+            <value>
+                <fullName>STF-RCC	 Resource Center Coordinator</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>STF-RCC	 Resource Center Coordinator</label>
+            </value>
+            <value>
+                <fullName>STF-RCCT	 Resource Center Coord. Training</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>STF-RCCT	 Resource Center Coord. Training</label>
+            </value>
+            <value>
+                <fullName>STF-SAS	         Strategic Alliance Specialist</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>STF-SAS	         Strategic Alliance Specialist</label>
+            </value>
+            <value>
+                <fullName>STF-SP	         Senior Planner</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>STF-SP	         Senior Planner</label>
+            </value>
+            <value>
+                <fullName>STF-SPOUSE	 Spouse</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>STF-SPOUSE	 Spouse</label>
+            </value>
+            <value>
+                <fullName>STF-SPT	         Senior Planner Training</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>STF-SPT	         Senior Planner Training</label>
+            </value>
+            <value>
+                <fullName>STF-TD	         Technical Director</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>STF-TD	         Technical Director</label>
+            </value>
+            <value>
+                <fullName>WKR-AP	         Associate Planner</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WKR-AP	         Associate Planner</label>
+            </value>
+            <value>
+                <fullName>WKR-APT	 Associate Planner Training</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WKR-APT	 Associate Planner Training</label>
+            </value>
+            <value>
+                <fullName>WKR-AV	         AV Tech</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WKR-AV	         AV Tech</label>
+            </value>
+            <value>
+                <fullName>WKR-CAM	 Camera Operator</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WKR-CAM	 Camera Operator</label>
+            </value>
+            <value>
+                <fullName>WKR-GEN	 General</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WKR-GEN	 General</label>
+            </value>
+            <value>
+                <fullName>WKR-HBT	 HomeBuilders Table Host</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WKR-HBT	 HomeBuilders Table Host</label>
+            </value>
+            <value>
+                <fullName>WKR-PA	         Production Assistant</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WKR-PA	         Production Assistant</label>
+            </value>
+            <value>
+                <fullName>WKR-RC	         Resource Center</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WKR-RC	         Resource Center</label>
+            </value>
+            <value>
+                <fullName>WKR-RCC	 Resource Center Coordinator</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WKR-RCC	 Resource Center Coordinator</label>
+            </value>
+            <value>
+                <fullName>WKR-RCCT	 Resource Center Coord Training</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WKR-RCCT	 Resource Center Coord Training</label>
+            </value>
+            <value>
+                <fullName>WKR-REG	 Registration</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WKR-REG	 Registration</label>
+            </value>
+            <value>
+                <fullName>WKR-TD	         Technical Director</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>WKR-TD	         Technical Director</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Speaker</controllingFieldValue>
+            <valueName>SPK-CPL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Speaker</controllingFieldValue>
+            <valueName>SPK-NEF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Speaker</controllingFieldValue>
+            <valueName>SPK-NEM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Speaker</controllingFieldValue>
+            <valueName>SPK-NSS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Speaker</controllingFieldValue>
+            <valueName>SPK-EF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Speaker</controllingFieldValue>
+            <valueName>SPK-EM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Speaker</controllingFieldValue>
+            <valueName>SPK-SF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Speaker</controllingFieldValue>
+            <valueName>SPK-SM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Speaker</controllingFieldValue>
+            <valueName>SPK-SSEF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Speaker</controllingFieldValue>
+            <valueName>SPK-SSEM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Speaker</controllingFieldValue>
+            <valueName>SPK-SSF</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Speaker</controllingFieldValue>
+            <valueName>SPK-SSM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>CNT-DONOR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>CNT-MEDIA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>CNT-PS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>CNT-RSS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>CNT-TS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>MST</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>PRO-HBCAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>PRO-HBTS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>PRO-PPTL Prayer Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>PRO-PR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>PRO-PRONS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>PRO-PRT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>PRO-SM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>PRO-WTRD WTR Director</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>Select Role Detail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-AP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-APT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-AV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-AVT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-COACH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-DEV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-GEN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-HR</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-INS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-LEADER</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-MAONS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-PA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-PAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-PM Planner Manager</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-P</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-SAS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-SM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-SMT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-SPOUSE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-SP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-SPT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>STF-TD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>WKR-AP</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>WKR-APT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>WKR-AV</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>WKR-CAM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>WKR-GEN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>WKR-HBT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>WKR-PA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>WKR-REG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>WKR-SM</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>WKR-SMT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>WKR-SW Shop Worker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Worker</controllingFieldValue>
+            <valueName>WKR-TD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>Guide - FL Equip</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>Guide-EL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>Guide - EX</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>Guide - G</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>Guide - SGL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-CAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-CMD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-CMT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-COACH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-COM-CPTL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-CPTL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-FOL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-GEN</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-HBCAT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-HB</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-HBMS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-HBPD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-HBPT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-HBSFD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-HBT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-HED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-MED</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-MIL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-PPTL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Volunteer</controllingFieldValue>
+            <valueName>VOL-WTRD</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

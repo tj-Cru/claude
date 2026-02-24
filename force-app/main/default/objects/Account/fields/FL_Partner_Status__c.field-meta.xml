@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FL_Partner_Status__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(AND(FL_Partner__c = TRUE,FL_Partner_Soon__c = FALSE,FL_Parnter_Lapsed__c = FALSE), &apos;Active Partner&apos;,IF( AND(FL_Partner__c = TRUE,FL_Partner_Soon__c = TRUE,FL_Parnter_Lapsed__c = FALSE), &apos;Partner is Soon to Lapse&apos;,IF( AND(FL_Partner__c = TRUE,FL_Partner_Soon__c = TRUE,FL_Parnter_Lapsed__c = TRUE),&apos;Partner Lapsed&apos;,&apos;None&apos;)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Partner Status based on Giving History</inlineHelpText>
+    <label>Partner Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

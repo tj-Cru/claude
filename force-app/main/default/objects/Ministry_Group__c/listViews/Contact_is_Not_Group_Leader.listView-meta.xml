@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_is_Not_Group_Leader</fullName>
+    <columns>NAME</columns>
+    <columns>Start_Date__c</columns>
+    <columns>End_Date__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Event_Area_Code__c</columns>
+    <columns>External_Id__c</columns>
+    <columns>Group_Coordinator__c</columns>
+    <columns>Group_Household__c</columns>
+    <columns>All_Registrations__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Ministry_Rep__c</columns>
+    <columns>Primary_Church__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Contact_is_GC__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Group_Coordinator__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Contact is Not Group Leader</label>
+</ListView>

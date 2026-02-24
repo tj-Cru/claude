@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Address_Phone_Donor_Caseload_Change</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+NOT(
+OR(
+$Profile.Name = &apos;System Administrator&apos;,
+$Profile.Name = &apos;FL Development Administrator AV&apos;,
+$Profile.Name = &apos;FL Customer Community Login User&apos;,
+$Profile.Name = &apos;Chief FL Development Administrator AV&apos;,
+$User.Id = &apos;0053q00000CfcyZ&apos;
+)
+),
+OR(
+AND(
+ISCHANGED(  BillingAddress  ),
+Donor_Caseload_Lookup__c != Null,
+$User.Id != OwnerId
+),
+AND(
+ISCHANGED( ShippingAddress ),
+Donor_Caseload_Lookup__c != Null,
+$User.Id != OwnerId
+),
+AND(
+ISCHANGED(  Phone   ),
+Donor_Caseload_Lookup__c != Null,
+$User.Id != OwnerId
+)
+)
+)</errorConditionFormula>
+    <errorMessage>Account is on Caseload, Only the Caseload owner can update this field</errorMessage>
+</ValidationRule>

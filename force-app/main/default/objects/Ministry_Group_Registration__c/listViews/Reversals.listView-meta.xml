@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reversals</fullName>
+    <booleanFilter>1 AND ((2 AND 3) OR 4)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Contact__c</columns>
+    <columns>Confirmation_Number__c</columns>
+    <columns>Ministry_Group__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>CV_Paid__c</columns>
+    <columns>Status__c</columns>
+    <columns>Qty_Eligible__c</columns>
+    <columns>Qty_Ineligible__c</columns>
+    <columns>Qty_Used__c</columns>
+    <columns>Registration_Type__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>Registration_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>11/16/2023 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>Registration_Type__c</field>
+        <operation>equals</operation>
+        <value>GC Earned Pass</value>
+    </filters>
+    <filters>
+        <field>Registration_Status__c</field>
+        <operation>equals</operation>
+        <value>X - Cancelled,N - NoShow</value>
+    </filters>
+    <filters>
+        <field>Event_Type__c</field>
+        <operation>equals</operation>
+        <value>REV</value>
+    </filters>
+    <label>Reversals</label>
+</ListView>

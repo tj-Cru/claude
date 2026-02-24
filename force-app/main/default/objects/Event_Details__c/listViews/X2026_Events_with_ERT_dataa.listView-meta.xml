@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2026_Events_with_ERT_dataa</fullName>
+    <columns>NAME</columns>
+    <columns>Weeks__c</columns>
+    <columns>Conference_Location__c</columns>
+    <columns>City_1__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Estimated_Attendance__c</columns>
+    <columns>Attending__c</columns>
+    <columns>Capacity__c</columns>
+    <columns>Sell_To__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Stage__c</field>
+        <operation>equals</operation>
+        <value>Setup,Planning,Complete</value>
+    </filters>
+    <filters>
+        <field>Start_Date__c</field>
+        <operation>greaterThan</operation>
+        <value>9/1/2025</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>notContain</operation>
+        <value>test</value>
+    </filters>
+    <filters>
+        <field>Start_Date__c</field>
+        <operation>lessThan</operation>
+        <value>8/30/2026</value>
+    </filters>
+    <label>2026 Events with ERT data</label>
+    <sharedTo>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

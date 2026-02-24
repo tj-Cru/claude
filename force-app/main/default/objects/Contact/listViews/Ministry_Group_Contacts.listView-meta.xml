@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ministry_Group_Contacts</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account.npo02__Informal_Greeting__c</columns>
+    <columns>Source_System__c</columns>
+    <columns>CventEvents__ContactStub__c</columns>
+    <columns>CONTACT.CREATED_DATE</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>CONTACT.ADDRESS2_STREET</columns>
+    <columns>CRU_PID__c</columns>
+    <columns>DD_Individual_ID__c</columns>
+    <columns>dupcheck__dc3Index__c</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>Suffix__c</columns>
+    <columns>Woo_CustomerUser__c</columns>
+    <columns>CV_Title_3__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CONTACT.CREATED_DATE</field>
+        <operation>greaterOrEqual</operation>
+        <value>3/11/2023 12:00 AM</value>
+    </filters>
+    <filters>
+        <field>Source_System__c</field>
+        <operation>equals</operation>
+        <value>Ministry Group</value>
+    </filters>
+    <label>Ministry Group Contacts</label>
+</ListView>

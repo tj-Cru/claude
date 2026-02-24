@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Caseload_List</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.SITE</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>Donor_Classification_Level__c</columns>
+    <columns>Cru_PID__c</columns>
+    <columns>DD_Family_ID__c</columns>
+    <columns>Legacy_Partner__c</columns>
+    <columns>ICP_Tier__c</columns>
+    <columns>IPP_Tier__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Caseload List</label>
+    <language>en_US</language>
+    <sharedTo>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

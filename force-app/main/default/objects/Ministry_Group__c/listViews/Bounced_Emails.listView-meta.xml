@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bounced_Emails</fullName>
+    <columns>NAME</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Contact_Email__c</columns>
+    <columns>Group_Email__c</columns>
+    <columns>End_Date__c</columns>
+    <columns>Event_Area_Code__c</columns>
+    <columns>External_Id__c</columns>
+    <columns>Group_Coordinator__c</columns>
+    <columns>Group_Household__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Ministry_Rep__c</columns>
+    <columns>Primary_Church__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Bounced Email</value>
+    </filters>
+    <label>Bounced Emails</label>
+</ListView>

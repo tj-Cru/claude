@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Att__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( AND(Event__r.End_Date__c &lt; TODAY(), TEXT(Status) = &apos;A - Attended&apos;), 1, IF (AND(Event__r.End_Date__c  &gt;= TODAY(),  TEXT(Status) = &apos;C - Confirmed&apos;),1,0))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Att</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

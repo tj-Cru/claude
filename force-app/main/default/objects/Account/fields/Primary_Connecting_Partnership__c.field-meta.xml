@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Primary_Connecting_Partnership__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Allows the user to select another organization as a primary relationship.</description>
+    <label>Primary Connecting Partnership</label>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Primary Connecting Partnership</relationshipLabel>
+    <relationshipName>Accounts_Households</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Lookup</type>
+</CustomField>

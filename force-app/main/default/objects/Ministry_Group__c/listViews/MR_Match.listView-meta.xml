@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MR_Match</fullName>
+    <columns>NAME</columns>
+    <columns>Group_Coordinator__c</columns>
+    <columns>Event_Area_Code__c</columns>
+    <columns>Ministry_Rep__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Ministry_Rep_Id__c</columns>
+    <columns>MR_Match__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Event_Area_Code__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>MR_Match__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Group_Coordinator__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <label>Ministry Rep Does Not Match</label>
+</ListView>

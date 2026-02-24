@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Partner_Status</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Donor_Caseload_Lookup__c</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>FL_welcomed__c</columns>
+    <columns>FL_Partner__c</columns>
+    <columns>FL_Partner_Soon__c</columns>
+    <columns>FL_Parnter_Lapsed__c</columns>
+    <columns>Giving_Last_Date__c</columns>
+    <columns>ACCOUNT.LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>FL_Partner__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Partner Status</label>
+    <sharedTo>
+        <group>Donor_Ops</group>
+        <group>Donor_Reps</group>
+        <group>System_Admins</group>
+    </sharedTo>
+</ListView>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Recommitment__c</fullName>
+    <description>Roll up of Registrations where Grow Marriage Recommitment was indicated on a survey</description>
+    <inlineHelpText>Roll up of Registrations where Grow Marriage Recommitment was indicated on a survey</inlineHelpText>
+    <label>Recommitment</label>
+    <summaryFilterItems>
+        <field>Ministry_Group_Registration__c.Recommit__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Ministry_Group_Registration__c.Ministry_Group__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

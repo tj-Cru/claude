@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Households_on_Caseload_with_No_Giving</fullName>
+    <columns>CORE.USERS.FIRST_NAME</columns>
+    <columns>CORE.USERS.LAST_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Donor_Caseload_Lookup__c</columns>
+    <columns>npsp__Number_of_Household_Members__c</columns>
+    <columns>Merge_Index__c</columns>
+    <columns>Cru_PID__c</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>ACCOUNT.LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>Giving_Count__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Household_Account</value>
+    </filters>
+    <filters>
+        <field>Donor_Caseload_Lookup__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Giving_Count__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>Households on Caseload with No Giving</label>
+</ListView>

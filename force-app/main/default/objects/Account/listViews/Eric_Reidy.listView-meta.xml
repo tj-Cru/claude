@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Eric_Reidy</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.SITE</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>Donor_Rep__c</columns>
+    <columns>Donor_Caseload_Lookup__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Donor_Caseload_Lookup__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Donor_Rep__c</field>
+        <operation>equals</operation>
+        <value>{!CurrentIUser}</value>
+    </filters>
+    <label>Testing</label>
+</ListView>

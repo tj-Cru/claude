@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mogle_Equals_Mobile</fullName>
+    <active>false</active>
+    <description>Checks to see if a mobile number matches the mogli text number</description>
+    <errorConditionFormula>AND(
+NOT(
+OR(
+$Profile.Name = &apos;System Administrator&apos;,
+$Profile.Name = &apos;FL Development Administrator AV&apos;
+)
+),
+AND(
+MobilePhone != Right( Mogli_SMS__Mogli_Number__c ,10)
+)
+)</errorConditionFormula>
+    <errorMessage>Set the mobile number to a 10 digit phone, no extra characters example 1112223333 and mogli number to the same, preceded by +1 example +111122233333</errorMessage>
+</ValidationRule>

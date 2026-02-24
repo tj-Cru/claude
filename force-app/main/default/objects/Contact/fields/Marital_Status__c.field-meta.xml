@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Marital_Status__c</fullName>
+    <label>Marital Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Single</fullName>
+                <default>false</default>
+                <label>Single (Never Married)</label>
+            </value>
+            <value>
+                <fullName>Married</fullName>
+                <default>false</default>
+                <label>Married</label>
+            </value>
+            <value>
+                <fullName>Divorced</fullName>
+                <default>false</default>
+                <label>Single (Previously Married)</label>
+            </value>
+            <value>
+                <fullName>Widowed</fullName>
+                <default>false</default>
+                <label>Widowed</label>
+            </value>
+            <value>
+                <fullName>Premarried</fullName>
+                <default>false</default>
+                <label>Premarried</label>
+            </value>
+            <value>
+                <fullName>Remarried</fullName>
+                <default>false</default>
+                <label>Remarried</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

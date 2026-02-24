@@ -1,0 +1,244 @@
+<template>
+    <div class="child-container">
+        <div class="child-header">
+            <div class="header-content slds-grid slds-grid_align-spread slds-grid_vertical-align-center">
+                <h2>{eventName} Registrations</h2>
+                
+                <div class="header-actions">
+                    <lightning-button-icon 
+                        icon-name="utility:back" 
+                        variant="border-filled" 
+                        alternative-text="Back" 
+                        onclick={handleBack}
+                        class="slds-m-right_x-small">
+                    </lightning-button-icon>
+
+                    <lightning-button-icon 
+                        icon-name="utility:refresh" 
+                        variant="border-filled" 
+                        alternative-text="Refresh List" 
+                        onclick={handleRefresh}
+                        class="refresh-button">
+                    </lightning-button-icon>
+                </div>
+            </div>
+        </div>
+
+        <div class="child-body">
+            
+            <div class="filters-container slds-grid slds-wrap slds-gutters_x-small slds-p-bottom_medium">
+                <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-4">
+                    <lightning-input 
+                        type="text" 
+                        label="First Name" 
+                        value={filterFirstName} 
+                        data-filter="firstName" 
+                        onchange={handleFilterChange}
+                        variant="label-stacked">
+                    </lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-4">
+                    <lightning-input 
+                        type="text" 
+                        label="Last Name"
+                        value={filterLastName} 
+                        data-filter="lastName" 
+                        onchange={handleFilterChange}
+                        variant="label-stacked">
+                    </lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-4">
+                    <lightning-input 
+                        type="text" 
+                        label="Zip Code" 
+                        value={filterZip}
+                        data-filter="zip" 
+                        onchange={handleFilterChange}
+                        variant="label-stacked">
+                    </lightning-input>
+                </div>
+                <div class="slds-col slds-size_1-of-2 slds-medium-size_1-of-4">
+                    <lightning-combobox
+                        label="Status"
+                        value={filterStatus}
+                        placeholder="All Statuses"
+                        options={statusOptions}
+                        onchange={handleFilterChange}
+                        data-filter="status"
+                        variant="label-stacked">
+                    </lightning-combobox>
+                </div>
+            </div>
+
+            <template lwc:if={isLoading}>
+                <div class="slds-is-relative slds-p-around_large">
+                    <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <template lwc:else>
+                <div class="results-container table-wrapper">
+                    <template lwc:if={hasResults}>
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_striped">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="" scope="col">
+                                        <div class="slds-truncate" title="Action">Check In</div>
+                                    </th>
+                                    <th class="slds-is-sortable slds-is-resizable" scope="col" onclick={handleSort} data-id="Name">
+                                        <a href="#" class="slds-th__action slds-text-link_reset" tabindex="0">
+                                            <span class="slds-assistive-text">Sort by: </span>
+                                            <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                                                <span class="slds-truncate" title="Name">Name</span>
+                                                <template lwc:if={sortedBy}>
+                                                    <template lwc:if={isNameSort}>
+                                                        <lightning-icon icon-name={sortIconName} size="xx-small" class="slds-m-left_xx-small"></lightning-icon>
+                                                    </template>
+                                                </template>
+                                            </div>
+                                        </a>
+                                    </th>
+                                    <th class="slds-is-sortable slds-is-resizable" scope="col" onclick={handleSort} data-id="Registration_Type__c">
+                                        <a href="#" class="slds-th__action slds-text-link_reset" tabindex="0">
+                                            <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                                                <span class="slds-truncate" title="Reg Type">Reg Type</span>
+                                                <template lwc:if={sortedBy}>
+                                                    <template lwc:if={isRegistrationTypeSort}>
+                                                        <lightning-icon icon-name={sortIconName} size="xx-small" class="slds-m-left_xx-small"></lightning-icon>
+                                                    </template>
+                                                </template>
+                                            </div>
+                                        </a>
+                                    </th>
+                                    <th class="slds-is-sortable slds-is-resizable" scope="col" onclick={handleSort} data-id="Registrant_Type__c">
+                                        <a href="#" class="slds-th__action slds-text-link_reset" tabindex="0">
+                                            <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                                                <span class="slds-truncate" title="Registrant Type">Registrant Type</span>
+                                                <template lwc:if={sortedBy}>
+                                                    <template lwc:if={isRegistrantTypeSort}>
+                                                        <lightning-icon icon-name={sortIconName} size="xx-small" class="slds-m-left_xx-small"></lightning-icon>
+                                                    </template>
+                                                </template>
+                                            </div>
+                                        </a>
+                                    </th>
+                                    <th class="slds-is-sortable slds-is-resizable" scope="col" onclick={handleSort} data-id="Contact_GC__c">
+                                        <a href="#" class="slds-th__action slds-text-link_reset" tabindex="0">
+                                            <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                                                <span class="slds-truncate" title="Group Owner">Group Owner</span>
+                                                <template lwc:if={sortedBy}>
+                                                    <template lwc:if={isGroupOwnerSort}>
+                                                        <lightning-icon icon-name={sortIconName} size="xx-small" class="slds-m-left_xx-small"></lightning-icon>
+                                                    </template>
+                                                </template>
+                                            </div>
+                                        </a>
+                                    </th>
+                                    <th class="slds-is-sortable slds-is-resizable" scope="col" onclick={handleSort} data-id="Waiver__c">
+                                        <a href="#" class="slds-th__action slds-text-link_reset" tabindex="0">
+                                            <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                                                <span class="slds-truncate" title="Waiver">Waiver</span>
+                                                <template lwc:if={sortedBy}>
+                                                    <template lwc:if={isWaiverSort}>
+                                                        <lightning-icon icon-name={sortIconName} size="xx-small" class="slds-m-left_xx-small"></lightning-icon>
+                                                    </template>
+                                                </template>
+                                            </div>
+                                        </a>
+                                    </th>
+                                    <th class="slds-is-sortable slds-is-resizable" scope="col" onclick={handleSort} data-id="Last_Event__c">
+                                        <a href="#" class="slds-th__action slds-text-link_reset" tabindex="0">
+                                            <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                                                <span class="slds-truncate" title="Last Event">Last Event</span>
+                                                <template lwc:if={sortedBy}>
+                                                    <template lwc:if={isLastEventSort}>
+                                                        <lightning-icon icon-name={sortIconName} size="xx-small" class="slds-m-left_xx-small"></lightning-icon>
+                                                    </template>
+                                                </template>
+                                            </div>
+                                        </a>
+                                    </th>
+                                    <th class="slds-is-sortable slds-is-resizable" scope="col" onclick={handleSort} data-id="Registration_Status__c">
+                                        <a href="#" class="slds-th__action slds-text-link_reset" tabindex="0">
+                                            <div class="slds-grid slds-grid_vertical-align-center slds-has-flexi-truncate">
+                                                <span class="slds-truncate" title="Status">Status</span>
+                                                <template lwc:if={sortedBy}>
+                                                    <template lwc:if={isStatusSort}>
+                                                        <lightning-icon icon-name={sortIconName} size="xx-small" class="slds-m-left_xx-small"></lightning-icon>
+                                                    </template>
+                                                </template>
+                                            </div>
+                                        </a>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template for:each={filteredRegistrations} for:item="reg">
+                                    <tr key={reg.Id} class="slds-hint-parent">
+                                        <td data-label="Check In">
+                                            <lightning-button 
+                                                label="Check In" 
+                                                variant="brand-outline"
+                                                onclick={handleCheckInClick}
+                                                data-external-id={reg.External_Registration_Id__c}
+                                                class="slds-truncate"
+                                                disabled={reg.isCheckedIn}>
+                                            </lightning-button>
+                                        </td>
+                                        <td data-label="Name">
+                                            <div class="slds-truncate" title={reg.Name}>
+                                                <a href="#" onclick={handleNameClick} data-record-id={reg.Id} class="wtr-link">{reg.Name}</a>
+                                            </div>
+                                        </td>
+                                        <td data-label="Reg Type">
+                                            <div class="slds-truncate" title={reg.Registration_Type__c}>{reg.Registration_Type__c}</div>
+                                        </td>
+                                        <td data-label="Registrant Type">
+                                            <div class="slds-truncate" title={reg.Registrant_Type__c}>{reg.Registrant_Type__c}</div>
+                                        </td>
+                                        <td data-label="Group Owner">
+                                            <div class="slds-truncate" title={reg.Contact_GC__c}>{reg.Contact_GC__c}</div>
+                                        </td>
+                                        <td data-label="Waiver">
+                                            <div class="slds-truncate" title={reg.Waiver__c}>{reg.Waiver__c}</div>
+                                        </td>
+                                        <td data-label="Last Event">
+                                            <div class="slds-truncate" title={reg.Last_Event__c}>
+                                                <lightning-formatted-date-time value={reg.Last_Event__c}></lightning-formatted-date-time>
+                                            </div>
+                                        </td>
+                                        <td data-label="Status">
+                                            <div class="slds-truncate" title={reg.Registration_Status__c}>
+                                                <span class="slds-badge status-badge">{reg.Registration_Status__c}</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                    </template>
+                    <template lwc:else>
+                        <div class="slds-text-align_center slds-p-around_medium text-weak">
+                            <p>No registrations found matching criteria.</p>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </div>
+
+    <template if:true={showCheckInModal}>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small" aria-modal="true">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <lightning-button-icon icon-name="utility:close" class="slds-modal__close" variant="bare-inverse" onclick={closeCheckInModal} alternative-text="Close"></lightning-button-icon>
+                    <h2 class="slds-text-heading_medium slds-hyphenate">Check In</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <lightning-flow flow-api-name="Registration_Screen_Flow_Check_In" flow-input-variables={checkInFlowInputs} onstatuschange={handleFlowStatusChange}></lightning-flow>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

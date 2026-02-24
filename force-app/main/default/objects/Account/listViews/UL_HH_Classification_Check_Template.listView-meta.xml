@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UL_HH_Classification_Check_Template</fullName>
+    <columns>Donor_Caseload_Lookup__c</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.SITE</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>Donor_Classification_Level__c</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Donor_Classification_Level__c</field>
+        <operation>notEqual</operation>
+        <value>FND,GV,ULP,ULQ,ULA,ULB,ULC,ULD,ULHP</value>
+    </filters>
+    <filters>
+        <field>Donor_Caseload_Lookup__c</field>
+        <operation>equals</operation>
+        <value>Jerry McCartney,Kevin Kelley,Eric Riedy,Mark Higinbotham,Steve Dillman,Randy Martin,Paul Shupe,Mark Claxton,Scott Mesker,Gene Haub,David Robbins</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Household_Account</value>
+    </filters>
+    <label>UL HH Classification Check Template</label>
+    <sharedTo>
+        <role>Development_Upper_Level</role>
+    </sharedTo>
+</ListView>

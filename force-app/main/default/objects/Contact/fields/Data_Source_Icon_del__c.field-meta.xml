@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Source_Icon_del__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ACTID__c &lt;&gt; &quot;&quot;, IMAGE(&quot;/servlet/servlet.FileDownload?file=015i0000002I0G2&quot;, &quot;ACT!&quot; ), 
+
+IF( GMID__c &lt;&gt; &quot;&quot;, IMAGE(&quot;/servlet/servlet.ImageServer?id=015i0000002I0G7&amp;oid=00DEc00000Z4Qlx&amp;lastMod=1408921142000&quot;, &quot;GM&quot; ), 
+
+IF( Dynamics_ID__c  &lt;&gt; &quot;&quot;, IMAGE(&quot;/servlet/servlet.ImageServer?id=015i0000002Hyzo&amp;oid=00DEc00000Z4Qlx&amp;lastMod=1399037431000&quot;, &quot;Dynamics&quot; ),
+
+If( MDM_Code__c &lt;&gt; &quot;&quot; , IMAGE( &quot;/servlet/servlet.ImageServer?id=015i0000002I0FY&amp;oid=00DEc00000Z4Qlx&amp;lastMod=1399037439000&quot;, &quot;DD&quot;),
+
+IF(  00Ni000000CKD8i   &lt;&gt; &quot;&quot;, IMAGE(&quot;/servlet/servlet.ImageServer?id=015i0000002I0Fd&amp;oid=00DEc00000Z4Qlx&amp;lastMod=1399037448000&quot;, &quot;Five9&quot; ),
+
+
+&quot;&quot;)))))</formula>
+    <label>Data Source</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

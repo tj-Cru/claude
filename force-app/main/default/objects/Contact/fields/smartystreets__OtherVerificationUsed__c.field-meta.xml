@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>smartystreets__OtherVerificationUsed__c</fullName>
+    <deprecated>false</deprecated>
+    <inlineHelpText>SmartyStreets, Google Maps, or UPS</inlineHelpText>
+    <label>Other Verification Used</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SmartyStreets</fullName>
+                <default>false</default>
+                <label>SmartyStreets</label>
+            </value>
+            <value>
+                <fullName>Google Maps</fullName>
+                <default>false</default>
+                <label>Google Maps</label>
+            </value>
+            <value>
+                <fullName>UPS</fullName>
+                <default>false</default>
+                <label>UPS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

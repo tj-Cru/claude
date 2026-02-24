@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Active_without_Ministry_Rep</fullName>
+    <columns>NAME</columns>
+    <columns>End_Date__c</columns>
+    <columns>Event_Area_Code__c</columns>
+    <columns>Group_Coordinator__c</columns>
+    <columns>Group_Household__c</columns>
+    <columns>All_Registrations__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Ministry_Rep__c</columns>
+    <columns>Account_Event_Area__c</columns>
+    <columns>Address__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Ministry_Rep__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <label>Active without Ministry Rep</label>
+</ListView>

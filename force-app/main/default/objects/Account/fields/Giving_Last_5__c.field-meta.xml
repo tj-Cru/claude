@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Giving_Last_5__c</fullName>
+    <inlineHelpText>Amount given over the last five calendar years.</inlineHelpText>
+    <label>Giving Last 5</label>
+    <summarizedField>Donation__c.Gift_Amount__c</summarizedField>
+    <summaryFilterItems>
+        <field>Donation__c.Year__c</field>
+        <operation>greaterOrEqual</operation>
+        <value>2020</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Donation__c.Account_Household__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

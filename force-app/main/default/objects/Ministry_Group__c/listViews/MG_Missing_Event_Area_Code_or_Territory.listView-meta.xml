@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MG_Missing_Event_Area_Code_or_Territory</fullName>
+    <columns>NAME</columns>
+    <columns>Group_Coordinator__c</columns>
+    <columns>Status__c</columns>
+    <columns>Event_Area_Code__c</columns>
+    <columns>Event_Territory__c</columns>
+    <columns>Address__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Ministry_Rep__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Event_Area_Code__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Event_Territory__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <label>MG Missing Event Area Code or Territory</label>
+</ListView>

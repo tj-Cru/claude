@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Primary_Staff__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( Donor_Level__c = &quot;Mid&quot;, IMAGE (&quot;https://familylife--c.vf.force.com/resource/1753282226000/Flashing_Yellow_Circle&quot;,&quot;YEL&quot;,27,40),
+
+    (IF( Donor_Level__c = &quot;Upper&quot;, IMAGE(&quot;https://familylife--c.vf.force.com/resource/1753282226000/Flashing_Red_Circle&quot;,&quot;RED&quot;,27,40),
+
+         (IF(NOT(ISBLANK(Primary_Relationship__c)), IMAGE(&quot;https://familylife--c.na56.content.force.com/sfc/servlet.shepherd/version/renditionDownload?rendition=ORIGINAL_Gif&amp;versionId=0680Z0000071t4Z&amp;operationContext=CHATTER&amp;contentId=05T0Z00000JqplX&quot;,&quot;&quot;,27,40),&quot;&quot;)))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Please contact Primary Staff Member below before making contact with this constituent.</inlineHelpText>
+    <label>On Caseload</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

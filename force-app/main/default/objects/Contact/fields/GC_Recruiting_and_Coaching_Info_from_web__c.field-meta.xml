@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GC_Recruiting_and_Coaching_Info_from_web__c</fullName>
+    <description>This LOCKED  field is used to capture Volunteer input from their efforts in making GC recruiting and coaching calls.   The field is only available for text capture and to be mapped to SE so that this information can be brought forth onto the Phone Bank report in the future.</description>
+    <inlineHelpText>This LOCKED  field is used to capture Volunteer input from their efforts in making GC recruiting and coaching calls.   The field is only available for text capture and to be mapped to SE so that this information can be brought forth onto the Phone Bank re</inlineHelpText>
+    <label>GC Recruiting and Coaching Info from web</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>TextArea</type>
+</CustomField>

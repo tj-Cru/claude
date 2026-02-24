@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Confrence_Hotel_Same__c</fullName>
+    <formula>IF(ISNULL(Hotel_Location__c),TRUE,IF(Conference_Location__c =  Hotel_Location__c, TRUE, FALSE))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Confrence Hotel Same</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

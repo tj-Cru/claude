@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Global_Staff_Classification__c</fullName>
+    <description>Cru/FamilyLife Staff Classification for people serving in a Global Role.</description>
+    <label>Global Staff Classification</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>N/A</fullName>
+                <default>true</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>CCC Staff - FamilyLife IS their primary responsibility</fullName>
+                <default>false</default>
+                <label>CCC Staff - FamilyLife IS their primary responsibility</label>
+            </value>
+            <value>
+                <fullName>CCC Staff - FamilyLife is NOT their primary responsibility</fullName>
+                <default>false</default>
+                <label>CCC Staff - FamilyLife is NOT their primary responsibility</label>
+            </value>
+            <value>
+                <fullName>CCC Staff - Other (e.g. Affiliate, Part Time Staff, etc.)</fullName>
+                <default>false</default>
+                <label>CCC Staff - Other (e.g. Affiliate, Part Time Staff, etc.)</label>
+            </value>
+            <value>
+                <fullName>FamilyLife Volunteer</fullName>
+                <default>false</default>
+                <label>FamilyLife Volunteer</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

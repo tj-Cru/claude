@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Security_Token__c</fullName>
+    <externalId>false</externalId>
+    <formula>SUBSTITUTE( Left(  Name  ,1)&amp;Left( Name,1)&amp;RIGHT(TEXT(TIMENOW()),4)&amp;Right(  Group_Coordinator__c,4  ), &quot;.&quot;, &quot;X&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Security Token</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

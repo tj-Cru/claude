@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Donor_Active_Mail_Merge_Lists__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAl(Account.Donor_Conf_Certs__c, &quot;Active&quot;), &quot;Conf Certs,&quot;, &apos;&apos;) &amp; 
+IF( ISPICKVAl(Account.Donor_Letter_1__c, &quot;Active&quot;), &quot; Fund Appeal,&quot;,  &apos;&apos;) &amp; 
+IF( ISPICKVAl(Account.Donor_Fund_Events__c , &quot;Active&quot;), &quot; Fund Events,&quot;,  &apos;&apos;) &amp; 
+IF( ISPICKVAl(Account.Donor_Gifts__c, &quot;Active&quot;), &quot; Gifts,&quot;,  &apos;&apos;) &amp; 
+IF( ISPICKVAl(Account.Donor_Info_Mail_Update__c, &quot;Active&quot;), &quot; Info Mail Update,&quot;,  &apos;&apos;) &amp; 
+IF( ISPICKVAl(Account.Donor_Ministry_Reports__c , &quot;Active&quot;), &quot; Ministry Reports,&quot;,  &apos;&apos;)</formula>
+    <label>Donor Active Mail Merge Lists</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

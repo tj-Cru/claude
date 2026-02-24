@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>xEvent_Area_Code__c</fullName>
+    <label>xEvent Area Code</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A-ABY | Albany</fullName>
+                <default>false</default>
+                <label>A-ABY | Albany</label>
+            </value>
+            <value>
+                <fullName>A-AGS | Augusta</fullName>
+                <default>false</default>
+                <label>A-AGS | Augusta</label>
+            </value>
+            <value>
+                <fullName>A-ALB | Albuquerque</fullName>
+                <default>false</default>
+                <label>A-ALB | Albuquerque</label>
+            </value>
+            <value>
+                <fullName>A-ANC | Anchorage</fullName>
+                <default>false</default>
+                <label>A-ANC | Anchorage</label>
+            </value>
+            <value>
+                <fullName>A-ATL | Atlanta</fullName>
+                <default>false</default>
+                <label>A-ATL | Atlanta</label>
+            </value>
+            <value>
+                <fullName>A-AUS | Austin</fullName>
+                <default>false</default>
+                <label>A-AUS | Austin</label>
+            </value>
+            <value>
+                <fullName>A-AVL | Asheville</fullName>
+                <default>false</default>
+                <label>A-AVL | Asheville</label>
+            </value>
+            <value>
+                <fullName>A-AZO | Kalamazoo</fullName>
+                <default>false</default>
+                <label>A-AZO | Kalamazoo</label>
+            </value>
+            <value>
+                <fullName>A-BIL | Billings</fullName>
+                <default>false</default>
+                <label>A-BIL | Billings</label>
+            </value>
+            <value>
+                <fullName>A-BIR | Alabama North</fullName>
+                <default>false</default>
+                <label>A-BIR | Alabama North</label>
+            </value>
+            <value>
+                <fullName>A-BLI | Bellingham</fullName>
+                <default>false</default>
+                <label>A-BLI | Bellingham</label>
+            </value>
+            <value>
+                <fullName>A-BND | Central Oregon</fullName>
+                <default>false</default>
+                <label>A-BND | Central Oregon</label>
+            </value>
+            <value>
+                <fullName>A-BOI | Boise</fullName>
+                <default>false</default>
+                <label>A-BOI | Boise</label>
+            </value>
+            <value>
+                <fullName>A-BOS | Boston</fullName>
+                <default>false</default>
+                <label>A-BOS | Boston</label>
+            </value>
+            <value>
+                <fullName>A-BRN | Branson</fullName>
+                <default>false</default>
+                <label>A-BRN | Branson</label>
+            </value>
+            <value>
+                <fullName>A-BRO | South Padre Island</fullName>
+                <default>false</default>
+                <label>A-BRO | South Padre Island</label>
+            </value>
+            <value>
+                <fullName>A-BVT | Burlington</fullName>
+                <default>false</default>
+                <label>A-BVT | Burlington</label>
+            </value>
+            <value>
+                <fullName>A-BWI | Capital Metro - MD</fullName>
+                <default>false</default>
+                <label>A-BWI | Capital Metro - MD</label>
+            </value>
+            <value>
+                <fullName>A-CAK | Akron</fullName>
+                <default>false</default>
+                <label>A-CAK | Akron</label>
+            </value>
+            <value>
+                <fullName>A-CHA | Chattanooga</fullName>
+                <default>false</default>
+                <label>A-CHA | Chattanooga</label>
+            </value>
+            <value>
+                <fullName>A-CHI | Chicago</fullName>
+                <default>false</default>
+                <label>A-CHI | Chicago</label>
+            </value>
+            <value>
+                <fullName>A-CHS | Charleston, SC</fullName>
+                <default>false</default>
+                <label>A-CHS | Charleston, SC</label>
+            </value>
+            <value>
+                <fullName>A-CID | Cedar Rapids</fullName>
+                <default>false</default>
+                <label>A-CID | Cedar Rapids</label>
+            </value>
+            <value>
+                <fullName>A-CIN | Cincinnati</fullName>
+                <default>false</default>
+                <label>A-CIN | Cincinnati</label>
+            </value>
+            <value>
+                <fullName>A-CLE | Cleveland</fullName>
+                <default>false</default>
+                <label>A-CLE | Cleveland</label>
+            </value>
+            <value>
+                <fullName>A-CLT | Charlotte</fullName>
+                <default>false</default>
+                <label>A-CLT | Charlotte</label>
+            </value>
+            <value>
+                <fullName>A-CMH | Columbus</fullName>
+                <default>false</default>
+                <label>A-CMH | Columbus</label>
+            </value>
+            <value>
+                <fullName>A-COS | Colorado Springs</fullName>
+                <default>false</default>
+                <label>A-COS | Colorado Springs</label>
+            </value>
+            <value>
+                <fullName>A-CRP | Corpus Christi</fullName>
+                <default>false</default>
+                <label>A-CRP | Corpus Christi</label>
+            </value>
+            <value>
+                <fullName>A-DAL | Dallas</fullName>
+                <default>false</default>
+                <label>A-DAL | Dallas</label>
+            </value>
+            <value>
+                <fullName>A-DAY | Dayton</fullName>
+                <default>false</default>
+                <label>A-DAY | Dayton</label>
+            </value>
+            <value>
+                <fullName>A-DCA | Capital Metro - DC</fullName>
+                <default>false</default>
+                <label>A-DCA | Capital Metro - DC</label>
+            </value>
+            <value>
+                <fullName>A-DEN | Denver</fullName>
+                <default>false</default>
+                <label>A-DEN | Denver</label>
+            </value>
+            <value>
+                <fullName>A-DES | Des Moines</fullName>
+                <default>false</default>
+                <label>A-DES | Des Moines</label>
+            </value>
+            <value>
+                <fullName>A-DET | Detroit</fullName>
+                <default>false</default>
+                <label>A-DET | Detroit</label>
+            </value>
+            <value>
+                <fullName>A-DOV | Dover</fullName>
+                <default>false</default>
+                <label>A-DOV | Dover</label>
+            </value>
+            <value>
+                <fullName>A-DTS | Destin</fullName>
+                <default>false</default>
+                <label>A-DTS | Destin</label>
+            </value>
+            <value>
+                <fullName>A-EUG | Eugene</fullName>
+                <default>false</default>
+                <label>A-EUG | Eugene</label>
+            </value>
+            <value>
+                <fullName>A-FAR | Fargo</fullName>
+                <default>false</default>
+                <label>A-FAR | Fargo</label>
+            </value>
+            <value>
+                <fullName>A-FAT | Fresno</fullName>
+                <default>false</default>
+                <label>A-FAT | Fresno</label>
+            </value>
+            <value>
+                <fullName>A-FTL | Fort Lauderdale</fullName>
+                <default>false</default>
+                <label>A-FTL | Fort Lauderdale</label>
+            </value>
+            <value>
+                <fullName>A-FTW | Fort Worth</fullName>
+                <default>false</default>
+                <label>A-FTW | Fort Worth</label>
+            </value>
+            <value>
+                <fullName>A-FWY | Fort Wayne</fullName>
+                <default>false</default>
+                <label>A-FWY | Fort Wayne</label>
+            </value>
+            <value>
+                <fullName>A-GRB | Appleton/Green Bay</fullName>
+                <default>false</default>
+                <label>A-GRB | Appleton/Green Bay</label>
+            </value>
+            <value>
+                <fullName>A-GRR | Grand Rapids</fullName>
+                <default>false</default>
+                <label>A-GRR | Grand Rapids</label>
+            </value>
+            <value>
+                <fullName>A-GSO | Greensboro</fullName>
+                <default>false</default>
+                <label>A-GSO | Greensboro</label>
+            </value>
+            <value>
+                <fullName>A-HNL | Oahu</fullName>
+                <default>false</default>
+                <label>A-HNL | Oahu</label>
+            </value>
+            <value>
+                <fullName>A-HOU | Houston</fullName>
+                <default>false</default>
+                <label>A-HOU | Houston</label>
+            </value>
+            <value>
+                <fullName>A-HSN | Hershey</fullName>
+                <default>false</default>
+                <label>A-HSN | Hershey</label>
+            </value>
+            <value>
+                <fullName>A-HTF | Hartford</fullName>
+                <default>false</default>
+                <label>A-HTF | Hartford</label>
+            </value>
+            <value>
+                <fullName>A-IAD | Capital Metro - VA</fullName>
+                <default>false</default>
+                <label>A-IAD | Capital Metro - VA</label>
+            </value>
+            <value>
+                <fullName>A-IND | Indianapolis</fullName>
+                <default>false</default>
+                <label>A-IND | Indianapolis</label>
+            </value>
+            <value>
+                <fullName>A-IRV | Irvine</fullName>
+                <default>false</default>
+                <label>A-IRV | Irvine</label>
+            </value>
+            <value>
+                <fullName>A-JAN | Jackson</fullName>
+                <default>false</default>
+                <label>A-JAN | Jackson</label>
+            </value>
+            <value>
+                <fullName>A-JAX | Jacksonville</fullName>
+                <default>false</default>
+                <label>A-JAX | Jacksonville</label>
+            </value>
+            <value>
+                <fullName>A-KNC | Kansas City</fullName>
+                <default>false</default>
+                <label>A-KNC | Kansas City</label>
+            </value>
+            <value>
+                <fullName>A-KNO | Knoxville</fullName>
+                <default>false</default>
+                <label>A-KNO | Knoxville</label>
+            </value>
+            <value>
+                <fullName>A-LAN | Lansing</fullName>
+                <default>false</default>
+                <label>A-LAN | Lansing</label>
+            </value>
+            <value>
+                <fullName>A-LAS | Las Vegas</fullName>
+                <default>false</default>
+                <label>A-LAS | Las Vegas</label>
+            </value>
+            <value>
+                <fullName>A-LAX | Los Angeles</fullName>
+                <default>false</default>
+                <label>A-LAX | Los Angeles</label>
+            </value>
+            <value>
+                <fullName>A-LGI | Long Island</fullName>
+                <default>false</default>
+                <label>A-LGI | Long Island</label>
+            </value>
+            <value>
+                <fullName>A-LIT | Little Rock</fullName>
+                <default>false</default>
+                <label>A-LIT | Little Rock</label>
+            </value>
+            <value>
+                <fullName>A-LKT | Lake Tahoe</fullName>
+                <default>false</default>
+                <label>A-LKT | Lake Tahoe</label>
+            </value>
+            <value>
+                <fullName>A-LVL | Louisville</fullName>
+                <default>false</default>
+                <label>A-LVL | Louisville</label>
+            </value>
+            <value>
+                <fullName>A-MEM | Memphis</fullName>
+                <default>false</default>
+                <label>A-MEM | Memphis</label>
+            </value>
+            <value>
+                <fullName>A-MGW | Alabama South</fullName>
+                <default>false</default>
+                <label>A-MGW | Alabama South</label>
+            </value>
+            <value>
+                <fullName>A-MIA | Miami</fullName>
+                <default>false</default>
+                <label>A-MIA | Miami</label>
+            </value>
+            <value>
+                <fullName>A-MIL | Milwaukee</fullName>
+                <default>false</default>
+                <label>A-MIL | Milwaukee</label>
+            </value>
+            <value>
+                <fullName>A-MIN | Minneapolis</fullName>
+                <default>false</default>
+                <label>A-MIN | Minneapolis</label>
+            </value>
+            <value>
+                <fullName>A-MON | Monterey</fullName>
+                <default>false</default>
+                <label>A-MON | Monterey</label>
+            </value>
+            <value>
+                <fullName>A-MSN | Madison</fullName>
+                <default>false</default>
+                <label>A-MSN | Madison</label>
+            </value>
+            <value>
+                <fullName>A-MYR | Myrtle Beach</fullName>
+                <default>false</default>
+                <label>A-MYR | Myrtle Beach</label>
+            </value>
+            <value>
+                <fullName>A-NEW | Newport</fullName>
+                <default>false</default>
+                <label>A-NEW | Newport</label>
+            </value>
+            <value>
+                <fullName>A-NFK | Norfolk</fullName>
+                <default>false</default>
+                <label>A-NFK | Norfolk</label>
+            </value>
+            <value>
+                <fullName>A-NGF | Niagara Falls</fullName>
+                <default>false</default>
+                <label>A-NGF | Niagara Falls</label>
+            </value>
+            <value>
+                <fullName>A-NOR | New Orleans</fullName>
+                <default>false</default>
+                <label>A-NOR | New Orleans</label>
+            </value>
+            <value>
+                <fullName>A-NSV | Nashville</fullName>
+                <default>false</default>
+                <label>A-NSV | Nashville</label>
+            </value>
+            <value>
+                <fullName>A-NWA | Northwest Arkansas</fullName>
+                <default>false</default>
+                <label>A-NWA | Northwest Arkansas</label>
+            </value>
+            <value>
+                <fullName>A-NWJ | Parsippany</fullName>
+                <default>false</default>
+                <label>A-NWJ | Parsippany</label>
+            </value>
+            <value>
+                <fullName>A-OKC | Oklahoma City</fullName>
+                <default>false</default>
+                <label>A-OKC | Oklahoma City</label>
+            </value>
+            <value>
+                <fullName>A-OMA | Omaha</fullName>
+                <default>false</default>
+                <label>A-OMA | Omaha</label>
+            </value>
+            <value>
+                <fullName>A-ONT | Ontario</fullName>
+                <default>false</default>
+                <label>A-ONT | Ontario</label>
+            </value>
+            <value>
+                <fullName>A-ORL | Orlando</fullName>
+                <default>false</default>
+                <label>A-ORL | Orlando</label>
+            </value>
+            <value>
+                <fullName>A-PBI | Palm Beach (Delray Beach)</fullName>
+                <default>false</default>
+                <label>A-PBI | Palm Beach (Delray Beach)</label>
+            </value>
+            <value>
+                <fullName>A-PDX | Portland, OR</fullName>
+                <default>false</default>
+                <label>A-PDX | Portland, OR</label>
+            </value>
+            <value>
+                <fullName>A-PHF | Williamsburg</fullName>
+                <default>false</default>
+                <label>A-PHF | Williamsburg</label>
+            </value>
+            <value>
+                <fullName>A-PHL | Philadelphia</fullName>
+                <default>false</default>
+                <label>A-PHL | Philadelphia</label>
+            </value>
+            <value>
+                <fullName>A-PHO | Phoenix</fullName>
+                <default>false</default>
+                <label>A-PHO | Phoenix</label>
+            </value>
+            <value>
+                <fullName>A-PIA | Peoria</fullName>
+                <default>false</default>
+                <label>A-PIA | Peoria</label>
+            </value>
+            <value>
+                <fullName>A-PIT | Pittsburgh</fullName>
+                <default>false</default>
+                <label>A-PIT | Pittsburgh</label>
+            </value>
+            <value>
+                <fullName>A-POC | Poconos</fullName>
+                <default>false</default>
+                <label>A-POC | Poconos</label>
+            </value>
+            <value>
+                <fullName>A-PSC | Columbia Basin</fullName>
+                <default>false</default>
+                <label>A-PSC | Columbia Basin</label>
+            </value>
+            <value>
+                <fullName>A-PWM | Portland, ME</fullName>
+                <default>false</default>
+                <label>A-PWM | Portland, ME</label>
+            </value>
+            <value>
+                <fullName>A-RAL | Raleigh</fullName>
+                <default>false</default>
+                <label>A-RAL | Raleigh</label>
+            </value>
+            <value>
+                <fullName>A-RAP | Rapid City</fullName>
+                <default>false</default>
+                <label>A-RAP | Rapid City</label>
+            </value>
+            <value>
+                <fullName>A-RIC | Richmond</fullName>
+                <default>false</default>
+                <label>A-RIC | Richmond</label>
+            </value>
+            <value>
+                <fullName>A-ROA | Roanoke</fullName>
+                <default>false</default>
+                <label>A-ROA | Roanoke</label>
+            </value>
+            <value>
+                <fullName>A-RSW | Fort Myers</fullName>
+                <default>false</default>
+                <label>A-RSW | Fort Myers</label>
+            </value>
+            <value>
+                <fullName>A-SAC | Sacramento</fullName>
+                <default>false</default>
+                <label>A-SAC | Sacramento</label>
+            </value>
+            <value>
+                <fullName>A-SAT | San Antonio</fullName>
+                <default>false</default>
+                <label>A-SAT | San Antonio</label>
+            </value>
+            <value>
+                <fullName>A-SAV | Savannah (Hilton Head)</fullName>
+                <default>false</default>
+                <label>A-SAV | Savannah (Hilton Head)</label>
+            </value>
+            <value>
+                <fullName>A-SEA | Seattle</fullName>
+                <default>false</default>
+                <label>A-SEA | Seattle</label>
+            </value>
+            <value>
+                <fullName>A-SFO | San Francisco</fullName>
+                <default>false</default>
+                <label>A-SFO | San Francisco</label>
+            </value>
+            <value>
+                <fullName>A-SHV | Shreveport</fullName>
+                <default>false</default>
+                <label>A-SHV | Shreveport</label>
+            </value>
+            <value>
+                <fullName>A-SKT | Stockton</fullName>
+                <default>false</default>
+                <label>A-SKT | Stockton</label>
+            </value>
+            <value>
+                <fullName>A-SLC | Salt Lake City</fullName>
+                <default>false</default>
+                <label>A-SLC | Salt Lake City</label>
+            </value>
+            <value>
+                <fullName>A-SNC | Santa Clara</fullName>
+                <default>false</default>
+                <label>A-SNC | Santa Clara</label>
+            </value>
+            <value>
+                <fullName>A-SND | San Diego</fullName>
+                <default>false</default>
+                <label>A-SND | San Diego</label>
+            </value>
+            <value>
+                <fullName>A-SNR | San Ramon</fullName>
+                <default>false</default>
+                <label>A-SNR | San Ramon</label>
+            </value>
+            <value>
+                <fullName>A-SPK | Spokane</fullName>
+                <default>false</default>
+                <label>A-SPK | Spokane</label>
+            </value>
+            <value>
+                <fullName>A-STL | Saint Louis</fullName>
+                <default>false</default>
+                <label>A-STL | Saint Louis</label>
+            </value>
+            <value>
+                <fullName>A-STS | Sonoma</fullName>
+                <default>false</default>
+                <label>A-STS | Sonoma</label>
+            </value>
+            <value>
+                <fullName>A-SXF | Sioux Falls</fullName>
+                <default>false</default>
+                <label>A-SXF | Sioux Falls</label>
+            </value>
+            <value>
+                <fullName>A-SYR | Syracuse</fullName>
+                <default>false</default>
+                <label>A-SYR | Syracuse</label>
+            </value>
+            <value>
+                <fullName>A-TDZ | Toledo</fullName>
+                <default>false</default>
+                <label>A-TDZ | Toledo</label>
+            </value>
+            <value>
+                <fullName>A-TPA | Tampa</fullName>
+                <default>false</default>
+                <label>A-TPA | Tampa</label>
+            </value>
+            <value>
+                <fullName>A-TUL | Tulsa</fullName>
+                <default>false</default>
+                <label>A-TUL | Tulsa</label>
+            </value>
+            <value>
+                <fullName>A-TUS | Tucson</fullName>
+                <default>false</default>
+                <label>A-TUS | Tucson</label>
+            </value>
+            <value>
+                <fullName>A-VEN | Ventura</fullName>
+                <default>false</default>
+                <label>A-VEN | Ventura</label>
+            </value>
+            <value>
+                <fullName>A-WCH | Wichita</fullName>
+                <default>false</default>
+                <label>A-WCH | Wichita</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

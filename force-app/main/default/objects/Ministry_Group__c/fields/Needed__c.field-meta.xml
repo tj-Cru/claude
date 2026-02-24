@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Needed__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(10 - (Eligible_Registrations__c -(Couples_Eligible__c *10)) &gt;0,10 - (Eligible_Registrations__c -(Couples_Eligible__c *10)),0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Needed registrations to get the next Couples Eligible 10-Progress</inlineHelpText>
+    <label>Needed</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

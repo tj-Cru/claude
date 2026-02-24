@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Email_Other_Type__c</fullName>
+    <label>Email (Other) Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Home</fullName>
+                <default>false</default>
+                <label>Home</label>
+            </value>
+            <value>
+                <fullName>Work</fullName>
+                <default>false</default>
+                <label>Work</label>
+            </value>
+            <value>
+                <fullName>Spouse Home</fullName>
+                <default>false</default>
+                <label>Spouse Home</label>
+            </value>
+            <value>
+                <fullName>Spouse Work</fullName>
+                <default>false</default>
+                <label>Spouse Work</label>
+            </value>
+            <value>
+                <fullName>Spouse Mobile</fullName>
+                <default>false</default>
+                <label>Spouse Mobile</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

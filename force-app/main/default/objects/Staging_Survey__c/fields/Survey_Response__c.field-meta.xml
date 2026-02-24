@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Survey_Response__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Survey Response</label>
+    <referenceTo>Survey_Response__c</referenceTo>
+    <relationshipLabel>Staging Surveys</relationshipLabel>
+    <relationshipName>Staging_Surveys</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

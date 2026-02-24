@@ -1,0 +1,3002 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Former_Household</fullName>
+    <active>true</active>
+    <description>Used to facilitate dissolved households from divorce or death from a donor aspect</description>
+    <label>Former Household</label>
+    <picklistValues>
+        <picklist>AccountSource</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advertisement - Radio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Church</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Events FL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Events Non-FL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FL Today Broadcast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kit Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral - External %28Family%2FFriend%2E%2E%2E%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral - Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminar - Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminar - Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website - FL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website - Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCC_Area__c</picklist>
+        <values>
+            <fullName>Western Europe</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>CCM_Completed__c</picklist>
+        <values>
+            <fullName>CCM 1 - DON%27T KNOW</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCM 2 - CONTACT INFO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCM 3 - TIME %26 EFFORT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCM 4 - FIRST TRANS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCM 5 - REPEAT TRANS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCM 6 - CROSSOVER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCM 7 - REPEAT CROSSOVER</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCM 8 - ALL THREE TYPES</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CCM 9 - PROCLAIM</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Church_Ministries__c</picklist>
+        <values>
+            <fullName>Blended Marriage Ministry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marriage Ministry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Men%27s Ministry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Military Ministry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Women%27s Ministry</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Church_Size__c</picklist>
+        <values>
+            <fullName>0-50</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>10000%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1001-2000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>101-200</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2001-5000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>201-500</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5001-10001</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>501-750</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>51-100</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>751-1000</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Corporate_Sponsorship_Rep__c</picklist>
+        <values>
+            <fullName>Carol Moore</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Glen Fagerstrom</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Country_Development_Phase__c</picklist>
+        <values>
+            <fullName>Developing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Launching</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maturing</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Country_Level__c</picklist>
+        <values>
+            <fullName>0 - No Known Presence</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>1 - Presence</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Organized</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Expanded</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Model</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Crisis_Management_Travel_Permission__c</picklist>
+        <values>
+            <fullName>Inform</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>None_Required</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Permission</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Crisis_Management_Visibility_Level__c</picklist>
+        <values>
+            <fullName>1 - No Restrictions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Some Restrictions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - High Restrictions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Extremely High Restrictions</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Current_Ministry_Description__c</picklist>
+        <values>
+            <fullName>1%2E Customers have purchased FL resources</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DD_Account_Type__c</picklist>
+        <values>
+            <fullName>F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>I</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>O</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>DD__c</picklist>
+        <values>
+            <fullName>CN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>F</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>O</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Denomination__c</picklist>
+        <values>
+            <fullName>Assembly of God</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Baptist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Catholic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Christian Reformed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Christian and Missionary Alliance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Church of Christ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Church of God</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EV Free</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Episcopalian%2FAnglican</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FourSquare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fundamental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Judasim</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lutheran</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Methodist%2FWesleyan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nazarene</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-denominational</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pentecostal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Presbyterian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seventh Day Adventist</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>US Military Chapel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vinyard</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Do_they_cover_hotel_for_their_staff__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes%3A 1 night</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes%3A 2 nights</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Donor_Case_Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Donor_Classification_Level__c</picklist>
+        <values>
+            <fullName>Cru</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FND</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GFL</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ML1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ML3</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ML3A</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ML4</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ML5</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MLHP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ULA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ULB</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ULC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ULD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ULHP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ULP</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ULQ</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Donor_Conf_Certs__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hold</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Donor_Fund_Events__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hold</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Donor_Gifts__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hold</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Donor_Info_Mail_Update__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hold</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Donor_Letter_1__c</picklist>
+        <values>
+            <fullName>Hold</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Donor_Letter_2__c</picklist>
+        <values>
+            <fullName>Ask</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Hold</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Donor_Ministry_Reports__c</picklist>
+        <values>
+            <fullName>Hold</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Estate_Will__c</picklist>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shown Interest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ethnic_Diversity_of_Church__c</picklist>
+        <values>
+            <fullName>Afrikaan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Afrikaans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Albanian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Amharic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arabic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arabic-Syrian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bahasa Indonesia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bahasa Malaysia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Belarusian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>British English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bulgarian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Burmese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cebuana</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cebuano</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chinese - Complex</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chinese - Mandarin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chinese - Simplified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chinese - Traditional</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Croation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Czech</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Danish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dutch</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>English Adapted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Estonian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finnish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>French</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>German</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greek</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hausa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hebrew</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hindi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hungarian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Indonesian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Italian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Japanese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kazakh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kekchi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Khmer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kinyarwanda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Kiswahili</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Korean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Latvian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lithuanian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Luganda</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malagasy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malayalam</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mongolian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mongolian%2C Khalkh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Norwegian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Porguguese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Romanian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Russian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Serbian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Serbo-Croatian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sinhalese</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slovak</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slovenian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Spanish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swahilli</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Swedish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tagalog</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tajik</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tamil</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Thai</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Turkish</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ukrainian</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Vietnamese</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FamilyLife_Branded_Ministry__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>FamilyLife_Resource_Usage__c</picklist>
+        <values>
+            <fullName>Multiple Locations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>One Location</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Family_Type__c</picklist>
+        <values>
+            <fullName>Blended</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Divorced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Married</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Single</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unmarried</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Widowed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>With children</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Financial_Sustainability__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Follow_up_Practices__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>GM_Lead_Rep_Code__c</picklist>
+        <values>
+            <fullName>6050</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6745</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6747</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6750</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6751</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6752</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6753</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6755</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6756</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6757</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6758</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6759</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6760</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6776</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6778</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6779</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6780</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6781</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6782</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6783</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6785</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6786</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6788</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6789</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6790</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6791</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>6792</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Global_Region__c</picklist>
+        <values>
+            <fullName>Albanian%3A %3A Kosova ou Kosovë%2C</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Antarctica</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arabian Peninsula%2C Middle East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caribbean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caribbean%2C parts of the Bahamas island chain%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Caucasus%2C Western Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central East South America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central Eastern South America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Central South America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>East-Central Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eastern Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eastern Africa%2C African Great Lakes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eastern Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eastern Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Eastern Europe - Northern Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greater Antilles%2C Caribbean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leeward Islands%2C Caribbean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lesser Antilles%2C Caribbean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maritime South-East Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Maritime Southeast Asia%2C Melanesia%2C Oceania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mediterranean%2C Western Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Melanesia%2C Oceania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Micronesia%2C Oceania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Middle East</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Middle East%2C Western Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North Eastern South America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North North America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North West South America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>North-Eastern South America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northern Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northern Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northern South America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northern South America%2C Caribbean</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oceania%2FAustralia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Oceania%3B Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Polynesia%2C Oceania</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South-Central Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South-East Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South-East Asia%2C Australia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southeast Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southeastern Europe%2C Western Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southern Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southern Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southern Europe within Italy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southern South America</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southern South America%2C Antarctic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>West Africa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Western Asia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Western Europe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Western South America</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Growing_HomeBuilders_Ministry__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Guides__c</picklist>
+        <values>
+            <fullName>Group Leader</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Movement Leader</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Network Leader</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>High_Quality_Events__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HomeBuilder_Type__c</picklist>
+        <values>
+            <fullName>Donor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Host</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mentor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Small Group Leader</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>HomeBuilders_Leader_Training__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ICP_Tier__c</picklist>
+        <values>
+            <fullName>Tier 1 %E2%80%93 Young %26 Growing Married Families</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 2 %E2%80%93 Newly Married %26 Maturing Families</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 3 %E2%80%93 Transitioning %26 Legacy Families</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 4 %E2%80%93 Singles</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>IPP_Tier__c</picklist>
+        <values>
+            <fullName>Tier 1 - Ministry Class</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 2 - Investment Class</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 3 - Commerce Class</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tier 4 - Outer Edge</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry</picklist>
+        <values>
+            <fullName>Agriculture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Apparel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Association</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Banking</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Biotechnology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chemicals</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Construction</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Consulting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Denomination</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Electronics</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Energy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Engineering</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Entertainment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Finance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Food %26 Beverage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Government</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Healthcare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hospitality</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Insurance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Machinery</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Manufacturing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Media</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not For Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recreation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Telecommunications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transportation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Utilities</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Key_Couple__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LP_Active__c</picklist>
+        <values>
+            <fullName>N</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Y</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LP_Pledge_Frequency__c</picklist>
+        <values>
+            <fullName>A - Annual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>M - Monthly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>O - One Time</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Q - Quarterly</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S - Semi-Annual</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>W - Weekly</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Local_FamilyLife_Team__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Mail_Hold__c</picklist>
+        <values>
+            <fullName>Bad Address</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Constituent Request</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Manual_Dedupe_Group__c</picklist>
+        <values>
+            <fullName>GM Account Group 1</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Marriage_Ministry_in_Churches__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Materials_Available__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ministry_to_Pastors__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Monthly_Touch__c</picklist>
+        <values>
+            <fullName>April</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>August</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>December</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>February</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>January</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>July</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>June</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>March</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>May</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>November</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>October</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>September</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Multi_City_Ministry__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Next_Touch_Month__c</picklist>
+        <values>
+            <fullName>April</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>August</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>December</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>February</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>January</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>July</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>June</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>March</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>May</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>November</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>October</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>September</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Number_of_Churches_Influenced__c</picklist>
+        <values>
+            <fullName>1 - 50</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>201 - 500</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>500%2B</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>51 - 200</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Number_of_Couples_Influenced__c</picklist>
+        <values>
+            <fullName>1 - 1000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1001 - 5000</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5000%2B</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Ownership</picklist>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Private</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Subsidiary</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>PERMISSION_Website_Logo_Social_Media_Pr__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Partner_Status__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Prayer_Effort__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Qualified_Trainers__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Radio_Broadcast__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Radio_Listeners__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Radio_Program_Type__c</picklist>
+        <values>
+            <fullName>IEV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MAN</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RUS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VFH</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Rating</picklist>
+        <values>
+            <fullName>Cold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hot</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Warm</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Replication__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Source_of_Funds__c</picklist>
+        <values>
+            <fullName>Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foundation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Speaker_Team__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Active Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Active Prospect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive Customer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inactive Prospect</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subtype__c</picklist>
+        <values>
+            <fullName>Arena</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Conference Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Convention Center</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Hotel</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lodge</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resort</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Testimonies__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Translated_Materials__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>N%2FA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Two_Part_Strategy__c</picklist>
+        <values>
+            <fullName>1 - Strongly Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Neither Agree Nor Disagree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - Agree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Strongly Agree</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Household</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type_of_Touch__c</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Left Message</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Note</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Text</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>WE_FW8_NP__Active__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>WE_FW8_NP__CustomerPriority__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>WE_FW8_NP__SLA__c</picklist>
+        <values>
+            <fullName>Bronze</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gold</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Platinum</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Silver</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>WE_FW8_NP__UpsellOpportunity__c</picklist>
+        <values>
+            <fullName>Maybe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npo02__SYSTEM_CUSTOM_NAMING__c</picklist>
+        <values>
+            <fullName>Formal_Greeting%5F%5Fc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Informal_Greeting%5F%5Fc</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Name</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npsp__Funding_Focus__c</picklist>
+        <values>
+            <fullName>Animal Welfare</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Arts and Culture</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Capacity Building</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Education</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Environmental</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Human Services</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>npsp__Sustainer__c</picklist>
+        <values>
+            <fullName>Active</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Former</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lapsed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>smartystreets__BillingVerificationUsed__c</picklist>
+        <values>
+            <fullName>Google Maps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SmartyStreets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>smartystreets__ShippingVerificationUsed__c</picklist>
+        <values>
+            <fullName>Google Maps</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SmartyStreets</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UPS</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>xEvent_Area_Code__c</picklist>
+        <values>
+            <fullName>A-ABY %7C Albany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-AGS %7C Augusta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-ALB %7C Albuquerque</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-ANC %7C Anchorage</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-ATL %7C Atlanta</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-AUS %7C Austin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-AVL %7C Asheville</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-AZO %7C Kalamazoo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-BIL %7C Billings</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-BIR %7C Alabama North</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-BLI %7C Bellingham</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-BND %7C Central Oregon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-BOI %7C Boise</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-BOS %7C Boston</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-BRN %7C Branson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-BRO %7C South Padre Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-BVT %7C Burlington</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-BWI %7C Capital Metro - MD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-CAK %7C Akron</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-CHA %7C Chattanooga</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-CHI %7C Chicago</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-CHS %7C Charleston%2C SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-CID %7C Cedar Rapids</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-CIN %7C Cincinnati</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-CLE %7C Cleveland</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-CLT %7C Charlotte</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-CMH %7C Columbus</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-COS %7C Colorado Springs</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-CRP %7C Corpus Christi</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-DAL %7C Dallas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-DAY %7C Dayton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-DCA %7C Capital Metro - DC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-DEN %7C Denver</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-DES %7C Des Moines</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-DET %7C Detroit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-DOV %7C Dover</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-DTS %7C Destin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-EUG %7C Eugene</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-FAR %7C Fargo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-FAT %7C Fresno</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-FTL %7C Fort Lauderdale</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-FTW %7C Fort Worth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-FWY %7C Fort Wayne</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-GRB %7C Appleton%2FGreen Bay</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-GRR %7C Grand Rapids</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-GSO %7C Greensboro</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-HNL %7C Oahu</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-HOU %7C Houston</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-HSN %7C Hershey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-HTF %7C Hartford</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-IAD %7C Capital Metro - VA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-IND %7C Indianapolis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-IRV %7C Irvine</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-JAN %7C Jackson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-JAX %7C Jacksonville</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-KNC %7C Kansas City</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-KNO %7C Knoxville</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-LAN %7C Lansing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-LAS %7C Las Vegas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-LAX %7C Los Angeles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-LGI %7C Long Island</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-LIT %7C Little Rock</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-LKT %7C Lake Tahoe</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-LVL %7C Louisville</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-MEM %7C Memphis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-MGW %7C Alabama South</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-MIA %7C Miami</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-MIL %7C Milwaukee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-MIN %7C Minneapolis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-MON %7C Monterey</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-MSN %7C Madison</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-MYR %7C Myrtle Beach</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-NEW %7C Newport</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-NFK %7C Norfolk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-NGF %7C Niagara Falls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-NOR %7C New Orleans</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-NSV %7C Nashville</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-NWA %7C Northwest Arkansas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-NWJ %7C Parsippany</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-OKC %7C Oklahoma City</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-OMA %7C Omaha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-ONT %7C Ontario</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-ORL %7C Orlando</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-PBI %7C Palm Beach %28Delray Beach%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-PDX %7C Portland%2C OR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-PHF %7C Williamsburg</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-PHL %7C Philadelphia</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-PHO %7C Phoenix</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-PIA %7C Peoria</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-PIT %7C Pittsburgh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-POC %7C Poconos</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-PSC %7C Columbia Basin</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-PWM %7C Portland%2C ME</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-RAL %7C Raleigh</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-RAP %7C Rapid City</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-RIC %7C Richmond</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-ROA %7C Roanoke</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-RSW %7C Fort Myers</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-SAC %7C Sacramento</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-SAT %7C San Antonio</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-SAV %7C Savannah %28Hilton Head%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-SEA %7C Seattle</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-SFO %7C San Francisco</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-SHV %7C Shreveport</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-SKT %7C Stockton</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-SLC %7C Salt Lake City</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-SNC %7C Santa Clara</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-SND %7C San Diego</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-SNR %7C San Ramon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-SPK %7C Spokane</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-STL %7C Saint Louis</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-STS %7C Sonoma</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-SXF %7C Sioux Falls</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-SYR %7C Syracuse</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-TDZ %7C Toledo</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-TPA %7C Tampa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-TUL %7C Tulsa</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-TUS %7C Tucson</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-VEN %7C Ventura</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>A-WCH %7C Wichita</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>xRegion__c</picklist>
+        <values>
+            <fullName>Great Lakes</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Greater Northwest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mid Atlantic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mid South</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mountain</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Northeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Red River</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>South Pacific</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Southeast</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Upper Midwest</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

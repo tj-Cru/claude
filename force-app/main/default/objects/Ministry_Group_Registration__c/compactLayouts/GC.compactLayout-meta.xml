@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GC</fullName>
+    <fields>Name</fields>
+    <fields>Registration_Status__c</fields>
+    <fields>Start_Date__c</fields>
+    <label>GC</label>
+</CompactLayout>

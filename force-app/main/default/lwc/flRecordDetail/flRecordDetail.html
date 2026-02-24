@@ -1,0 +1,79 @@
+<template>
+    <div class="child-container">
+        <div class="child-header">
+            <div class="header-content slds-grid slds-grid_align-spread slds-grid_vertical-align-center">
+                
+                <h2 class="slds-truncate">{headerTitle}</h2>
+                
+                <div class="header-actions slds-grid slds-grid_vertical-align-center">
+                    
+                    <template lwc:if={editFlowName}>
+                        <lightning-button-icon 
+                            icon-name="utility:edit" 
+                            variant="border-filled" 
+                            alternative-text="Edit" 
+                            onclick={handleEdit}
+                            class="header-icon slds-m-right_x-small">
+                        </lightning-button-icon>
+                    </template>
+
+                    <template lwc:if={showBackButton}>
+                        <lightning-button-icon 
+                            icon-name="utility:back" 
+                            variant="border-filled" 
+                            alternative-text="Back" 
+                            onclick={handleBack}
+                            class="header-icon">
+                        </lightning-button-icon>
+                    </template>
+                </div>
+            </div>
+        </div>
+
+        <div class="child-body">
+            <template lwc:if={hasRecordContext}>
+                <div class="scrollable-wrapper">
+                    <lightning-record-form
+                        key={refreshKey}
+                        record-id={recordId}
+                        object-api-name={objectApiName}
+                        fields={fields}
+                        columns={columns}
+                        density="compact" 
+                        mode="readonly">
+                    </lightning-record-form>
+                </div>
+            </template>
+            <template lwc:else>
+                <div class="slds-text-align_center slds-text-color_weak slds-p-around_medium">
+                    <p>Please configure Object API Name, Record ID, and Fields in Experience Builder.</p>
+                </div>
+            </template>
+        </div>
+    </div>
+
+    <template if:true={showEditModal}>
+        <section role="dialog" tabindex="-1" class="slds-modal slds-fade-in-open slds-modal_small" aria-modal="true">
+            <div class="slds-modal__container">
+                <header class="slds-modal__header">
+                    <lightning-button-icon 
+                        icon-name="utility:close" 
+                        class="slds-modal__close" 
+                        variant="bare-inverse" 
+                        onclick={closeEditModal} 
+                        alternative-text="Close">
+                    </lightning-button-icon>
+                    <h2 class="slds-text-heading_medium slds-hyphenate">Edit {headerTitle}</h2>
+                </header>
+                <div class="slds-modal__content slds-p-around_medium">
+                    <lightning-flow 
+                        flow-api-name={editFlowName} 
+                        flow-input-variables={flowInputVariables} 
+                        onstatuschange={handleFlowStatusChange}>
+                    </lightning-flow>
+                </div>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>

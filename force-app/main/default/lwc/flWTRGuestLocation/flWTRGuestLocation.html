@@ -1,0 +1,154 @@
+<template>
+  <div class="wtr-wrapper">
+    <div class="wtr-header slds-m-bottom_medium">
+      <h1>{headerText}</h1>
+    </div>
+
+    <div class="slds-p-horizontal_medium slds-p-bottom_medium">
+      <template if:true={isLoading}>
+        <div class="slds-align_absolute-center slds-m-vertical_large">
+          <lightning-spinner
+            alternative-text="Loading..."
+            size="medium"
+            variant="brand"
+          ></lightning-spinner>
+        </div>
+      </template>
+
+      <template if:true={showSuccess}>
+        
+        <template lwc:if={showHome}>
+          <p
+            class="slds-text-align_center slds-m-bottom_large"
+            style="font-family: Arial; color: #555"
+          >
+            Welcome to your Weekend to Remember. Please select an option below.
+          </p>
+
+          <button
+            class="wtr-menu-button"
+            data-view="ask"
+            onclick={handleNavClick}
+          >
+            Submit a Marriage Question
+          </button>
+
+          <button
+            class="wtr-menu-button"
+            data-view="prayer"
+            onclick={handleNavClick}
+          >
+            Submit Prayer Requests
+          </button>
+
+          <button
+            class="wtr-menu-button"
+            data-view="oneness"
+            onclick={handleNavClick}
+          >
+            Where Are You With God?
+          </button>
+
+          <button
+            class="wtr-menu-button"
+            data-view="marriage"
+            onclick={handleNavClick}
+          >
+            Be a Marriage on Mission
+          </button>
+
+          <button
+            class="wtr-menu-button"
+            data-view="feedback"
+            onclick={handleNavClick}
+          >
+            Event Evaluation
+          </button>
+        </template>
+
+        <c-fl-w-t-r-registration-lookup
+          lwc:if={showRegistrationLookup}
+          event-id={selectedEventId}
+          onsuccess={handleRegistrationSuccess}
+          onclose={handleChildClose}
+        >
+        </c-fl-w-t-r-registration-lookup>
+
+        <c-fl-w-t-r-ask-question
+          lwc:if={showAskQuestion}
+          event-id={selectedEventId}
+          onclose={handleChildClose}
+        >
+        </c-fl-w-t-r-ask-question>
+
+        <c-fl-w-t-r-request-prayer
+          lwc:if={showRequestPrayer}
+          event-id={selectedEventId}
+          onclose={handleChildClose}
+        >
+        </c-fl-w-t-r-request-prayer>
+
+        <c-fl-w-t-r-oneness-with-christ
+          lwc:if={showOneness}
+          event-id={selectedEventId}
+          registration-id={selectedRegistrationId}
+          onclose={handleChildClose}
+        >
+        </c-fl-w-t-r-oneness-with-christ>
+
+        <c-fl-w-t-r-marriage-on-mission
+          lwc:if={showMarriage}
+          event-id={selectedEventId}
+          registration-id={selectedRegistrationId}
+          onclose={handleChildClose}
+        >
+        </c-fl-w-t-r-marriage-on-mission>
+
+        <c-fl-w-t-r-feedback
+          lwc:if={showFeedback}
+          event-id={selectedEventId}
+          registration-id={selectedRegistrationId}
+          onclose={handleChildClose}
+        >
+        </c-fl-w-t-r-feedback>
+      </template>
+
+      <template if:true={showFallbackList}>
+        <div class="slds-text-align_center slds-m-bottom_medium">
+          <p class="slds-text-color_error slds-m-bottom_small">{error}</p>
+        </div>
+        <lightning-combobox
+          name="eventList"
+          label="Select Event"
+          value={selectedEventId}
+          placeholder="-- Select Event --"
+          options={openEvents}
+          onchange={handleEventSelection}
+          required
+        ></lightning-combobox>
+      </template>
+
+      <template if:true={showFinalError}>
+        <div
+          class="slds-align_absolute-center slds-m-vertical_large slds-text-align_center"
+        >
+          <div>
+            <lightning-icon
+              icon-name="utility:warning"
+              variant="warning"
+              size="medium"
+              class="slds-m-bottom_small"
+            ></lightning-icon>
+            <p class="slds-text-color_error slds-text-heading_small">{error}</p>
+          </div>
+        </div>
+      </template>
+
+      <div class="wtr-footer">
+        <p class="wtr-logo-text">Weekend to Remember</p>
+        <p style="font-size: 0.65rem">by FamilyLife</p>
+      </div>
+
+    </div>
+  </div>
+</template>

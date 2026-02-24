@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContactMDM__c</fullName>
+    <formula>Contact.MDM_Acquisition_Date__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>ContactMDM</label>
+    <required>false</required>
+    <type>DateTime</type>
+</CustomField>

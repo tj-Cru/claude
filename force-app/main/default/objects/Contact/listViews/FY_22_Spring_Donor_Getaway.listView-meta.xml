@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FY_22_Spring_Donor_Getaway</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Donor_Caseload__c</columns>
+    <columns>Contact_Primary_Staff_Member__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CAMPAIGN_MEMBER.STATUS</field>
+        <operation>equals</operation>
+        <value>Going,Registered</value>
+    </filters>
+    <label>FY 22 Spring Donor Getaway</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Development_Mid_Level</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Development_Upper_Level</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Donor_Operations</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

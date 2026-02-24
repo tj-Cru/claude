@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Eligibility__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( TEXT(Status__c) = &apos;Redeemed&apos;, &apos;You have already redeemed this registration&apos;,
+IF( OR(CV_Paid__c = 0,  Qty_Eligible__c = 0),&quot;This was a free registration and thus not eligible&quot;,
+&quot;This is an eligible registration&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Eligibility</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

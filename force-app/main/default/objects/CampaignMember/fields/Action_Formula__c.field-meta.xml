@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Action_Formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>&quot;/apex/gblite__Grid?gname=Contacts Opptys and Tasks&amp;fpf=Contact.Id&amp;fpv=&quot;+ ContactId</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Action Formula</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

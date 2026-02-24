@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Areas_without_Advisors</fullName>
+    <columns>Region__c</columns>
+    <columns>Event_Area_ID__c</columns>
+    <columns>NAME</columns>
+    <columns>Description__c</columns>
+    <columns>WTR_Director_1__c</columns>
+    <columns>Advisor__c</columns>
+    <columns>Donor_Rep__c</columns>
+    <columns>Ministry_Rep__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Advisor__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Event Areas without Advisors</label>
+    <sharedTo>
+        <group>Joe_Cassel</group>
+        <group>Robert_Coletti</group>
+        <group>Service_Specialists</group>
+    </sharedTo>
+</ListView>

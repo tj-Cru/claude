@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Anonymous_Household</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>CREATEDBY_USER.ALIAS</columns>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>Cru_PID__c</columns>
+    <columns>ACCOUNT.LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>Woo_ID__c</columns>
+    <columns>npo02__SYSTEM_CUSTOM_NAMING__c</columns>
+    <columns>npsp__Number_of_Household_Members__c</columns>
+    <columns>Donor_Caseload_Lookup__c</columns>
+    <columns>Giving_Count__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ACCOUNT.NAME</field>
+        <operation>equals</operation>
+        <value>Anonymous Household</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Household_Account</value>
+    </filters>
+    <label>Anonymous Household</label>
+</ListView>

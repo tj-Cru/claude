@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>WTR_Area_Rep__c</fullName>
+    <description>Only for use when entering the Ministry Rep from the Event Area in which a WTR was held and only for the Campaigns involving those that requested an Advisor call while attending WTR.</description>
+    <inlineHelpText>Only for use when entering the Ministry Rep from the Event Area in which a WTR was held and only for the Campaigns involving those that requested an Advisor call while attending WTR.</inlineHelpText>
+    <label>WTR Area Rep</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Bob Richardson</fullName>
+                <default>false</default>
+                <label>Bob Richardson</label>
+            </value>
+            <value>
+                <fullName>Bob Stelter</fullName>
+                <default>false</default>
+                <label>Bob Stelter</label>
+            </value>
+            <value>
+                <fullName>Chris Randazzo</fullName>
+                <default>false</default>
+                <label>Chris Randazzo</label>
+            </value>
+            <value>
+                <fullName>Dave Lowe</fullName>
+                <default>false</default>
+                <label>Dave Lowe</label>
+            </value>
+            <value>
+                <fullName>David Newell</fullName>
+                <default>false</default>
+                <label>David Newell</label>
+            </value>
+            <value>
+                <fullName>Don Zerbian</fullName>
+                <default>false</default>
+                <label>Don Zerbian</label>
+            </value>
+            <value>
+                <fullName>Doug Mary</fullName>
+                <default>false</default>
+                <label>Doug Mary</label>
+            </value>
+            <value>
+                <fullName>Doug Wittenberg</fullName>
+                <default>false</default>
+                <label>Doug Wittenberg</label>
+            </value>
+            <value>
+                <fullName>Duane Abbott</fullName>
+                <default>false</default>
+                <label>Duane Abbott</label>
+            </value>
+            <value>
+                <fullName>Eric Graefen</fullName>
+                <default>false</default>
+                <label>Eric Graefen</label>
+            </value>
+            <value>
+                <fullName>Frank Waterer</fullName>
+                <default>false</default>
+                <label>Frank Waterer</label>
+            </value>
+            <value>
+                <fullName>Gene Haub</fullName>
+                <default>false</default>
+                <label>Gene Haub</label>
+            </value>
+            <value>
+                <fullName>Gregory Johnson</fullName>
+                <default>false</default>
+                <label>Gregory Johnson</label>
+            </value>
+            <value>
+                <fullName>Hobby Howard</fullName>
+                <default>false</default>
+                <label>Hobby Howard</label>
+            </value>
+            <value>
+                <fullName>Jeff Kemp</fullName>
+                <default>false</default>
+                <label>Jeff Kemp</label>
+            </value>
+            <value>
+                <fullName>Jim Holmquist</fullName>
+                <default>false</default>
+                <label>Jim Holmquist</label>
+            </value>
+            <value>
+                <fullName>John McDermott</fullName>
+                <default>false</default>
+                <label>John McDermott</label>
+            </value>
+            <value>
+                <fullName>Keith Tully</fullName>
+                <default>false</default>
+                <label>Keith Tully</label>
+            </value>
+            <value>
+                <fullName>Ken Hasner</fullName>
+                <default>false</default>
+                <label>Ken Hasner</label>
+            </value>
+            <value>
+                <fullName>Mark Claxton</fullName>
+                <default>false</default>
+                <label>Mark Claxton</label>
+            </value>
+            <value>
+                <fullName>Mark Ellis</fullName>
+                <default>false</default>
+                <label>Mark Ellis</label>
+            </value>
+            <value>
+                <fullName>Matt Angell</fullName>
+                <default>false</default>
+                <label>Matt Angell</label>
+            </value>
+            <value>
+                <fullName>Mike Warren</fullName>
+                <default>false</default>
+                <label>Mike Warren</label>
+            </value>
+            <value>
+                <fullName>Rick Maupin</fullName>
+                <default>false</default>
+                <label>Rick Maupin</label>
+            </value>
+            <value>
+                <fullName>Robert Coletti</fullName>
+                <default>false</default>
+                <label>Robert Coletti</label>
+            </value>
+            <value>
+                <fullName>Rodger Henn</fullName>
+                <default>false</default>
+                <label>Rodger Henn</label>
+            </value>
+            <value>
+                <fullName>Roger Haskin</fullName>
+                <default>false</default>
+                <label>Roger Haskin</label>
+            </value>
+            <value>
+                <fullName>Scott Gray</fullName>
+                <default>false</default>
+                <label>Scott Gray</label>
+            </value>
+            <value>
+                <fullName>Scott Mercer</fullName>
+                <default>false</default>
+                <label>Scott Mercer</label>
+            </value>
+            <value>
+                <fullName>Tim Steele</fullName>
+                <default>false</default>
+                <label>Tim Steele</label>
+            </value>
+            <value>
+                <fullName>Tom Clifton</fullName>
+                <default>false</default>
+                <label>Tom Clifton</label>
+            </value>
+            <value>
+                <fullName>Tony DeCicco</fullName>
+                <default>false</default>
+                <label>Tony DeCicco</label>
+            </value>
+            <value>
+                <fullName>Tony Wagner</fullName>
+                <default>false</default>
+                <label>Tony Wagner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Down_Stream</fullName>
+    <columns>ACCOUNT.RECORDTYPE</columns>
+    <columns>ACCOUNT.CREATED_DATE</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Donor_Caseload_Lookup__c</columns>
+    <columns>UPDATEDBY_USER.ALIAS</columns>
+    <columns>ACCOUNT.LAST_UPDATE</columns>
+    <columns>Status__c</columns>
+    <columns>Lift_Oppty_Closed_Date__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Lift_Oppty_Closed_Date__c</field>
+        <operation>equals</operation>
+        <value>THIS_FISCAL_YEAR</value>
+    </filters>
+    <label>Down Stream</label>
+</ListView>

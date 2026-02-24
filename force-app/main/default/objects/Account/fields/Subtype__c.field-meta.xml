@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Subtype__c</fullName>
+    <label>Subtype</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type</controllingField>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Air Force</fullName>
+                <default>false</default>
+                <label>Air Force</label>
+            </value>
+            <value>
+                <fullName>Arena</fullName>
+                <default>false</default>
+                <label>Arena</label>
+            </value>
+            <value>
+                <fullName>Army</fullName>
+                <default>false</default>
+                <label>Army</label>
+            </value>
+            <value>
+                <fullName>Coast Guard</fullName>
+                <default>false</default>
+                <label>Coast Guard</label>
+            </value>
+            <value>
+                <fullName>Conference Center</fullName>
+                <default>false</default>
+                <label>Conference Center</label>
+            </value>
+            <value>
+                <fullName>Convention Center</fullName>
+                <default>false</default>
+                <label>Convention Center</label>
+            </value>
+            <value>
+                <fullName>Corporate Sponsorship Program</fullName>
+                <default>false</default>
+                <label>Corporate Sponsorship Program</label>
+            </value>
+            <value>
+                <fullName>Geocoded</fullName>
+                <default>false</default>
+                <label>Geocoded</label>
+            </value>
+            <value>
+                <fullName>Hotel</fullName>
+                <default>false</default>
+                <label>Hotel</label>
+            </value>
+            <value>
+                <fullName>Lodge</fullName>
+                <default>false</default>
+                <label>Lodge</label>
+            </value>
+            <value>
+                <fullName>Marine Corps</fullName>
+                <default>false</default>
+                <label>Marine Corps</label>
+            </value>
+            <value>
+                <fullName>Navy</fullName>
+                <default>false</default>
+                <label>Navy</label>
+            </value>
+            <value>
+                <fullName>Not GeoCoded</fullName>
+                <default>false</default>
+                <label>Not GeoCoded</label>
+            </value>
+            <value>
+                <fullName>Resort</fullName>
+                <default>false</default>
+                <label>Resort</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Denominations</controllingFieldValue>
+            <controllingFieldValue>Corporation</controllingFieldValue>
+            <controllingFieldValue>Parachurch</controllingFieldValue>
+            <controllingFieldValue>Military</controllingFieldValue>
+            <controllingFieldValue>Network</controllingFieldValue>
+            <controllingFieldValue>Foundation</controllingFieldValue>
+            <controllingFieldValue>Trust</controllingFieldValue>
+            <controllingFieldValue>Venue</controllingFieldValue>
+            <controllingFieldValue>Advertiser</controllingFieldValue>
+            <controllingFieldValue>Radio Station</controllingFieldValue>
+            <controllingFieldValue>Media</controllingFieldValue>
+            <controllingFieldValue>Global</controllingFieldValue>
+            <controllingFieldValue>Church</controllingFieldValue>
+            <controllingFieldValue>Prison</controllingFieldValue>
+            <controllingFieldValue>Shelter</controllingFieldValue>
+            <controllingFieldValue>Vendor</controllingFieldValue>
+            <controllingFieldValue>Ministry</controllingFieldValue>
+            <controllingFieldValue>Distributor</controllingFieldValue>
+            <controllingFieldValue>Other</controllingFieldValue>
+            <controllingFieldValue>Competitor</controllingFieldValue>
+            <controllingFieldValue>Partner</controllingFieldValue>
+            <controllingFieldValue>Retailer</controllingFieldValue>
+            <controllingFieldValue>School</controllingFieldValue>
+            <controllingFieldValue>Household</controllingFieldValue>
+            <controllingFieldValue>University</controllingFieldValue>
+            <controllingFieldValue>Internal</controllingFieldValue>
+            <valueName>Corporate Sponsorship Program</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WTR Venue</controllingFieldValue>
+            <valueName>Geocoded</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>WTR Venue</controllingFieldValue>
+            <valueName>Not GeoCoded</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Military</controllingFieldValue>
+            <valueName>Air Force</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Military</controllingFieldValue>
+            <valueName>Army</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Military</controllingFieldValue>
+            <valueName>Coast Guard</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Military</controllingFieldValue>
+            <valueName>Marine Corps</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Military</controllingFieldValue>
+            <valueName>Navy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Venue</controllingFieldValue>
+            <valueName>Arena</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Venue</controllingFieldValue>
+            <valueName>Conference Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Venue</controllingFieldValue>
+            <valueName>Convention Center</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Venue</controllingFieldValue>
+            <valueName>Hotel</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Venue</controllingFieldValue>
+            <valueName>Lodge</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Venue</controllingFieldValue>
+            <valueName>Resort</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

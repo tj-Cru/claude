@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>pref_limit_freq__c</fullName>
+    <description>SilverPop Preferences and Subscriptions Limit Frequency</description>
+    <label>pref_limit_freq</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>use the settings below</fullName>
+                <default>false</default>
+                <label>use the settings below</label>
+            </value>
+            <value>
+                <fullName>limit emails to one per week</fullName>
+                <default>false</default>
+                <label>limit emails to one per week</label>
+            </value>
+            <value>
+                <fullName>limit emails to one per month</fullName>
+                <default>false</default>
+                <label>limit emails to one per month</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

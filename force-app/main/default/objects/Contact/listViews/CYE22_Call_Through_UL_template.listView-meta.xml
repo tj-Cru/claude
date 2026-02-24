@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CYE22_Call_Through_UL_template</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.SITE</columns>
+    <columns>FULL_NAME</columns>
+    <columns>Donor_Classication__c</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>Preferred_Phone_Type__c</columns>
+    <columns>Anniversary_Date__c</columns>
+    <columns>Donor_Letter_1_Contact__c</columns>
+    <columns>CAMPAIGN_MEMBER.STATUS</columns>
+    <columns>NMC__c</columns>
+    <columns>Primary_Donor_Motivation_Code__c</columns>
+    <columns>Why_Do_You_Give_to_FL__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Donor_Caseload__c</field>
+        <operation>equals</operation>
+        <value>Randall Martin</value>
+    </filters>
+    <filters>
+        <field>Donor_Classication__c</field>
+        <operation>notEqual</operation>
+        <value>GV</value>
+    </filters>
+    <filters>
+        <field>Is_Primary_Contact__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Household_Account</value>
+    </filters>
+    <label>CYE22 Call Through - UL template</label>
+    <sharedTo>
+        <roleAndSubordinatesInternal>Development_Upper_Level</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

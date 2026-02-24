@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cancelled_Events</fullName>
+    <columns>NAME</columns>
+    <columns>EventCode__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Conference_Location__c</columns>
+    <columns>City_1__c</columns>
+    <columns>State__c</columns>
+    <columns>Capacity__c</columns>
+    <columns>Sr_Planner__c</columns>
+    <columns>Estimated_Attendance__c</columns>
+    <columns>GL_Account__c</columns>
+    <columns>Seats_Allocated__c</columns>
+    <columns>Months__c</columns>
+    <columns>Weeks__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>EventCode__c</field>
+        <operation>contains</operation>
+        <value>21</value>
+    </filters>
+    <filters>
+        <field>Stage__c</field>
+        <operation>equals</operation>
+        <value>Event Canceled</value>
+    </filters>
+    <label>Cancelled Events</label>
+</ListView>

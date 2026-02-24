@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Website</fullName>
+    <inlineHelpText>GLOBAL Accounts: Enter the website associated with either Cru or Familylife.  Websites for other ministries belong under that Ministry&apos;s Account Page</inlineHelpText>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+</CustomField>

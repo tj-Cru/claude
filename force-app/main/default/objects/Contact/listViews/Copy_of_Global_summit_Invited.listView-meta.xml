@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Copy_of_Global_summit_Invited</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>Form_Url__c</columns>
+    <columns>CONTACT.EMAIL_OPT_OUT</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CAMPAIGN_MEMBER.STATUS</field>
+        <operation>equals</operation>
+        <value>Invited</value>
+    </filters>
+    <label>Global summit Invited</label>
+    <sharedTo>
+        <group>Global_Outreach</group>
+    </sharedTo>
+</ListView>

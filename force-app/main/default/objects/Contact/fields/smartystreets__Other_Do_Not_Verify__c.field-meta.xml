@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>smartystreets__Other_Do_Not_Verify__c</fullName>
+    <defaultValue>false</defaultValue>
+    <deprecated>false</deprecated>
+    <description>Check this box so that the other address is never verified by the SmartyStreets service</description>
+    <inlineHelpText>Check this box so that the other address is never verified by the SmartyStreets service</inlineHelpText>
+    <label>Other Do Not Verify</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

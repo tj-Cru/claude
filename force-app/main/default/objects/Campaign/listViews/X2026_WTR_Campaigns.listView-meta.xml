@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2026_WTR_Campaigns</fullName>
+    <columns>CAMPAIGN.CREATED_DATE</columns>
+    <columns>CAMPAIGN.NAME</columns>
+    <columns>Campaign_Code__c</columns>
+    <columns>CAMPAIGN.START_DATE</columns>
+    <columns>CAMPAIGN.NUM_CONTACTS</columns>
+    <columns>CAMPAIGN.STATUS</columns>
+    <columns>CAMPAIGN.LAST_UPDATE</columns>
+    <columns>Event_Code__c</columns>
+    <columns>Website_URL__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CAMPAIGN.START_DATE</field>
+        <operation>greaterThan</operation>
+        <value>8/31/2025</value>
+    </filters>
+    <filters>
+        <field>Event_Code__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>CAMPAIGN.START_DATE</field>
+        <operation>lessOrEqual</operation>
+        <value>8/31/2026</value>
+    </filters>
+    <label>2026 WTR Campaigns</label>
+</ListView>

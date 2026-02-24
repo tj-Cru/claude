@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Giving_Amount__c</fullName>
+    <inlineHelpText>The total sum of all donations associated with this account. This sum includes adjustments.</inlineHelpText>
+    <label>Giving Amount</label>
+    <summarizedField>Donation__c.Gift_Amount__c</summarizedField>
+    <summaryForeignKey>Donation__c.Account_Household__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

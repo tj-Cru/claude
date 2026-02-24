@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ICP_Tier__c</fullName>
+    <inlineHelpText>Where does this contact fit in the ideal customer profile?</inlineHelpText>
+    <label>ICP Tier</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Married with Kids</fullName>
+                <default>false</default>
+                <label>Married with Kids</label>
+            </value>
+            <value>
+                <fullName>Married without Kids</fullName>
+                <default>false</default>
+                <label>Married without Kids</label>
+            </value>
+            <value>
+                <fullName>Single with Kids</fullName>
+                <default>false</default>
+                <label>Single with Kids</label>
+            </value>
+            <value>
+                <fullName>Single without Kids</fullName>
+                <default>false</default>
+                <label>Single without Kids</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

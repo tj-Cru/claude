@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Stage__c</fullName>
+    <inlineHelpText>Status of the Current Event.. Note this must be in Planning for it to publish in WordPress. Changing it to any other value will prevent it from publishing.</inlineHelpText>
+    <label>Stage</label>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Setup</fullName>
+                <default>false</default>
+                <label>Setup</label>
+            </value>
+            <value>
+                <fullName>Planning</fullName>
+                <default>false</default>
+                <label>Planning</label>
+            </value>
+            <value>
+                <fullName>Open</fullName>
+                <default>false</default>
+                <label>Open</label>
+            </value>
+            <value>
+                <fullName>Complete</fullName>
+                <default>false</default>
+                <label>Complete</label>
+            </value>
+            <value>
+                <fullName>Event Canceled</fullName>
+                <default>false</default>
+                <label>Event Canceled</label>
+            </value>
+            <value>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Scheduled</label>
+            </value>
+            <value>
+                <fullName>Staffed</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Staffed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

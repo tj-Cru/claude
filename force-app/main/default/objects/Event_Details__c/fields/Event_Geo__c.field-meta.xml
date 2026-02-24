@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Event_Geo__c</fullName>
+    <description>For ERT</description>
+    <displayLocationInDecimal>true</displayLocationInDecimal>
+    <inlineHelpText>Vital piece of information for proper execution of WordPress Map and Landing Pages. Event Surveys, Event Check in.
+To set, use google maps to find the latitude and longitude of the conference location.</inlineHelpText>
+    <label>Event Geo</label>
+    <required>false</required>
+    <scale>10</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Location</type>
+</CustomField>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CYE_Mailing_del__c</fullName>
+    <label>CYE Mailing</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>true</sorted>
+            <value>
+                <fullName>Letter w/No Ask</fullName>
+                <default>false</default>
+                <label>Letter w/No Ask</label>
+            </value>
+            <value>
+                <fullName>No CYE Letter</fullName>
+                <default>false</default>
+                <label>No CYE Letter</label>
+            </value>
+            <value>
+                <fullName>YE ASK ML</fullName>
+                <default>false</default>
+                <label>YE ASK ML</label>
+            </value>
+            <value>
+                <fullName>YE ASK UL</fullName>
+                <default>false</default>
+                <label>YE ASK UL</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

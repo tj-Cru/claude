@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UL_Caseload_HH_Mail_Codes_Template</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.SITE</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>Donor_Classification_Level__c</columns>
+    <columns>Personal_Conversation__c</columns>
+    <columns>Mail_Hold__c</columns>
+    <columns>Do_Not_Call__c</columns>
+    <columns>Donor_Conf_Certs__c</columns>
+    <columns>Donor_Letter_1__c</columns>
+    <columns>Donor_Letter_2__c</columns>
+    <columns>Donor_Fund_Events__c</columns>
+    <columns>Donor_Gifts__c</columns>
+    <columns>Donor_Info_Mail_Update__c</columns>
+    <columns>Donor_Ministry_Reports__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Donor_Caseload_Lookup__c</field>
+        <operation>equals</operation>
+        <value>Kevin Kelley</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Household_Account</value>
+    </filters>
+    <label>UL - Caseload HH Mail Codes Template</label>
+    <sharedTo>
+        <role>Development_Upper_Level</role>
+    </sharedTo>
+</ListView>

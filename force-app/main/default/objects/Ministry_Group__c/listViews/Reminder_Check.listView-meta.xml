@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reminder_Check</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND (4 OR 5)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>End_Date__c</columns>
+    <columns>Event_Area_Code__c</columns>
+    <columns>Group_Coordinator__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Ministry_Rep__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>Reminder_Date__c</columns>
+    <columns>Status__c</columns>
+    <columns>Days_until_Ministry_Group_Expires__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Days_until_Ministry_Group_Expires__c</field>
+        <operation>lessOrEqual</operation>
+        <value>22</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Active</value>
+    </filters>
+    <filters>
+        <field>End_Date__c</field>
+        <operation>greaterThan</operation>
+        <value>7/12/2023</value>
+    </filters>
+    <filters>
+        <field>Reminder_Date__c</field>
+        <operation>equals</operation>
+        <value>1/1/1990</value>
+    </filters>
+    <filters>
+        <field>Reminder_Date__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Reminder Check</label>
+</ListView>

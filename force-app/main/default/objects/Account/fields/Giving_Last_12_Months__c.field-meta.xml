@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Giving_Last_12_Months__c</fullName>
+    <description>Total giving for this account during the past 12 months</description>
+    <inlineHelpText>Rolling &quot;Last 12 Months&quot;</inlineHelpText>
+    <label>Giving Last 12 Months</label>
+    <summarizedField>Donation__c.Gift_Amount__c</summarizedField>
+    <summaryFilterItems>
+        <field>Donation__c.Gift_Within_Last_12_Months__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Donation__c.Account_Household__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

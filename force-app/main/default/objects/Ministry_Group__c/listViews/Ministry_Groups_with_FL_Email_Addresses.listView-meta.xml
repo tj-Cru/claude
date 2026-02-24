@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ministry_Groups_with_FL_Email_Addresses</fullName>
+    <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Group_Coordinator__c</columns>
+    <columns>Group_Email__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>End_Date__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>migration_groupnamesId__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Group_Email__c</field>
+        <operation>contains</operation>
+        <value>familylife</value>
+    </filters>
+    <filters>
+        <field>Contact_Email__c</field>
+        <operation>contains</operation>
+        <value>familylife</value>
+    </filters>
+    <filters>
+        <field>Group_Email__c</field>
+        <operation>contains</operation>
+        <value>CRU.org</value>
+    </filters>
+    <filters>
+        <field>Contact_Email__c</field>
+        <operation>contains</operation>
+        <value>cru.org</value>
+    </filters>
+    <label>Ministry Groups with FL Email Addresses</label>
+</ListView>

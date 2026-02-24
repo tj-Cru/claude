@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Big Text Area</masterLabel>
+    <description>A text area with configurable height for Flows</description>
+    <targets>
+        <target>lightning__FlowScreen</target>
+        <target>lightningCommunity__Page</target>
+        <target>lightningCommunity__Default</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="label" type="String" label="Label" />
+            <property name="value" type="String" label="Text Value" />
+            <property name="required" type="Boolean" label="Required" />
+            <property name="rows" type="Integer" label="Number of Rows" default="6" />
+        </targetConfig>
+    </targetConfigs>
+</LightningComponentBundle>

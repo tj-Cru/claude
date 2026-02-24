@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>General_File_Lift_Program__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>Is this household part of the General File Lift Program</inlineHelpText>
+    <label>General File Lift Program</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

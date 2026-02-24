@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_Email_for_User_Creation</fullName>
+    <columns>NAME</columns>
+    <columns>Bad_Email__c</columns>
+    <columns>Group_Email__c</columns>
+    <columns>End_Date__c</columns>
+    <columns>Group_Coordinator__c</columns>
+    <columns>Group_Household__c</columns>
+    <columns>All_Registrations__c</columns>
+    <columns>Ministry_Rep__c</columns>
+    <columns>Primary_Church__c</columns>
+    <columns>Mobile_Phone__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Bad_Email__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Bad Email to Exclude from Welcome Email</label>
+</ListView>

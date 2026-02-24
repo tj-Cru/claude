@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_Giving_Past_12_Months</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.SITE</columns>
+    <columns>ACCOUNT.ADDRESS1_CITY</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>Cru_PID__c</columns>
+    <columns>Giving_Last_12_Months__c</columns>
+    <columns>Giving_Last_Date__c</columns>
+    <columns>Giving_Count__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Gifts_12_Months__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <filters>
+        <field>Giving_Largest_Date__c</field>
+        <operation>greaterThan</operation>
+        <value>10/31/2019</value>
+    </filters>
+    <label>No Giving Past 12 Months</label>
+    <sharedTo>
+        <group>Donor_Ops</group>
+    </sharedTo>
+</ListView>

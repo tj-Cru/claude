@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MobilePhone</fullName>
+    <inlineHelpText>To Enter a properly-formatted international phone number, start with a &quot;+&quot; follow immediate with a country code (e.g. &quot;+237&quot;). Then enter the remaining digits, inserting any spaces and/or dashes, as appropriate.</inlineHelpText>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+</CustomField>

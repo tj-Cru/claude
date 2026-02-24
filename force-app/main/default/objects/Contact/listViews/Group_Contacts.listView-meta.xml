@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group_Contacts</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>Account.npo02__Informal_Greeting__c</columns>
+    <columns>Source_System__c</columns>
+    <columns>CventEvents__ContactStub__c</columns>
+    <columns>CONTACT.CREATED_DATE</columns>
+    <columns>CV_Group__c</columns>
+    <columns>CV_Group_Valid__c</columns>
+    <columns>Is_Group_Leader__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CONTACT.CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>THIS_WEEK</value>
+    </filters>
+    <label>Group Contacts</label>
+    <sharedTo>
+        <group>System_Admins</group>
+        <roleAndSubordinatesInternal>Ministry_Rep_Manager_Northern_Division</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Ministry_Rep_Manager_Southern_Division</roleAndSubordinatesInternal>
+        <roleAndSubordinatesInternal>Ministry_Rep_Manager_Western_Division</roleAndSubordinatesInternal>
+    </sharedTo>
+</ListView>

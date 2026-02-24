@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contacts_from_Users</fullName>
+    <columns>NAME</columns>
+    <columns>Ministry_Rep__c</columns>
+    <columns>Ministry_Rep_A__c</columns>
+    <columns>Ministry_Rep_B__c</columns>
+    <columns>Divisional_Manager__c</columns>
+    <columns>WTR_Director_1__c</columns>
+    <columns>Advisor__c</columns>
+    <columns>Advisor_Manager__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>Ministry Reps and Directors</label>
+</ListView>

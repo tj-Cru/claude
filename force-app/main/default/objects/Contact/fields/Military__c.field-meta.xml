@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Military__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Recognize military contacts</description>
+    <inlineHelpText>Contact has indicated they are in the military.</inlineHelpText>
+    <label>Military</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

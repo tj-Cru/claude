@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LP_Inception_Date</fullName>
+    <active>true</active>
+    <description>LP Inception Date cannot be changed from populated to blank.</description>
+    <errorConditionFormula>AND(
+
+(NOT( ISNULL(PRIORVALUE( LP_Inception_Date__c ) ))), ISNULL( LP_Inception_Date__c )
+
+
+)</errorConditionFormula>
+    <errorDisplayField>LP_Inception_Date__c</errorDisplayField>
+    <errorMessage>LP Inception Date cannot change from populated to blank. Contact your Salesforce Administrator if you have questions.</errorMessage>
+</ValidationRule>

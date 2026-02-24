@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Giving_Count__c</fullName>
+    <description>This is the number of true donations. Note there may be more records listed in Donations. The list includes adjustments. This number does not count adjustments so the Average Gift Calculation excludes adjustments.</description>
+    <inlineHelpText>This is the number of true donations. Note there may be more records listed in Donations. The list includes adjustments. This number does not count adjustments so the Average Gift Calculation excludes adjustments.</inlineHelpText>
+    <label>Giving Count</label>
+    <summarizedField>Donation__c.Gift__c</summarizedField>
+    <summaryForeignKey>Donation__c.Account_Household__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <type>Summary</type>
+</CustomField>

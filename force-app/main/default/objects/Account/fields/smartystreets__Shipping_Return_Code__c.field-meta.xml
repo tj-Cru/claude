@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>smartystreets__Shipping_Return_Code__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Confirmed (The entire address was DPV confirmed as a deliverable address.)
+Not Confirmed (The address could not be DPV confirmed as a deliverable address.)
+Confirmed - By Dropping Secondary Info The address was DPV confirmed by dropping the secondary information (apartment, suite, etc.))
+Confirmed - Missing Secondary Info (The address was DPV confirmed, but it is missing secondary information (apartment, suite, etc.))
+Not Submitted (The address was not submitted for DPV confirmation. This is usually because the address does not have a ZIP code and +4 add-on code, or the address has already been determined to be Not Deliverable.)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Confirmed
+Not Confirmed
+Confirmed - By Dropping Secondary Info
+Confirmed - Missing Secondary Info
+Not Submitted</inlineHelpText>
+    <label>Shipping Return Code</label>
+    <length>40</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

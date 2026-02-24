@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Radio_Program_Type__c</fullName>
+    <description>Used only by Global for categorizing their foreign Radio Stations</description>
+    <inlineHelpText>Used only by Global for categorizing their foreign Radio Stations</inlineHelpText>
+    <label>Radio Program Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IEV</fullName>
+                <default>false</default>
+                <label>IEV</label>
+            </value>
+            <value>
+                <fullName>VFH</fullName>
+                <default>false</default>
+                <label>VFH</label>
+            </value>
+            <value>
+                <fullName>MAN</fullName>
+                <default>false</default>
+                <label>MAN</label>
+            </value>
+            <value>
+                <fullName>RUS</fullName>
+                <default>false</default>
+                <label>RUS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

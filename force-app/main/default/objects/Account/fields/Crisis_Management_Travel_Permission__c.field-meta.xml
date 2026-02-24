@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Crisis_Management_Travel_Permission__c</fullName>
+    <description>Global Dept Use:  Cru Crisis Management Travel Permission</description>
+    <inlineHelpText>Source: Cru Global Crisis Management Country Information sheet</inlineHelpText>
+    <label>Crisis Management Travel Permission</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>None_Required</fullName>
+                <default>false</default>
+                <label>None Required</label>
+            </value>
+            <value>
+                <fullName>Inform</fullName>
+                <default>false</default>
+                <label>Inform</label>
+            </value>
+            <value>
+                <fullName>Permission</fullName>
+                <default>false</default>
+                <label>Permission</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Church_Ministries__c</fullName>
+    <label>Church Ministries</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Marriage Ministry</fullName>
+                <default>false</default>
+                <label>Marriage Ministry</label>
+            </value>
+            <value>
+                <fullName>Men&apos;s Ministry</fullName>
+                <default>false</default>
+                <label>Men&apos;s Ministry</label>
+            </value>
+            <value>
+                <fullName>Women&apos;s Ministry</fullName>
+                <default>false</default>
+                <label>Women&apos;s Ministry</label>
+            </value>
+            <value>
+                <fullName>Military Ministry</fullName>
+                <default>false</default>
+                <label>Military Ministry</label>
+            </value>
+            <value>
+                <fullName>Blended Marriage Ministry</fullName>
+                <default>false</default>
+                <label>Blended Marriage Ministry</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,37 @@
+:host {
+    /* --- BRAND PALETTE --- */
+    --wtr-green: #006C5B;
+    --wtr-soft-black: #24272A;
+    --wtr-cool-grey: #898C8E;
+
+    /* --- SLDS OVERRIDES (Styling Hooks) --- */
+    /* Primary Buttons (Brand) -> Dark Green, Square */
+    --slds-c-button-brand-color-background: var(--wtr-green);
+    --slds-c-button-brand-color-border: var(--wtr-green);
+    --slds-c-button-brand-color-background-hover: #005649;
+    --slds-c-button-brand-color-border-hover: #005649;
+    --slds-c-button-radius-border: 2px;
+    --slds-c-button-shadow: none;
+    
+    /* Inputs/Radios */
+    --slds-c-input-radius-border: 2px;
+    --slds-c-checkbox-radius-border: 2px;
+    --slds-c-radio-color-background-checked: var(--wtr-green);
+}
+
+/* Label Typography for Mobile Readability */
+.wtr-radio-label .slds-radio__label,
+.wtr-radio-label .slds-checkbox__label {
+    font-size: 1.1rem;      
+    line-height: 1.5;       
+    white-space: normal;    
+    display: inline;
+    color: var(--wtr-soft-black);
+}
+
+.slds-button_stretch {
+    margin-top: 1rem;
+    min-height: 45px; /* Brand Guide Standard */
+    font-size: 1rem;
+    font-weight: 700;
+}

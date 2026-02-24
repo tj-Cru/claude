@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_and_Address_Donor_Caseload</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ NOT(
+   OR(
+       $Profile.Name = &apos;System Administrator&apos;,
+       $Profile.Name = &apos;FL Development Administrator AV&apos;, 
+			 $Profile.Name  = &apos;FL Customer Community Login User&apos;
+			)
+   ),
+   OR(
+    AND(
+      ISCHANGED( MailingAddress ),
+      Account.Donor_Caseload_Lookup__c != Null,
+      $User.Id != Account.OwnerId
+       ),
+    AND(
+      ISCHANGED(  OtherAddress  ),
+      Account.Donor_Caseload_Lookup__c != Null,
+      $User.Id != Account.OwnerId
+       ),
+    AND(
+      ISCHANGED(   MobilePhone   ),
+      Account.Donor_Caseload_Lookup__c != Null,
+      $User.Id != Account.OwnerId
+       )
+   )
+)</errorConditionFormula>
+    <errorMessage>You cannot Edit Addresses or Phone Numbers on this Contact, because it is on a Donor Caseload. Contact the Caseload Owner to make these changes..</errorMessage>
+</ValidationRule>

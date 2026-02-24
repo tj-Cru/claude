@@ -1,0 +1,89 @@
+:host {
+    /* --- BRAND PALETTE --- */
+    --wtr-green: #006C5B;       /* Dark Green (Primary) */
+    --wtr-off-white: #F1F1F1;   /* Off White (Backgrounds) */
+    --wtr-cool-grey: #898C8E;   /* Cool Grey (Borders/Subtext) */
+    --wtr-soft-black: #24272A;  /* Soft Black (Headings/Text) */
+    --wtr-white: #FFFFFF;
+    
+    /* --- TYPOGRAPHY --- */
+    --wtr-font-heading: 'Akkurat', 'Roboto', sans-serif; 
+    --wtr-font-body: 'Akkurat', 'Roboto', sans-serif;
+    --wtr-font-weight-bold: 700;
+}
+
+/* Card Overrides */
+lightning-card {
+    --slds-c-card-shadow: none;
+    --slds-c-card-color-border: transparent;
+    font-family: var(--wtr-font-body);
+}
+
+/* HEADER */
+.wtr-header {
+    background-color: var(--wtr-green); /* Changed to Brand Green */
+    color: var(--wtr-white);            /* Text to White */
+    padding: 0.75rem 1rem;              /* Reduced padding (was 1.5rem) */
+    text-align: center;
+    margin-bottom: 1rem;
+    /* Removed border-bottom as the solid color defines the section */
+}
+
+.wtr-header h1 {
+    font-family: var(--wtr-font-heading);
+    font-size: 1.25rem;                 /* Reduced font size slightly */
+    font-weight: var(--wtr-font-weight-bold);
+    letter-spacing: 0.5px;
+    margin: 0;
+    color: var(--wtr-white);            /* Ensure text is white */
+    text-transform: capitalize;
+}
+
+/* MENU BUTTONS (Tiles) */
+.wtr-menu-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50px; 
+    padding: 0.75rem; /* Slightly reduced padding */
+    
+    background-color: var(--wtr-white);
+    border: 1px solid var(--wtr-cool-grey); 
+    border-radius: 2px; 
+    
+    color: var(--wtr-green); 
+    font-family: var(--wtr-font-heading);
+    font-size: 1rem; /* Adjusted for better fit */
+    font-weight: var(--wtr-font-weight-bold);
+    
+    margin-bottom: 0.75rem;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.wtr-menu-button:hover, .wtr-menu-button:active {
+    background-color: var(--wtr-green); 
+    border-color: var(--wtr-green);
+    color: var(--wtr-white);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* FOOTER */
+.wtr-footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--wtr-off-white);
+}
+
+.wtr-logo-text {
+    font-family: var(--wtr-font-heading);
+    color: var(--wtr-cool-grey);
+    font-size: 0.75rem;
+    font-weight: var(--wtr-font-weight-bold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}

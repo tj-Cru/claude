@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Account_Status_Change</fullName>
+    <active>false</active>
+    <description>User cannot change &quot;Merge Pending&quot; and &quot;Deleted&quot; statuses.</description>
+    <errorConditionFormula>OR(
+AND (ISPICKVAL(PRIORVALUE(Status__c), &quot;Merge Pending&quot;),
+     NOT(ISPICKVAL(Status__c, &quot;Merge Pending&quot;)),
+     EDI_ByPassValidation__c = false),
+AND (ISPICKVAL(PRIORVALUE(Status__c), &quot;Deleted&quot;),
+     NOT(ISPICKVAL(Status__c, &quot;Deleted&quot;)),
+     EDI_ByPassValidation__c = false)
+)</errorConditionFormula>
+    <errorDisplayField>Status__c</errorDisplayField>
+    <errorMessage>&quot;Merge Pending&quot; and &quot;Deleted&quot; statuses cannot be changed.</errorMessage>
+</ValidationRule>

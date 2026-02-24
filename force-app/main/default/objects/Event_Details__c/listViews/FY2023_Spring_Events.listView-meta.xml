@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FY2023_Spring_Events</fullName>
+    <columns>NAME</columns>
+    <columns>EventCode__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Weeks__c</columns>
+    <columns>Campaign__c</columns>
+    <columns>Attending__c</columns>
+    <columns>Conference_Location__c</columns>
+    <columns>City_1__c</columns>
+    <columns>State__c</columns>
+    <columns>Capacity__c</columns>
+    <columns>Estimated_Attendance__c</columns>
+    <columns>Ministry_Rep_A__c</columns>
+    <columns>Cru_Source__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Start_Date__c</field>
+        <operation>greaterThan</operation>
+        <value>1/1/2023</value>
+    </filters>
+    <filters>
+        <field>Stage__c</field>
+        <operation>equals</operation>
+        <value>Setup,Planning,Complete</value>
+    </filters>
+    <filters>
+        <field>End_Date__c</field>
+        <operation>lessThan</operation>
+        <value>8/31/2023</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>notContain</operation>
+        <value>test</value>
+    </filters>
+    <label>FY2023 Spring Events</label>
+</ListView>

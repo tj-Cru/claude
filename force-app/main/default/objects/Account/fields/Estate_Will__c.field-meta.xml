@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Estate_Will__c</fullName>
+    <description>Donors who have us in their Estate or Will</description>
+    <inlineHelpText>Donors who have put FamilyLife in their Estate or Will (Heritage Partner) -- Donor Team Only use.  
+NOTE:  This field is automatically marked &quot;YES&quot; when a Heritage Partner Opportunity is set to &quot;Closed/Won.&quot;</inlineHelpText>
+    <label>Estate/Will</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Yes</fullName>
+                <default>false</default>
+                <label>Yes</label>
+            </value>
+            <value>
+                <fullName>Shown Interest</fullName>
+                <default>false</default>
+                <label>Shown Interest</label>
+            </value>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+                <label>Not Interested</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

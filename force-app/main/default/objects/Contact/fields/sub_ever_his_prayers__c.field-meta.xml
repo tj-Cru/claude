@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sub_ever_his_prayers__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>SilverPop Preferences and Subscriptions</description>
+    <label>sub_ever_his_prayers</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

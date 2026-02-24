@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Longitude_and_Latitude__c</fullName>
+    <description>For use in GeoCode formulas distance from</description>
+    <displayLocationInDecimal>false</displayLocationInDecimal>
+    <inlineHelpText>Enter a longitude and latitude for the capital of this country.</inlineHelpText>
+    <label>Longitude and Latitude</label>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Location</type>
+</CustomField>

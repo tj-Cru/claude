@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CCC_Area__c</fullName>
+    <label>CCC Area</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Western Europe</fullName>
+                <default>false</default>
+                <label>Western Europe</label>
+            </value>
+            <value>
+                <fullName>East Asia Opportunities    (EAOP)</fullName>
+                <default>false</default>
+                <label>East Asia Opportunities    (EAOP)</label>
+            </value>
+            <value>
+                <fullName>East Asia Orient  (EAORT)</fullName>
+                <default>false</default>
+                <label>East Asia Orient  (EAORT)</label>
+            </value>
+            <value>
+                <fullName>Eastern Europe &amp; Russia  (EE/R)</fullName>
+                <default>false</default>
+                <label>Eastern Europe &amp; Russia  (EE/R)</label>
+            </value>
+            <value>
+                <fullName>Francophone Africa  (FAF)</fullName>
+                <default>false</default>
+                <label>Francophone Africa  (FAF)</label>
+            </value>
+            <value>
+                <fullName>Latin America &amp; Caribbean  (LA/C)</fullName>
+                <default>false</default>
+                <label>Latin America &amp; Caribbean  (LA/C)</label>
+            </value>
+            <value>
+                <fullName>North Africa, Middle East   (NAME)</fullName>
+                <default>false</default>
+                <label>North Africa, Middle East   (NAME)</label>
+            </value>
+            <value>
+                <fullName>North America, Oceania  (NA/O)</fullName>
+                <default>false</default>
+                <label>North America, Oceania  (NA/O)</label>
+            </value>
+            <value>
+                <fullName>Persian,Armenian,Central Asian, Turkic    (PACT)</fullName>
+                <default>false</default>
+                <label>Persian,Armenian,Central Asian, Turkic    (PACT)</label>
+            </value>
+            <value>
+                <fullName>South Asia  (S.ASIA)</fullName>
+                <default>false</default>
+                <label>South Asia  (S.ASIA)</label>
+            </value>
+            <value>
+                <fullName>South East Asia  (ASEA)</fullName>
+                <default>false</default>
+                <label>South East Asia  (ASEA)</label>
+            </value>
+            <value>
+                <fullName>Southern &amp; Eastern Africa   (SEA)</fullName>
+                <default>false</default>
+                <label>Southern &amp; Eastern Africa   (SEA)</label>
+            </value>
+            <value>
+                <fullName>West Africa  (WA)</fullName>
+                <default>false</default>
+                <label>West Africa  (WA)</label>
+            </value>
+            <value>
+                <fullName>Western Europe  (WE)</fullName>
+                <default>false</default>
+                <label>Western Europe  (WE)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

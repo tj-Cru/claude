@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Interest_in_Stewardship_Strategies__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Used by Development</description>
+    <label>Interest in Stewardship Strategies</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

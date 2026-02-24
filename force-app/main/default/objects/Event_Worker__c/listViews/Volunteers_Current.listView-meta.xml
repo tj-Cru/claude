@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Volunteers_Current</fullName>
+    <columns>NAME</columns>
+    <columns>Role__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>Years_On_Team__c</columns>
+    <columns>Is_Primary__c</columns>
+    <columns>Next_Award__c</columns>
+    <columns>Next_Due__c</columns>
+    <columns>Volunteer_Area_Code__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Event_Worker__c.Volunteer</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Current</value>
+    </filters>
+    <label>Volunteers Current</label>
+</ListView>

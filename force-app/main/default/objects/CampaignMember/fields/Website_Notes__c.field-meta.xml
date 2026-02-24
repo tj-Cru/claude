@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Website_Notes__c</fullName>
+    <description>This field is used to capture any information received from a customer on a website form that does not have a standard place to be stored.  It is then mapped to the Opty that is automatically generated from Custom Object if applicable.  Will also allow reporting from this field as it will be standardized.</description>
+    <inlineHelpText>This is data received from the customer via the website they were interacting with that does not have a standard place to be stored.</inlineHelpText>
+    <label>Website Notes/Event Notes</label>
+    <length>32768</length>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

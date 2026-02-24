@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Caseload_List_contacts_Rep_Template</fullName>
+    <columns>Donor_Caseload__c</columns>
+    <columns>Is_Primary_Contact__c</columns>
+    <columns>FULL_NAME</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.SITE</columns>
+    <columns>CONTACT.ADDRESS2_STREET</columns>
+    <columns>CONTACT.ADDRESS2_CITY</columns>
+    <columns>CONTACT.ADDRESS2_STATE</columns>
+    <columns>CONTACT.ADDRESS2_ZIP</columns>
+    <columns>CONTACT.PHONE1</columns>
+    <columns>All_Emails_Opt_Out__c</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>Donor_Classication__c</columns>
+    <columns>CRU_PID__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Donor_Caseload__c</field>
+        <operation>contains</operation>
+        <value>Don Zerbian</value>
+    </filters>
+    <label>Caseload List contacts - Rep Template</label>
+    <sharedTo>
+        <role>Development_Upper_Level</role>
+    </sharedTo>
+</ListView>

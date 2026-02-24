@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ministry_Description__c</fullName>
+    <description>Global Dept Use:  Description of Ministry focus in the country.</description>
+    <inlineHelpText>Brief statement (2-3 sentences) describing the focus and distinctives of the country’s FamilyLife ministry.</inlineHelpText>
+    <label>Ministry Description</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

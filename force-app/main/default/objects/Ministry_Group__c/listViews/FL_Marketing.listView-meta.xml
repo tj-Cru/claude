@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FL_Marketing</fullName>
+    <columns>NAME</columns>
+    <columns>Group_Email__c</columns>
+    <columns>Start_Date__c</columns>
+    <columns>End_Date__c</columns>
+    <columns>Event_Area_Code__c</columns>
+    <columns>External_Id__c</columns>
+    <columns>Group_Coordinator__c</columns>
+    <columns>Group_Household__c</columns>
+    <columns>All_Registrations__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Ministry_Rep__c</columns>
+    <columns>migration_groupnamesId__c</columns>
+    <columns>Process_Text__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Group_Coordinator_Last_Name__c</field>
+        <operation>equals</operation>
+        <value>FL - MArketing,Test,Vendicaore</value>
+    </filters>
+    <label>FL Marketing</label>
+</ListView>

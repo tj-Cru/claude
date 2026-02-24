@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>smartystreets__Other_Address_Status__c</fullName>
+    <deprecated>false</deprecated>
+    <description>Shows return code plus icon</description>
+    <externalId>false</externalId>
+    <formula>If(smartystreets__Other_Return_Code__c = &quot;Confirmed&quot;, IMAGE(&quot;/img/msg_icons/confirm16.png&quot;, &quot;Confirmed&quot;, 16, 16) &amp; &quot; Confirmed&quot;,
+	If(smartystreets__Other_Return_Code__c = &quot;Partial&quot;, IMAGE(&quot;/img/msg_icons/warning16.png&quot;, &quot;Confirmed - Partially&quot;, 16, 16) &amp; &quot; Confirmed - Partially&quot;,
+	    If(left(smartystreets__Other_Return_Code__c,9) = &quot;Confirmed&quot;, IMAGE(&quot;/img/msg_icons/warning16.png&quot;, smartystreets__Other_Return_Code__c, 16, 16) &amp; &quot; &quot; &amp; smartystreets__Other_Return_Code__c,
+	        If(smartystreets__Other_Return_Code__c = &quot;Bad or Blank Address&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Blank Address&quot;, 16, 16) &amp; &quot; Bad or Blank Address&quot;,
+	                If(smartystreets__Other_Return_Code__c = &quot;Not Submitted&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Not Submitted&quot;, 16, 16) &amp; &quot; Not Submitted&quot;,
+	                    If(smartystreets__Other_Return_Code__c = &quot;Not Confirmed&quot;, IMAGE(&quot;/img/msg_icons/error16.png&quot;, &quot;Not Confirmed&quot;, 16, 16) &amp; &quot; Not Confirmed&quot;, IMAGE(&quot;/img/msg_icons/info16.png&quot;, &quot;Not Yet Verified&quot;, 16, 16) &amp; &quot; Not Yet Verified&quot;))))))</formula>
+    <inlineHelpText>Confirmed
+Not Confirmed
+Confirmed - By Dropping Secondary Info
+Confirmed - Missing Secondary Info
+Confirmed - May be Undeliverable
+Not Submitted</inlineHelpText>
+    <label>Other Address Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

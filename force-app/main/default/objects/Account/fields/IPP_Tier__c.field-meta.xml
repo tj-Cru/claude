@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IPP_Tier__c</fullName>
+    <label>IPP Tier</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Tier 0 - Influence Class</fullName>
+                <default>false</default>
+                <label>Tier 0 - Influence Class</label>
+            </value>
+            <value>
+                <fullName>Tier 1 - Ministry Class</fullName>
+                <default>false</default>
+                <label>Tier 1 - Ministry Class</label>
+            </value>
+            <value>
+                <fullName>Tier 2 - Investment Class</fullName>
+                <default>false</default>
+                <label>Tier 2 - Investment Class</label>
+            </value>
+            <value>
+                <fullName>Tier 3 - Commerce Class</fullName>
+                <default>false</default>
+                <label>Tier 3 - Commerce Class</label>
+            </value>
+            <value>
+                <fullName>Tier 4 - Outer Edge</fullName>
+                <default>false</default>
+                <label>Tier 4 - Outer Edge</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

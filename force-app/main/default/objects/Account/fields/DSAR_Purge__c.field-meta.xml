@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DSAR_Purge__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Check this box to trigger a Flow to delete the account; necessary step in the DSAR Deletion process to avoid cascade deletes.</description>
+    <label>DSAR Purge</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

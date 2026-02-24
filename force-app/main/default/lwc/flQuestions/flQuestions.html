@@ -1,0 +1,115 @@
+<template>
+    <div class="child-container">
+        <div class="child-header">
+            <div class="header-content slds-grid slds-grid_align-spread slds-grid_vertical-align-center">
+                <h2>{eventName} Questions</h2>
+                
+                <div class="header-actions slds-grid slds-grid_vertical-align-center">
+                    
+                    <lightning-button-icon-stateful 
+                        icon-name="utility:user" 
+                        selected={filterMine} 
+                        onclick={handleMyFilterChange} 
+                        variant="border-filled"
+                        alternative-text="Filter by My Questions"
+                        class="slds-m-right_x-small filter-button">
+                    </lightning-button-icon-stateful>
+
+                    <lightning-button-menu 
+                        icon-name="utility:filterList" 
+                        variant="border-filled" 
+                        alternative-text="Filter by Status"
+                        onselect={handleStatusChange}
+                        class="slds-m-right_x-small menu-button-white">
+                        
+                        <template for:each={statusOptions} for:item="opt">
+                            <lightning-menu-item 
+                                key={opt.value} 
+                                value={opt.value} 
+                                label={opt.label}>
+                            </lightning-menu-item>
+                        </template>
+                    </lightning-button-menu>
+
+                    <lightning-button-icon 
+                        icon-name="utility:back" 
+                        variant="border-filled" 
+                        alternative-text="Back" 
+                        onclick={handleBack}
+                        class="slds-m-right_x-small back-header-icon">
+                    </lightning-button-icon>
+
+                    <lightning-button-icon 
+                        icon-name="utility:refresh" 
+                        variant="border-filled" 
+                        alternative-text="Refresh List" 
+                        onclick={handleRefresh}
+                        class="refresh-button">
+                    </lightning-button-icon>
+                </div>
+            </div>
+        </div>
+
+        <div class="child-body">
+            <template lwc:if={isLoading}>
+                <div class="slds-is-relative slds-p-around_large">
+                    <lightning-spinner alternative-text="Loading" size="medium"></lightning-spinner>
+                </div>
+            </template>
+
+            <template lwc:else>
+                <div class="results-container scrollable-wrapper">
+                    <template lwc:if={hasResults}>
+                        <ul class="question-list">
+                            <template for:each={filteredQuestions} for:item="q">
+                                <li key={q.Id} class="question-item">
+                                    <div class="question-header slds-grid slds-grid_vertical-align-center slds-grid_align-spread">
+                                        <div class="slds-truncate">
+                                            <a href="#" 
+                                               onclick={handleNameClick} 
+                                               data-record-id={q.Id} 
+                                               class="wtr-link slds-text-heading_small">
+                                                {q.Name}
+                                            </a>
+                                            <div class="date-stamp slds-text-color_weak slds-m-top_xx-small">
+                                                <lightning-formatted-date-time value={q.CreatedDate} year="2-digit" month="numeric" day="numeric" hour="2-digit" minute="2-digit"></lightning-formatted-date-time>
+                                                <span class="slds-m-horizontal_xx-small">•</span>
+                                                <span>{q.Status__c}</span>
+                                                <template lwc:if={q.Owner}>
+                                                    <span class="slds-m-horizontal_xx-small">•</span>
+                                                    <span>{q.Owner.Name}</span>
+                                                </template>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="slds-no-flex">
+                                            <lightning-button 
+                                                label="Claim" 
+                                                variant="neutral" 
+                                                icon-name="utility:check"
+                                                icon-position="left"
+                                                onclick={handleClaim} 
+                                                data-id={q.Id}
+                                                class="claim-button">
+                                            </lightning-button>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="question-text slds-m-top_small">
+                                        "{q.Question__c}"
+                                    </div>
+                                </li>
+                            </template>
+                        </ul>
+                    </template>
+                    <template lwc:else>
+                        <div class="slds-text-align_center slds-p-around_medium text-weak">
+                            <lightning-icon icon-name="utility:filter" size="medium" class="slds-m-bottom_small"></lightning-icon>
+                            <p>No questions found matching your filters.</p>
+                        </div>
+                    </template>
+                </div>
+            </template>
+        </div>
+    </div>
+</template>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EventCode__c</fullName>
+    <caseSensitive>false</caseSensitive>
+    <description>Unique Code assigned to this specific event</description>
+    <externalId>true</externalId>
+    <inlineHelpText>This is unique key that must be used across the enterprise to maintain automation. The syntax is always
+&quot;WTR&quot; + Last two digits from the fiscal year of the event + Three letter code usually the nearest airport code + a single digit, normally 1. but could be 2 if there is more than one event at the location in the same fiscal year. Example WTR26TPA1</inlineHelpText>
+    <label>EventCode</label>
+    <length>20</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

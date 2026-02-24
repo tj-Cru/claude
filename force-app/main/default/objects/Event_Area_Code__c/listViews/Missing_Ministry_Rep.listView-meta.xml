@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Missing_Ministry_Rep</fullName>
+    <columns>NAME</columns>
+    <columns>Region__c</columns>
+    <columns>Advisor__c</columns>
+    <columns>Advisor_Manager__c</columns>
+    <columns>Ministry_Rep__c</columns>
+    <columns>Ministry_Rep_2__c</columns>
+    <columns>Ministry_Rep_A__c</columns>
+    <columns>Ministry_Rep_B__c</columns>
+    <columns>Divisional_Manager__c</columns>
+    <columns>Donor_Rep__c</columns>
+    <columns>Event_Territory_Code__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Ministry_Rep__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Missing Ministry Rep</label>
+</ListView>

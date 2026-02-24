@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preferred_Email__c</fullName>
+    <label>Preferred Email Old (DoNotUse)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business</fullName>
+                <default>false</default>
+                <label>Business</label>
+            </value>
+            <value>
+                <fullName>Email (Other)</fullName>
+                <default>false</default>
+                <label>Email (Other)</label>
+            </value>
+            <value>
+                <fullName>Home</fullName>
+                <default>false</default>
+                <label>Home</label>
+            </value>
+            <value>
+                <fullName>Primary Email</fullName>
+                <default>false</default>
+                <label>Primary Email</label>
+            </value>
+            <value>
+                <fullName>Private Email</fullName>
+                <default>false</default>
+                <label>Private Email</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

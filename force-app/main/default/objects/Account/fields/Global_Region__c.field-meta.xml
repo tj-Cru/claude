@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Global_Region__c</fullName>
+    <label>Global Region</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Albanian: : Kosova ou Kosovë,</fullName>
+                <default>false</default>
+                <label>Albanian: : Kosova ou Kosovë,</label>
+            </value>
+            <value>
+                <fullName>Antarctica</fullName>
+                <default>false</default>
+                <label>Antarctica</label>
+            </value>
+            <value>
+                <fullName>Arabian Peninsula, Middle East</fullName>
+                <default>false</default>
+                <label>Arabian Peninsula, Middle East</label>
+            </value>
+            <value>
+                <fullName>Australia</fullName>
+                <default>false</default>
+                <label>Australia</label>
+            </value>
+            <value>
+                <fullName>Caribbean</fullName>
+                <default>false</default>
+                <label>Caribbean</label>
+            </value>
+            <value>
+                <fullName>Caribbean, parts of the Bahamas island chain.</fullName>
+                <default>false</default>
+                <label>Caribbean, parts of the Bahamas island chain.</label>
+            </value>
+            <value>
+                <fullName>Caucasus, Western Asia</fullName>
+                <default>false</default>
+                <label>Caucasus, Western Asia</label>
+            </value>
+            <value>
+                <fullName>Central Africa</fullName>
+                <default>false</default>
+                <label>Central Africa</label>
+            </value>
+            <value>
+                <fullName>Central America</fullName>
+                <default>false</default>
+                <label>Central America</label>
+            </value>
+            <value>
+                <fullName>Central Asia</fullName>
+                <default>false</default>
+                <label>Central Asia</label>
+            </value>
+            <value>
+                <fullName>Central East South America</fullName>
+                <default>false</default>
+                <label>Central East South America</label>
+            </value>
+            <value>
+                <fullName>Central Eastern South America</fullName>
+                <default>false</default>
+                <label>Central Eastern South America</label>
+            </value>
+            <value>
+                <fullName>Central South America</fullName>
+                <default>false</default>
+                <label>Central South America</label>
+            </value>
+            <value>
+                <fullName>East-Central Africa</fullName>
+                <default>false</default>
+                <label>East-Central Africa</label>
+            </value>
+            <value>
+                <fullName>Eastern Africa</fullName>
+                <default>false</default>
+                <label>Eastern Africa</label>
+            </value>
+            <value>
+                <fullName>Eastern Africa, African Great Lakes</fullName>
+                <default>false</default>
+                <label>Eastern Africa, African Great Lakes</label>
+            </value>
+            <value>
+                <fullName>Eastern Asia</fullName>
+                <default>false</default>
+                <label>Eastern Asia</label>
+            </value>
+            <value>
+                <fullName>Eastern Europe</fullName>
+                <default>false</default>
+                <label>Eastern Europe</label>
+            </value>
+            <value>
+                <fullName>Eastern Europe - Northern Asia</fullName>
+                <default>false</default>
+                <label>Eastern Europe - Northern Asia</label>
+            </value>
+            <value>
+                <fullName>Greater Antilles, Caribbean</fullName>
+                <default>false</default>
+                <label>Greater Antilles, Caribbean</label>
+            </value>
+            <value>
+                <fullName>Leeward Islands, Caribbean</fullName>
+                <default>false</default>
+                <label>Leeward Islands, Caribbean</label>
+            </value>
+            <value>
+                <fullName>Lesser Antilles, Caribbean</fullName>
+                <default>false</default>
+                <label>Lesser Antilles, Caribbean</label>
+            </value>
+            <value>
+                <fullName>Maritime South-East Asia</fullName>
+                <default>false</default>
+                <label>Maritime South-East Asia</label>
+            </value>
+            <value>
+                <fullName>Maritime Southeast Asia, Melanesia, Oceania</fullName>
+                <default>false</default>
+                <label>Maritime Southeast Asia, Melanesia, Oceania</label>
+            </value>
+            <value>
+                <fullName>Mediterranean, Western Asia</fullName>
+                <default>false</default>
+                <label>Mediterranean, Western Asia</label>
+            </value>
+            <value>
+                <fullName>Melanesia, Oceania</fullName>
+                <default>false</default>
+                <label>Melanesia, Oceania</label>
+            </value>
+            <value>
+                <fullName>Micronesia, Oceania</fullName>
+                <default>false</default>
+                <label>Micronesia, Oceania</label>
+            </value>
+            <value>
+                <fullName>Middle East</fullName>
+                <default>false</default>
+                <label>Middle East</label>
+            </value>
+            <value>
+                <fullName>Middle East, Western Asia</fullName>
+                <default>false</default>
+                <label>Middle East, Western Asia</label>
+            </value>
+            <value>
+                <fullName>North America</fullName>
+                <default>false</default>
+                <label>North America</label>
+            </value>
+            <value>
+                <fullName>North Eastern South America</fullName>
+                <default>false</default>
+                <label>North Eastern South America</label>
+            </value>
+            <value>
+                <fullName>North North America</fullName>
+                <default>false</default>
+                <label>North North America</label>
+            </value>
+            <value>
+                <fullName>North West South America</fullName>
+                <default>false</default>
+                <label>North West South America</label>
+            </value>
+            <value>
+                <fullName>North-Eastern South America</fullName>
+                <default>false</default>
+                <label>North-Eastern South America</label>
+            </value>
+            <value>
+                <fullName>Northern Africa</fullName>
+                <default>false</default>
+                <label>Northern Africa</label>
+            </value>
+            <value>
+                <fullName>Northern Europe</fullName>
+                <default>false</default>
+                <label>Northern Europe</label>
+            </value>
+            <value>
+                <fullName>Northern South America</fullName>
+                <default>false</default>
+                <label>Northern South America</label>
+            </value>
+            <value>
+                <fullName>Northern South America, Caribbean</fullName>
+                <default>false</default>
+                <label>Northern South America, Caribbean</label>
+            </value>
+            <value>
+                <fullName>Oceania/Australia</fullName>
+                <default>false</default>
+                <label>Oceania/Australia</label>
+            </value>
+            <value>
+                <fullName>Oceania; Australia</fullName>
+                <default>false</default>
+                <label>Oceania; Australia</label>
+            </value>
+            <value>
+                <fullName>Polynesia, Oceania</fullName>
+                <default>false</default>
+                <label>Polynesia, Oceania</label>
+            </value>
+            <value>
+                <fullName>South-Central Asia</fullName>
+                <default>false</default>
+                <label>South-Central Asia</label>
+            </value>
+            <value>
+                <fullName>Southeast Asia</fullName>
+                <default>false</default>
+                <label>Southeast Asia</label>
+            </value>
+            <value>
+                <fullName>South-East Asia</fullName>
+                <default>false</default>
+                <label>South-East Asia</label>
+            </value>
+            <value>
+                <fullName>South-East Asia, Australia</fullName>
+                <default>false</default>
+                <label>South-East Asia, Australia</label>
+            </value>
+            <value>
+                <fullName>Southeastern Europe, Western Asia</fullName>
+                <default>false</default>
+                <label>Southeastern Europe, Western Asia</label>
+            </value>
+            <value>
+                <fullName>Southern Africa</fullName>
+                <default>false</default>
+                <label>Southern Africa</label>
+            </value>
+            <value>
+                <fullName>Southern Europe</fullName>
+                <default>false</default>
+                <label>Southern Europe</label>
+            </value>
+            <value>
+                <fullName>Southern Europe within Italy</fullName>
+                <default>false</default>
+                <label>Southern Europe within Italy</label>
+            </value>
+            <value>
+                <fullName>Southern South America</fullName>
+                <default>false</default>
+                <label>Southern South America</label>
+            </value>
+            <value>
+                <fullName>Southern South America, Antarctic</fullName>
+                <default>false</default>
+                <label>Southern South America, Antarctic</label>
+            </value>
+            <value>
+                <fullName>West Africa</fullName>
+                <default>false</default>
+                <label>West Africa</label>
+            </value>
+            <value>
+                <fullName>Western Asia</fullName>
+                <default>false</default>
+                <label>Western Asia</label>
+            </value>
+            <value>
+                <fullName>Western Europe</fullName>
+                <default>false</default>
+                <label>Western Europe</label>
+            </value>
+            <value>
+                <fullName>Western South America</fullName>
+                <default>false</default>
+                <label>Western South America</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

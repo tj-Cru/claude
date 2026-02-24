@@ -1,0 +1,2141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Global_Time_Zone__c</fullName>
+    <inlineHelpText>Two-Character Country Code followed by Country Name/City followed by Time Offset from UTC/GMT time.  The characters &quot;UTC&quot; with no specified time offset = GMT.</inlineHelpText>
+    <label>Global Time Zone</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AD  Europe/Andorra UTC +01:00</fullName>
+                <default>false</default>
+                <label>AD  Europe/Andorra UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>AE  Asia/Dubai UTC +04:00</fullName>
+                <default>false</default>
+                <label>AE  Asia/Dubai UTC +04:00</label>
+            </value>
+            <value>
+                <fullName>AF  Asia/Kabul UTC +04:30</fullName>
+                <default>false</default>
+                <label>AF  Asia/Kabul UTC +04:30</label>
+            </value>
+            <value>
+                <fullName>AG  America/Antigua UTC -04:00</fullName>
+                <default>false</default>
+                <label>AG  America/Antigua UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>AI  America/Anguilla UTC -04:00</fullName>
+                <default>false</default>
+                <label>AI  America/Anguilla UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>AL  Europe/Tirane UTC +01:00</fullName>
+                <default>false</default>
+                <label>AL  Europe/Tirane UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>AM  Asia/Yerevan UTC +04:00</fullName>
+                <default>false</default>
+                <label>AM  Asia/Yerevan UTC +04:00</label>
+            </value>
+            <value>
+                <fullName>AO  Africa/Luanda UTC +01:00</fullName>
+                <default>false</default>
+                <label>AO  Africa/Luanda UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>AQ  Antarctica/Casey UTC +08:00</fullName>
+                <default>false</default>
+                <label>AQ  Antarctica/Casey UTC +08:00</label>
+            </value>
+            <value>
+                <fullName>AQ  Antarctica/Davis UTC +07:00</fullName>
+                <default>false</default>
+                <label>AQ  Antarctica/Davis UTC +07:00</label>
+            </value>
+            <value>
+                <fullName>AQ  Antarctica/DumontDUrville UTC +10:00</fullName>
+                <default>false</default>
+                <label>AQ  Antarctica/DumontDUrville UTC +10:00</label>
+            </value>
+            <value>
+                <fullName>AQ  Antarctica/Mawson UTC +05:00</fullName>
+                <default>false</default>
+                <label>AQ  Antarctica/Mawson UTC +05:00</label>
+            </value>
+            <value>
+                <fullName>AQ  Antarctica/McMurdo UTC +13:00</fullName>
+                <default>false</default>
+                <label>AQ  Antarctica/McMurdo UTC +13:00</label>
+            </value>
+            <value>
+                <fullName>AQ  Antarctica/Palmer UTC -03:00</fullName>
+                <default>false</default>
+                <label>AQ  Antarctica/Palmer UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>AQ  Antarctica/Rothera UTC -03:00</fullName>
+                <default>false</default>
+                <label>AQ  Antarctica/Rothera UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>AQ  Antarctica/Syowa UTC +03:00</fullName>
+                <default>false</default>
+                <label>AQ  Antarctica/Syowa UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>AQ  Antarctica/Troll UTC</fullName>
+                <default>false</default>
+                <label>AQ  Antarctica/Troll UTC</label>
+            </value>
+            <value>
+                <fullName>AQ  Antarctica/Vostok UTC +06:00</fullName>
+                <default>false</default>
+                <label>AQ  Antarctica/Vostok UTC +06:00</label>
+            </value>
+            <value>
+                <fullName>AR  America/Argentina/Buenos_Aires UTC -03:00</fullName>
+                <default>false</default>
+                <label>AR  America/Argentina/Buenos_Aires UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>AR  America/Argentina/Catamarca UTC -03:00</fullName>
+                <default>false</default>
+                <label>AR  America/Argentina/Catamarca UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>AR  America/Argentina/Cordoba UTC -03:00</fullName>
+                <default>false</default>
+                <label>AR  America/Argentina/Cordoba UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>AR  America/Argentina/Jujuy UTC -03:00</fullName>
+                <default>false</default>
+                <label>AR  America/Argentina/Jujuy UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>AR  America/Argentina/La_Rioja UTC -03:00</fullName>
+                <default>false</default>
+                <label>AR  America/Argentina/La_Rioja UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>AR  America/Argentina/Mendoza UTC -03:00</fullName>
+                <default>false</default>
+                <label>AR  America/Argentina/Mendoza UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>AR  America/Argentina/Rio_Gallegos UTC -03:00</fullName>
+                <default>false</default>
+                <label>AR  America/Argentina/Rio_Gallegos UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>AR  America/Argentina/Salta UTC -03:00</fullName>
+                <default>false</default>
+                <label>AR  America/Argentina/Salta UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>AR  America/Argentina/San_Juan UTC -03:00</fullName>
+                <default>false</default>
+                <label>AR  America/Argentina/San_Juan UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>AR  America/Argentina/San_Luis UTC -03:00</fullName>
+                <default>false</default>
+                <label>AR  America/Argentina/San_Luis UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>AR  America/Argentina/Tucuman UTC -03:00</fullName>
+                <default>false</default>
+                <label>AR  America/Argentina/Tucuman UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>AR  America/Argentina/Ushuaia UTC -03:00</fullName>
+                <default>false</default>
+                <label>AR  America/Argentina/Ushuaia UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>AS  Pacific/Pago_Pago UTC -11:00</fullName>
+                <default>false</default>
+                <label>AS  Pacific/Pago_Pago UTC -11:00</label>
+            </value>
+            <value>
+                <fullName>AT  Europe/Vienna UTC +01:00</fullName>
+                <default>false</default>
+                <label>AT  Europe/Vienna UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>AU  Antarctica/Macquarie UTC +11:00</fullName>
+                <default>false</default>
+                <label>AU  Antarctica/Macquarie UTC +11:00</label>
+            </value>
+            <value>
+                <fullName>AU  Australia/Adelaide UTC +10:30</fullName>
+                <default>false</default>
+                <label>AU  Australia/Adelaide UTC +10:30</label>
+            </value>
+            <value>
+                <fullName>AU  Australia/Brisbane UTC +10:00</fullName>
+                <default>false</default>
+                <label>AU  Australia/Brisbane UTC +10:00</label>
+            </value>
+            <value>
+                <fullName>AU  Australia/Broken_Hill UTC +10:30</fullName>
+                <default>false</default>
+                <label>AU  Australia/Broken_Hill UTC +10:30</label>
+            </value>
+            <value>
+                <fullName>AU  Australia/Currie UTC +11:00</fullName>
+                <default>false</default>
+                <label>AU  Australia/Currie UTC +11:00</label>
+            </value>
+            <value>
+                <fullName>AU  Australia/Darwin UTC +09:30</fullName>
+                <default>false</default>
+                <label>AU  Australia/Darwin UTC +09:30</label>
+            </value>
+            <value>
+                <fullName>AU  Australia/Eucla UTC +08:45</fullName>
+                <default>false</default>
+                <label>AU  Australia/Eucla UTC +08:45</label>
+            </value>
+            <value>
+                <fullName>AU  Australia/Hobart UTC +11:00</fullName>
+                <default>false</default>
+                <label>AU  Australia/Hobart UTC +11:00</label>
+            </value>
+            <value>
+                <fullName>AU  Australia/Lindeman UTC +10:00</fullName>
+                <default>false</default>
+                <label>AU  Australia/Lindeman UTC +10:00</label>
+            </value>
+            <value>
+                <fullName>AU  Australia/Lord_Howe UTC +11:00</fullName>
+                <default>false</default>
+                <label>AU  Australia/Lord_Howe UTC +11:00</label>
+            </value>
+            <value>
+                <fullName>AU  Australia/Melbourne UTC +11:00</fullName>
+                <default>false</default>
+                <label>AU  Australia/Melbourne UTC +11:00</label>
+            </value>
+            <value>
+                <fullName>AU  Australia/Perth UTC +08:00</fullName>
+                <default>false</default>
+                <label>AU  Australia/Perth UTC +08:00</label>
+            </value>
+            <value>
+                <fullName>AU  Australia/Sydney UTC +11:00</fullName>
+                <default>false</default>
+                <label>AU  Australia/Sydney UTC +11:00</label>
+            </value>
+            <value>
+                <fullName>AW  America/Aruba UTC -04:00</fullName>
+                <default>false</default>
+                <label>AW  America/Aruba UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>AX  Europe/Mariehamn UTC +02:00</fullName>
+                <default>false</default>
+                <label>AX  Europe/Mariehamn UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>AZ  Asia/Baku UTC +04:00</fullName>
+                <default>false</default>
+                <label>AZ  Asia/Baku UTC +04:00</label>
+            </value>
+            <value>
+                <fullName>BA  Europe/Sarajevo UTC +01:00</fullName>
+                <default>false</default>
+                <label>BA  Europe/Sarajevo UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>BB  America/Barbados UTC -04:00</fullName>
+                <default>false</default>
+                <label>BB  America/Barbados UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>BD  Asia/Dhaka UTC +06:00</fullName>
+                <default>false</default>
+                <label>BD  Asia/Dhaka UTC +06:00</label>
+            </value>
+            <value>
+                <fullName>BE  Europe/Brussels UTC +01:00</fullName>
+                <default>false</default>
+                <label>BE  Europe/Brussels UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>BF  Africa/Ouagadougou UTC</fullName>
+                <default>false</default>
+                <label>BF  Africa/Ouagadougou UTC</label>
+            </value>
+            <value>
+                <fullName>BG  Europe/Sofia UTC +02:00</fullName>
+                <default>false</default>
+                <label>BG  Europe/Sofia UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>BH  Asia/Bahrain UTC +03:00</fullName>
+                <default>false</default>
+                <label>BH  Asia/Bahrain UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>BI  Africa/Bujumbura UTC +02:00</fullName>
+                <default>false</default>
+                <label>BI  Africa/Bujumbura UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>BJ  Africa/Porto-Novo UTC +01:00</fullName>
+                <default>false</default>
+                <label>BJ  Africa/Porto-Novo UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>BL  America/St_Barthelemy UTC -04:00</fullName>
+                <default>false</default>
+                <label>BL  America/St_Barthelemy UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>BM  Atlantic/Bermuda UTC -04:00</fullName>
+                <default>false</default>
+                <label>BM  Atlantic/Bermuda UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>BN  Asia/Brunei UTC +08:00</fullName>
+                <default>false</default>
+                <label>BN  Asia/Brunei UTC +08:00</label>
+            </value>
+            <value>
+                <fullName>BO  America/La_Paz UTC -04:00</fullName>
+                <default>false</default>
+                <label>BO  America/La_Paz UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>BQ  America/Kralendijk UTC -04:00</fullName>
+                <default>false</default>
+                <label>BQ  America/Kralendijk UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>BR  America/Araguaina UTC -03:00</fullName>
+                <default>false</default>
+                <label>BR  America/Araguaina UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>BR  America/Bahia UTC -03:00</fullName>
+                <default>false</default>
+                <label>BR  America/Bahia UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>BR  America/Belem UTC -03:00</fullName>
+                <default>false</default>
+                <label>BR  America/Belem UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>BR  America/Boa_Vista UTC -04:00</fullName>
+                <default>false</default>
+                <label>BR  America/Boa_Vista UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>BR  America/Campo_Grande UTC -04:00</fullName>
+                <default>false</default>
+                <label>BR  America/Campo_Grande UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>BR  America/Cuiaba UTC -04:00</fullName>
+                <default>false</default>
+                <label>BR  America/Cuiaba UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>BR  America/Eirunepe UTC -05:00</fullName>
+                <default>false</default>
+                <label>BR  America/Eirunepe UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>BR  America/Fortaleza UTC -03:00</fullName>
+                <default>false</default>
+                <label>BR  America/Fortaleza UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>BR  America/Maceio UTC -03:00</fullName>
+                <default>false</default>
+                <label>BR  America/Maceio UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>BR  America/Manaus UTC -04:00</fullName>
+                <default>false</default>
+                <label>BR  America/Manaus UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>BR  America/Noronha UTC -02:00</fullName>
+                <default>false</default>
+                <label>BR  America/Noronha UTC -02:00</label>
+            </value>
+            <value>
+                <fullName>BR  America/Porto_Velho UTC -04:00</fullName>
+                <default>false</default>
+                <label>BR  America/Porto_Velho UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>BR  America/Recife UTC -03:00</fullName>
+                <default>false</default>
+                <label>BR  America/Recife UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>BR  America/Rio_Branco UTC -05:00</fullName>
+                <default>false</default>
+                <label>BR  America/Rio_Branco UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>BR  America/Santarem UTC -03:00</fullName>
+                <default>false</default>
+                <label>BR  America/Santarem UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>BR  America/Sao_Paulo UTC -03:00</fullName>
+                <default>false</default>
+                <label>BR  America/Sao_Paulo UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>BS  America/Nassau UTC -05:00</fullName>
+                <default>false</default>
+                <label>BS  America/Nassau UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>BT  Asia/Thimphu UTC +06:00</fullName>
+                <default>false</default>
+                <label>BT  Asia/Thimphu UTC +06:00</label>
+            </value>
+            <value>
+                <fullName>BW  Africa/Gaborone UTC +02:00</fullName>
+                <default>false</default>
+                <label>BW  Africa/Gaborone UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>BY  Europe/Minsk UTC +03:00</fullName>
+                <default>false</default>
+                <label>BY  Europe/Minsk UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>BZ  America/Belize UTC -06:00</fullName>
+                <default>false</default>
+                <label>BZ  America/Belize UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Atikokan UTC -05:00</fullName>
+                <default>false</default>
+                <label>CA  America/Atikokan UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Blanc-Sablon UTC -04:00</fullName>
+                <default>false</default>
+                <label>CA  America/Blanc-Sablon UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Cambridge_Bay UTC -07:00</fullName>
+                <default>false</default>
+                <label>CA  America/Cambridge_Bay UTC -07:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Creston UTC -07:00</fullName>
+                <default>false</default>
+                <label>CA  America/Creston UTC -07:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Dawson_Creek UTC -07:00</fullName>
+                <default>false</default>
+                <label>CA  America/Dawson_Creek UTC -07:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Dawson UTC -08:00</fullName>
+                <default>false</default>
+                <label>CA  America/Dawson UTC -08:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Edmonton UTC -07:00</fullName>
+                <default>false</default>
+                <label>CA  America/Edmonton UTC -07:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Fort_Nelson UTC -07:00</fullName>
+                <default>false</default>
+                <label>CA  America/Fort_Nelson UTC -07:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Glace_Bay UTC -04:00</fullName>
+                <default>false</default>
+                <label>CA  America/Glace_Bay UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Goose_Bay UTC -04:00</fullName>
+                <default>false</default>
+                <label>CA  America/Goose_Bay UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Halifax UTC -04:00</fullName>
+                <default>false</default>
+                <label>CA  America/Halifax UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Inuvik UTC -07:00</fullName>
+                <default>false</default>
+                <label>CA  America/Inuvik UTC -07:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Iqaluit UTC -05:00</fullName>
+                <default>false</default>
+                <label>CA  America/Iqaluit UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Moncton UTC -04:00</fullName>
+                <default>false</default>
+                <label>CA  America/Moncton UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Nipigon UTC -05:00</fullName>
+                <default>false</default>
+                <label>CA  America/Nipigon UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Pangnirtung UTC -05:00</fullName>
+                <default>false</default>
+                <label>CA  America/Pangnirtung UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Rainy_River UTC -06:00</fullName>
+                <default>false</default>
+                <label>CA  America/Rainy_River UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Rankin_Inlet UTC -06:00</fullName>
+                <default>false</default>
+                <label>CA  America/Rankin_Inlet UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Regina UTC -06:00</fullName>
+                <default>false</default>
+                <label>CA  America/Regina UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Resolute UTC -06:00</fullName>
+                <default>false</default>
+                <label>CA  America/Resolute UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/St_Johns UTC -03:30</fullName>
+                <default>false</default>
+                <label>CA  America/St_Johns UTC -03:30</label>
+            </value>
+            <value>
+                <fullName>CA  America/Swift_Current UTC -06:00</fullName>
+                <default>false</default>
+                <label>CA  America/Swift_Current UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Thunder_Bay UTC -05:00</fullName>
+                <default>false</default>
+                <label>CA  America/Thunder_Bay UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Toronto UTC -05:00</fullName>
+                <default>false</default>
+                <label>CA  America/Toronto UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Vancouver UTC -08:00</fullName>
+                <default>false</default>
+                <label>CA  America/Vancouver UTC -08:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Whitehorse UTC -08:00</fullName>
+                <default>false</default>
+                <label>CA  America/Whitehorse UTC -08:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Winnipeg UTC -06:00</fullName>
+                <default>false</default>
+                <label>CA  America/Winnipeg UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>CA  America/Yellowknife UTC -07:00</fullName>
+                <default>false</default>
+                <label>CA  America/Yellowknife UTC -07:00</label>
+            </value>
+            <value>
+                <fullName>CC  Indian/Cocos UTC +06:30</fullName>
+                <default>false</default>
+                <label>CC  Indian/Cocos UTC +06:30</label>
+            </value>
+            <value>
+                <fullName>CD  Africa/Kinshasa UTC +01:00</fullName>
+                <default>false</default>
+                <label>CD  Africa/Kinshasa UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>CD  Africa/Lubumbashi UTC +02:00</fullName>
+                <default>false</default>
+                <label>CD  Africa/Lubumbashi UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>CF  Africa/Bangui UTC +01:00</fullName>
+                <default>false</default>
+                <label>CF  Africa/Bangui UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>CG  Africa/Brazzaville UTC +01:00</fullName>
+                <default>false</default>
+                <label>CG  Africa/Brazzaville UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>CH  Europe/Zurich UTC +01:00</fullName>
+                <default>false</default>
+                <label>CH  Europe/Zurich UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>CI  Africa/Abidjan UTC</fullName>
+                <default>false</default>
+                <label>CI  Africa/Abidjan UTC</label>
+            </value>
+            <value>
+                <fullName>CK  Pacific/Rarotonga UTC -10:00</fullName>
+                <default>false</default>
+                <label>CK  Pacific/Rarotonga UTC -10:00</label>
+            </value>
+            <value>
+                <fullName>CL  America/Punta_Arenas UTC -03:00</fullName>
+                <default>false</default>
+                <label>CL  America/Punta_Arenas UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>CL  America/Santiago UTC -03:00</fullName>
+                <default>false</default>
+                <label>CL  America/Santiago UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>CL  Pacific/Easter UTC -05:00</fullName>
+                <default>false</default>
+                <label>CL  Pacific/Easter UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>CM  Africa/Douala UTC +01:00</fullName>
+                <default>false</default>
+                <label>CM  Africa/Douala UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>CN  Asia/Shanghai UTC +08:00</fullName>
+                <default>false</default>
+                <label>CN  Asia/Shanghai UTC +08:00</label>
+            </value>
+            <value>
+                <fullName>CN  Asia/Urumqi UTC +06:00</fullName>
+                <default>false</default>
+                <label>CN  Asia/Urumqi UTC +06:00</label>
+            </value>
+            <value>
+                <fullName>CO  America/Bogota UTC -05:00</fullName>
+                <default>false</default>
+                <label>CO  America/Bogota UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>CR  America/Costa_Rica UTC -06:00</fullName>
+                <default>false</default>
+                <label>CR  America/Costa_Rica UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>CU  America/Havana UTC -05:00</fullName>
+                <default>false</default>
+                <label>CU  America/Havana UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>CV  Atlantic/Cape_Verde UTC -01:00</fullName>
+                <default>false</default>
+                <label>CV  Atlantic/Cape_Verde UTC -01:00</label>
+            </value>
+            <value>
+                <fullName>CW  America/Curacao UTC -04:00</fullName>
+                <default>false</default>
+                <label>CW  America/Curacao UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>CX  Indian/Christmas UTC +07:00</fullName>
+                <default>false</default>
+                <label>CX  Indian/Christmas UTC +07:00</label>
+            </value>
+            <value>
+                <fullName>CY  Asia/Famagusta UTC +02:00</fullName>
+                <default>false</default>
+                <label>CY  Asia/Famagusta UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>CY  Asia/Nicosia UTC +02:00</fullName>
+                <default>false</default>
+                <label>CY  Asia/Nicosia UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>CZ  Europe/Prague UTC +01:00</fullName>
+                <default>false</default>
+                <label>CZ  Europe/Prague UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>DE  Europe/Berlin UTC +01:00</fullName>
+                <default>false</default>
+                <label>DE  Europe/Berlin UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>DE  Europe/Busingen UTC +01:00</fullName>
+                <default>false</default>
+                <label>DE  Europe/Busingen UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>DJ  Africa/Djibouti UTC +03:00</fullName>
+                <default>false</default>
+                <label>DJ  Africa/Djibouti UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>DK  Europe/Copenhagen UTC +01:00</fullName>
+                <default>false</default>
+                <label>DK  Europe/Copenhagen UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>DM  America/Dominica UTC -04:00</fullName>
+                <default>false</default>
+                <label>DM  America/Dominica UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>DO  America/Santo_Domingo UTC -04:00</fullName>
+                <default>false</default>
+                <label>DO  America/Santo_Domingo UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>DZ  Africa/Algiers UTC +01:00</fullName>
+                <default>false</default>
+                <label>DZ  Africa/Algiers UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>EC  America/Guayaquil UTC -05:00</fullName>
+                <default>false</default>
+                <label>EC  America/Guayaquil UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>EC  Pacific/Galapagos UTC -06:00</fullName>
+                <default>false</default>
+                <label>EC  Pacific/Galapagos UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>EE  Europe/Tallinn UTC +02:00</fullName>
+                <default>false</default>
+                <label>EE  Europe/Tallinn UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>EG  Africa/Cairo UTC +02:00</fullName>
+                <default>false</default>
+                <label>EG  Africa/Cairo UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>EH  Africa/El_Aaiun UTC +01:00</fullName>
+                <default>false</default>
+                <label>EH  Africa/El_Aaiun UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>ER  Africa/Asmara UTC +03:00</fullName>
+                <default>false</default>
+                <label>ER  Africa/Asmara UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>ES  Africa/Ceuta UTC +01:00</fullName>
+                <default>false</default>
+                <label>ES  Africa/Ceuta UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>ES  Atlantic/Canary UTC</fullName>
+                <default>false</default>
+                <label>ES  Atlantic/Canary UTC</label>
+            </value>
+            <value>
+                <fullName>ES  Europe/Madrid UTC +01:00</fullName>
+                <default>false</default>
+                <label>ES  Europe/Madrid UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>ET  Africa/Addis_Ababa UTC +03:00</fullName>
+                <default>false</default>
+                <label>ET  Africa/Addis_Ababa UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>FI  Europe/Helsinki UTC +02:00</fullName>
+                <default>false</default>
+                <label>FI  Europe/Helsinki UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>FJ  Pacific/Fiji UTC +13:00</fullName>
+                <default>false</default>
+                <label>FJ  Pacific/Fiji UTC +13:00</label>
+            </value>
+            <value>
+                <fullName>FK  Atlantic/Stanley UTC -03:00</fullName>
+                <default>false</default>
+                <label>FK  Atlantic/Stanley UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>FM  Pacific/Chuuk UTC +10:00</fullName>
+                <default>false</default>
+                <label>FM  Pacific/Chuuk UTC +10:00</label>
+            </value>
+            <value>
+                <fullName>FM  Pacific/Kosrae UTC +11:00</fullName>
+                <default>false</default>
+                <label>FM  Pacific/Kosrae UTC +11:00</label>
+            </value>
+            <value>
+                <fullName>FM  Pacific/Pohnpei UTC +11:00</fullName>
+                <default>false</default>
+                <label>FM  Pacific/Pohnpei UTC +11:00</label>
+            </value>
+            <value>
+                <fullName>FO  Atlantic/Faroe UTC</fullName>
+                <default>false</default>
+                <label>FO  Atlantic/Faroe UTC</label>
+            </value>
+            <value>
+                <fullName>FR  Europe/Paris UTC +01:00</fullName>
+                <default>false</default>
+                <label>FR  Europe/Paris UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>GA  Africa/Libreville UTC +01:00</fullName>
+                <default>false</default>
+                <label>GA  Africa/Libreville UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>GB  Europe/London UTC</fullName>
+                <default>false</default>
+                <label>GB  Europe/London UTC</label>
+            </value>
+            <value>
+                <fullName>GD  America/Grenada UTC -04:00</fullName>
+                <default>false</default>
+                <label>GD  America/Grenada UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>GE  Asia/Tbilisi UTC +04:00</fullName>
+                <default>false</default>
+                <label>GE  Asia/Tbilisi UTC +04:00</label>
+            </value>
+            <value>
+                <fullName>GF  America/Cayenne UTC -03:00</fullName>
+                <default>false</default>
+                <label>GF  America/Cayenne UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>GG  Europe/Guernsey UTC</fullName>
+                <default>false</default>
+                <label>GG  Europe/Guernsey UTC</label>
+            </value>
+            <value>
+                <fullName>GH  Africa/Accra UTC</fullName>
+                <default>false</default>
+                <label>GH  Africa/Accra UTC</label>
+            </value>
+            <value>
+                <fullName>GI  Europe/Gibraltar UTC +01:00</fullName>
+                <default>false</default>
+                <label>GI  Europe/Gibraltar UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>GL  America/Danmarkshavn UTC</fullName>
+                <default>false</default>
+                <label>GL  America/Danmarkshavn UTC</label>
+            </value>
+            <value>
+                <fullName>GL  America/Godthab UTC -03:00</fullName>
+                <default>false</default>
+                <label>GL  America/Godthab UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>GL  America/Scoresbysund UTC -01:00</fullName>
+                <default>false</default>
+                <label>GL  America/Scoresbysund UTC -01:00</label>
+            </value>
+            <value>
+                <fullName>GL  America/Thule UTC -04:00</fullName>
+                <default>false</default>
+                <label>GL  America/Thule UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>GM  Africa/Banjul UTC</fullName>
+                <default>false</default>
+                <label>GM  Africa/Banjul UTC</label>
+            </value>
+            <value>
+                <fullName>GN  Africa/Conakry UTC</fullName>
+                <default>false</default>
+                <label>GN  Africa/Conakry UTC</label>
+            </value>
+            <value>
+                <fullName>GP  America/Guadeloupe UTC -04:00</fullName>
+                <default>false</default>
+                <label>GP  America/Guadeloupe UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>GQ  Africa/Malabo UTC +01:00</fullName>
+                <default>false</default>
+                <label>GQ  Africa/Malabo UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>GR  Europe/Athens UTC +02:00</fullName>
+                <default>false</default>
+                <label>GR  Europe/Athens UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>GS  Atlantic/South_Georgia UTC -02:00</fullName>
+                <default>false</default>
+                <label>GS  Atlantic/South_Georgia UTC -02:00</label>
+            </value>
+            <value>
+                <fullName>GT  America/Guatemala UTC -06:00</fullName>
+                <default>false</default>
+                <label>GT  America/Guatemala UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>GU  Pacific/Guam UTC +10:00</fullName>
+                <default>false</default>
+                <label>GU  Pacific/Guam UTC +10:00</label>
+            </value>
+            <value>
+                <fullName>GW  Africa/Bissau UTC</fullName>
+                <default>false</default>
+                <label>GW  Africa/Bissau UTC</label>
+            </value>
+            <value>
+                <fullName>GY  America/Guyana UTC -04:00</fullName>
+                <default>false</default>
+                <label>GY  America/Guyana UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>HK  Asia/Hong_Kong UTC +08:00</fullName>
+                <default>false</default>
+                <label>HK  Asia/Hong_Kong UTC +08:00</label>
+            </value>
+            <value>
+                <fullName>HN  America/Tegucigalpa UTC -06:00</fullName>
+                <default>false</default>
+                <label>HN  America/Tegucigalpa UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>HR  Europe/Zagreb UTC +01:00</fullName>
+                <default>false</default>
+                <label>HR  Europe/Zagreb UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>HT  America/Port-au-Prince UTC -05:00</fullName>
+                <default>false</default>
+                <label>HT  America/Port-au-Prince UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>HU  Europe/Budapest UTC +01:00</fullName>
+                <default>false</default>
+                <label>HU  Europe/Budapest UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>ID  Asia/Jakarta UTC +07:00</fullName>
+                <default>false</default>
+                <label>ID  Asia/Jakarta UTC +07:00</label>
+            </value>
+            <value>
+                <fullName>ID  Asia/Jayapura UTC +09:00</fullName>
+                <default>false</default>
+                <label>ID  Asia/Jayapura UTC +09:00</label>
+            </value>
+            <value>
+                <fullName>ID  Asia/Makassar UTC +08:00</fullName>
+                <default>false</default>
+                <label>ID  Asia/Makassar UTC +08:00</label>
+            </value>
+            <value>
+                <fullName>ID  Asia/Pontianak UTC +07:00</fullName>
+                <default>false</default>
+                <label>ID  Asia/Pontianak UTC +07:00</label>
+            </value>
+            <value>
+                <fullName>IE  Europe/Dublin UTC</fullName>
+                <default>false</default>
+                <label>IE  Europe/Dublin UTC</label>
+            </value>
+            <value>
+                <fullName>IL  Asia/Jerusalem UTC +02:00</fullName>
+                <default>false</default>
+                <label>IL  Asia/Jerusalem UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>IM  Europe/Isle_of_Man UTC</fullName>
+                <default>false</default>
+                <label>IM  Europe/Isle_of_Man UTC</label>
+            </value>
+            <value>
+                <fullName>IN  Asia/Kolkata UTC +05:30</fullName>
+                <default>false</default>
+                <label>IN  Asia/Kolkata UTC +05:30</label>
+            </value>
+            <value>
+                <fullName>IO  Indian/Chagos UTC +06:00</fullName>
+                <default>false</default>
+                <label>IO  Indian/Chagos UTC +06:00</label>
+            </value>
+            <value>
+                <fullName>IQ  Asia/Baghdad UTC +03:00</fullName>
+                <default>false</default>
+                <label>IQ  Asia/Baghdad UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>IR  Asia/Tehran UTC +03:30</fullName>
+                <default>false</default>
+                <label>IR  Asia/Tehran UTC +03:30</label>
+            </value>
+            <value>
+                <fullName>IS  Atlantic/Reykjavik UTC</fullName>
+                <default>false</default>
+                <label>IS  Atlantic/Reykjavik UTC</label>
+            </value>
+            <value>
+                <fullName>IT  Europe/Rome UTC +01:00</fullName>
+                <default>false</default>
+                <label>IT  Europe/Rome UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>JE  Europe/Jersey UTC</fullName>
+                <default>false</default>
+                <label>JE  Europe/Jersey UTC</label>
+            </value>
+            <value>
+                <fullName>JM  America/Jamaica UTC -05:00</fullName>
+                <default>false</default>
+                <label>JM  America/Jamaica UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>JO  Asia/Amman UTC +02:00</fullName>
+                <default>false</default>
+                <label>JO  Asia/Amman UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>JP  Asia/Tokyo UTC +09:00</fullName>
+                <default>false</default>
+                <label>JP  Asia/Tokyo UTC +09:00</label>
+            </value>
+            <value>
+                <fullName>KE  Africa/Nairobi UTC +03:00</fullName>
+                <default>false</default>
+                <label>KE  Africa/Nairobi UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>KG  Asia/Bishkek UTC +06:00</fullName>
+                <default>false</default>
+                <label>KG  Asia/Bishkek UTC +06:00</label>
+            </value>
+            <value>
+                <fullName>KH  Asia/Phnom_Penh UTC +07:00</fullName>
+                <default>false</default>
+                <label>KH  Asia/Phnom_Penh UTC +07:00</label>
+            </value>
+            <value>
+                <fullName>KI  Pacific/Enderbury UTC +13:00</fullName>
+                <default>false</default>
+                <label>KI  Pacific/Enderbury UTC +13:00</label>
+            </value>
+            <value>
+                <fullName>KI  Pacific/Kiritimati UTC +14:00</fullName>
+                <default>false</default>
+                <label>KI  Pacific/Kiritimati UTC +14:00</label>
+            </value>
+            <value>
+                <fullName>KI  Pacific/Tarawa UTC +12:00</fullName>
+                <default>false</default>
+                <label>KI  Pacific/Tarawa UTC +12:00</label>
+            </value>
+            <value>
+                <fullName>KM  Indian/Comoro UTC +03:00</fullName>
+                <default>false</default>
+                <label>KM  Indian/Comoro UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>KN  America/St_Kitts UTC -04:00</fullName>
+                <default>false</default>
+                <label>KN  America/St_Kitts UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>KP  Asia/Pyongyang UTC +09:00</fullName>
+                <default>false</default>
+                <label>KP  Asia/Pyongyang UTC +09:00</label>
+            </value>
+            <value>
+                <fullName>KR  Asia/Seoul UTC +09:00</fullName>
+                <default>false</default>
+                <label>KR  Asia/Seoul UTC +09:00</label>
+            </value>
+            <value>
+                <fullName>KW  Asia/Kuwait UTC +03:00</fullName>
+                <default>false</default>
+                <label>KW  Asia/Kuwait UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>KY  America/Cayman UTC -05:00</fullName>
+                <default>false</default>
+                <label>KY  America/Cayman UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>KZ  Asia/Almaty UTC +06:00</fullName>
+                <default>false</default>
+                <label>KZ  Asia/Almaty UTC +06:00</label>
+            </value>
+            <value>
+                <fullName>KZ  Asia/Aqtau UTC +05:00</fullName>
+                <default>false</default>
+                <label>KZ  Asia/Aqtau UTC +05:00</label>
+            </value>
+            <value>
+                <fullName>KZ  Asia/Aqtobe UTC +05:00</fullName>
+                <default>false</default>
+                <label>KZ  Asia/Aqtobe UTC +05:00</label>
+            </value>
+            <value>
+                <fullName>KZ  Asia/Atyrau UTC +05:00</fullName>
+                <default>false</default>
+                <label>KZ  Asia/Atyrau UTC +05:00</label>
+            </value>
+            <value>
+                <fullName>KZ  Asia/Oral UTC +05:00</fullName>
+                <default>false</default>
+                <label>KZ  Asia/Oral UTC +05:00</label>
+            </value>
+            <value>
+                <fullName>KZ  Asia/Qostanay UTC +06:00</fullName>
+                <default>false</default>
+                <label>KZ  Asia/Qostanay UTC +06:00</label>
+            </value>
+            <value>
+                <fullName>KZ  Asia/Qyzylorda UTC +05:00</fullName>
+                <default>false</default>
+                <label>KZ  Asia/Qyzylorda UTC +05:00</label>
+            </value>
+            <value>
+                <fullName>LA  Asia/Vientiane UTC +07:00</fullName>
+                <default>false</default>
+                <label>LA  Asia/Vientiane UTC +07:00</label>
+            </value>
+            <value>
+                <fullName>LB  Asia/Beirut UTC +02:00</fullName>
+                <default>false</default>
+                <label>LB  Asia/Beirut UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>LC  America/St_Lucia UTC -04:00</fullName>
+                <default>false</default>
+                <label>LC  America/St_Lucia UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>LI  Europe/Vaduz UTC +01:00</fullName>
+                <default>false</default>
+                <label>LI  Europe/Vaduz UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>LK  Asia/Colombo UTC +05:30</fullName>
+                <default>false</default>
+                <label>LK  Asia/Colombo UTC +05:30</label>
+            </value>
+            <value>
+                <fullName>LR  Africa/Monrovia UTC</fullName>
+                <default>false</default>
+                <label>LR  Africa/Monrovia UTC</label>
+            </value>
+            <value>
+                <fullName>LS  Africa/Maseru UTC +02:00</fullName>
+                <default>false</default>
+                <label>LS  Africa/Maseru UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>LT  Europe/Vilnius UTC +02:00</fullName>
+                <default>false</default>
+                <label>LT  Europe/Vilnius UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>LU  Europe/Luxembourg UTC +01:00</fullName>
+                <default>false</default>
+                <label>LU  Europe/Luxembourg UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>LV  Europe/Riga UTC +02:00</fullName>
+                <default>false</default>
+                <label>LV  Europe/Riga UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>LY  Africa/Tripoli UTC +02:00</fullName>
+                <default>false</default>
+                <label>LY  Africa/Tripoli UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>MA  Africa/Casablanca UTC +01:00</fullName>
+                <default>false</default>
+                <label>MA  Africa/Casablanca UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>MC  Europe/Monaco UTC +01:00</fullName>
+                <default>false</default>
+                <label>MC  Europe/Monaco UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>MD  Europe/Chisinau UTC +02:00</fullName>
+                <default>false</default>
+                <label>MD  Europe/Chisinau UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>ME  Europe/Podgorica UTC +01:00</fullName>
+                <default>false</default>
+                <label>ME  Europe/Podgorica UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>MF  America/Marigot UTC -04:00</fullName>
+                <default>false</default>
+                <label>MF  America/Marigot UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>MG  Indian/Antananarivo UTC +03:00</fullName>
+                <default>false</default>
+                <label>MG  Indian/Antananarivo UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>MH  Pacific/Kwajalein UTC +12:00</fullName>
+                <default>false</default>
+                <label>MH  Pacific/Kwajalein UTC +12:00</label>
+            </value>
+            <value>
+                <fullName>MH  Pacific/Majuro UTC +12:00</fullName>
+                <default>false</default>
+                <label>MH  Pacific/Majuro UTC +12:00</label>
+            </value>
+            <value>
+                <fullName>MK  Europe/Skopje UTC +01:00</fullName>
+                <default>false</default>
+                <label>MK  Europe/Skopje UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>ML  Africa/Bamako UTC</fullName>
+                <default>false</default>
+                <label>ML  Africa/Bamako UTC</label>
+            </value>
+            <value>
+                <fullName>MM  Asia/Yangon UTC +06:30</fullName>
+                <default>false</default>
+                <label>MM  Asia/Yangon UTC +06:30</label>
+            </value>
+            <value>
+                <fullName>MN  Asia/Choibalsan UTC +08:00</fullName>
+                <default>false</default>
+                <label>MN  Asia/Choibalsan UTC +08:00</label>
+            </value>
+            <value>
+                <fullName>MN  Asia/Hovd UTC +07:00</fullName>
+                <default>false</default>
+                <label>MN  Asia/Hovd UTC +07:00</label>
+            </value>
+            <value>
+                <fullName>MN  Asia/Ulaanbaatar UTC +08:00</fullName>
+                <default>false</default>
+                <label>MN  Asia/Ulaanbaatar UTC +08:00</label>
+            </value>
+            <value>
+                <fullName>MO  Asia/Macau UTC +08:00</fullName>
+                <default>false</default>
+                <label>MO  Asia/Macau UTC +08:00</label>
+            </value>
+            <value>
+                <fullName>MP  Pacific/Saipan UTC +10:00</fullName>
+                <default>false</default>
+                <label>MP  Pacific/Saipan UTC +10:00</label>
+            </value>
+            <value>
+                <fullName>MQ  America/Martinique UTC -04:00</fullName>
+                <default>false</default>
+                <label>MQ  America/Martinique UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>MR  Africa/Nouakchott UTC</fullName>
+                <default>false</default>
+                <label>MR  Africa/Nouakchott UTC</label>
+            </value>
+            <value>
+                <fullName>MS  America/Montserrat UTC -04:00</fullName>
+                <default>false</default>
+                <label>MS  America/Montserrat UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>MT  Europe/Malta UTC +01:00</fullName>
+                <default>false</default>
+                <label>MT  Europe/Malta UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>MU  Indian/Mauritius UTC +04:00</fullName>
+                <default>false</default>
+                <label>MU  Indian/Mauritius UTC +04:00</label>
+            </value>
+            <value>
+                <fullName>MV  Indian/Maldives UTC +05:00</fullName>
+                <default>false</default>
+                <label>MV  Indian/Maldives UTC +05:00</label>
+            </value>
+            <value>
+                <fullName>MW  Africa/Blantyre UTC +02:00</fullName>
+                <default>false</default>
+                <label>MW  Africa/Blantyre UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>MX  America/Bahia_Banderas UTC -06:00</fullName>
+                <default>false</default>
+                <label>MX  America/Bahia_Banderas UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>MX  America/Cancun UTC -05:00</fullName>
+                <default>false</default>
+                <label>MX  America/Cancun UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>MX  America/Chihuahua UTC -07:00</fullName>
+                <default>false</default>
+                <label>MX  America/Chihuahua UTC -07:00</label>
+            </value>
+            <value>
+                <fullName>MX  America/Hermosillo UTC -07:00</fullName>
+                <default>false</default>
+                <label>MX  America/Hermosillo UTC -07:00</label>
+            </value>
+            <value>
+                <fullName>MX  America/Matamoros UTC -06:00</fullName>
+                <default>false</default>
+                <label>MX  America/Matamoros UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>MX  America/Mazatlan UTC -07:00</fullName>
+                <default>false</default>
+                <label>MX  America/Mazatlan UTC -07:00</label>
+            </value>
+            <value>
+                <fullName>MX  America/Merida UTC -06:00</fullName>
+                <default>false</default>
+                <label>MX  America/Merida UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>MX  America/Mexico_City UTC -06:00</fullName>
+                <default>false</default>
+                <label>MX  America/Mexico_City UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>MX  America/Monterrey UTC -06:00</fullName>
+                <default>false</default>
+                <label>MX  America/Monterrey UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>MX  America/Ojinaga UTC -07:00</fullName>
+                <default>false</default>
+                <label>MX  America/Ojinaga UTC -07:00</label>
+            </value>
+            <value>
+                <fullName>MX  America/Tijuana UTC -08:00</fullName>
+                <default>false</default>
+                <label>MX  America/Tijuana UTC -08:00</label>
+            </value>
+            <value>
+                <fullName>MY  Asia/Kuala_Lumpur UTC +08:00</fullName>
+                <default>false</default>
+                <label>MY  Asia/Kuala_Lumpur UTC +08:00</label>
+            </value>
+            <value>
+                <fullName>MY  Asia/Kuching UTC +08:00</fullName>
+                <default>false</default>
+                <label>MY  Asia/Kuching UTC +08:00</label>
+            </value>
+            <value>
+                <fullName>MZ  Africa/Maputo UTC +02:00</fullName>
+                <default>false</default>
+                <label>MZ  Africa/Maputo UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>NA  Africa/Windhoek UTC +02:00</fullName>
+                <default>false</default>
+                <label>NA  Africa/Windhoek UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>NC  Pacific/Noumea UTC +11:00</fullName>
+                <default>false</default>
+                <label>NC  Pacific/Noumea UTC +11:00</label>
+            </value>
+            <value>
+                <fullName>NE  Africa/Niamey UTC +01:00</fullName>
+                <default>false</default>
+                <label>NE  Africa/Niamey UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>NF  Pacific/Norfolk UTC +12:00</fullName>
+                <default>false</default>
+                <label>NF  Pacific/Norfolk UTC +12:00</label>
+            </value>
+            <value>
+                <fullName>NG  Africa/Lagos UTC +01:00</fullName>
+                <default>false</default>
+                <label>NG  Africa/Lagos UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>NI  America/Managua UTC -06:00</fullName>
+                <default>false</default>
+                <label>NI  America/Managua UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>NL  Europe/Amsterdam UTC +01:00</fullName>
+                <default>false</default>
+                <label>NL  Europe/Amsterdam UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>NO  Europe/Oslo UTC +01:00</fullName>
+                <default>false</default>
+                <label>NO  Europe/Oslo UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>NP  Asia/Kathmandu UTC +05:45</fullName>
+                <default>false</default>
+                <label>NP  Asia/Kathmandu UTC +05:45</label>
+            </value>
+            <value>
+                <fullName>NR  Pacific/Nauru UTC +12:00</fullName>
+                <default>false</default>
+                <label>NR  Pacific/Nauru UTC +12:00</label>
+            </value>
+            <value>
+                <fullName>NU  Pacific/Niue UTC -11:00</fullName>
+                <default>false</default>
+                <label>NU  Pacific/Niue UTC -11:00</label>
+            </value>
+            <value>
+                <fullName>NZ  Pacific/Auckland UTC +13:00</fullName>
+                <default>false</default>
+                <label>NZ  Pacific/Auckland UTC +13:00</label>
+            </value>
+            <value>
+                <fullName>NZ  Pacific/Chatham UTC +13:45</fullName>
+                <default>false</default>
+                <label>NZ  Pacific/Chatham UTC +13:45</label>
+            </value>
+            <value>
+                <fullName>OM  Asia/Muscat UTC +04:00</fullName>
+                <default>false</default>
+                <label>OM  Asia/Muscat UTC +04:00</label>
+            </value>
+            <value>
+                <fullName>PA  America/Panama UTC -05:00</fullName>
+                <default>false</default>
+                <label>PA  America/Panama UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>PE  America/Lima UTC -05:00</fullName>
+                <default>false</default>
+                <label>PE  America/Lima UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>PF  Pacific/Gambier UTC -09:00</fullName>
+                <default>false</default>
+                <label>PF  Pacific/Gambier UTC -09:00</label>
+            </value>
+            <value>
+                <fullName>PF  Pacific/Marquesas UTC -09:30</fullName>
+                <default>false</default>
+                <label>PF  Pacific/Marquesas UTC -09:30</label>
+            </value>
+            <value>
+                <fullName>PF  Pacific/Tahiti UTC -10:00</fullName>
+                <default>false</default>
+                <label>PF  Pacific/Tahiti UTC -10:00</label>
+            </value>
+            <value>
+                <fullName>PG  Pacific/Bougainville UTC +11:00</fullName>
+                <default>false</default>
+                <label>PG  Pacific/Bougainville UTC +11:00</label>
+            </value>
+            <value>
+                <fullName>PG  Pacific/Port_Moresby UTC +10:00</fullName>
+                <default>false</default>
+                <label>PG  Pacific/Port_Moresby UTC +10:00</label>
+            </value>
+            <value>
+                <fullName>PH  Asia/Manila UTC +08:00</fullName>
+                <default>false</default>
+                <label>PH  Asia/Manila UTC +08:00</label>
+            </value>
+            <value>
+                <fullName>PK  Asia/Karachi UTC +05:00</fullName>
+                <default>false</default>
+                <label>PK  Asia/Karachi UTC +05:00</label>
+            </value>
+            <value>
+                <fullName>PL  Europe/Warsaw UTC +01:00</fullName>
+                <default>false</default>
+                <label>PL  Europe/Warsaw UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>PM  America/Miquelon UTC -03:00</fullName>
+                <default>false</default>
+                <label>PM  America/Miquelon UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>PN  Pacific/Pitcairn UTC -08:00</fullName>
+                <default>false</default>
+                <label>PN  Pacific/Pitcairn UTC -08:00</label>
+            </value>
+            <value>
+                <fullName>PR  America/Puerto_Rico UTC -04:00</fullName>
+                <default>false</default>
+                <label>PR  America/Puerto_Rico UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>PS  Asia/Gaza UTC +02:00</fullName>
+                <default>false</default>
+                <label>PS  Asia/Gaza UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>PS  Asia/Hebron UTC +02:00</fullName>
+                <default>false</default>
+                <label>PS  Asia/Hebron UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>PT  Atlantic/Azores UTC -01:00</fullName>
+                <default>false</default>
+                <label>PT  Atlantic/Azores UTC -01:00</label>
+            </value>
+            <value>
+                <fullName>PT  Atlantic/Madeira UTC</fullName>
+                <default>false</default>
+                <label>PT  Atlantic/Madeira UTC</label>
+            </value>
+            <value>
+                <fullName>PT  Europe/Lisbon UTC</fullName>
+                <default>false</default>
+                <label>PT  Europe/Lisbon UTC</label>
+            </value>
+            <value>
+                <fullName>PW  Pacific/Palau UTC +09:00</fullName>
+                <default>false</default>
+                <label>PW  Pacific/Palau UTC +09:00</label>
+            </value>
+            <value>
+                <fullName>PY  America/Asuncion UTC -03:00</fullName>
+                <default>false</default>
+                <label>PY  America/Asuncion UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>QA  Asia/Qatar UTC +03:00</fullName>
+                <default>false</default>
+                <label>QA  Asia/Qatar UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>RE  Indian/Reunion UTC +04:00</fullName>
+                <default>false</default>
+                <label>RE  Indian/Reunion UTC +04:00</label>
+            </value>
+            <value>
+                <fullName>RO  Europe/Bucharest UTC +02:00</fullName>
+                <default>false</default>
+                <label>RO  Europe/Bucharest UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>RS  Europe/Belgrade UTC +01:00</fullName>
+                <default>false</default>
+                <label>RS  Europe/Belgrade UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>RU  Asia/Anadyr UTC +12:00</fullName>
+                <default>false</default>
+                <label>RU  Asia/Anadyr UTC +12:00</label>
+            </value>
+            <value>
+                <fullName>RU  Asia/Barnaul UTC +07:00</fullName>
+                <default>false</default>
+                <label>RU  Asia/Barnaul UTC +07:00</label>
+            </value>
+            <value>
+                <fullName>RU  Asia/Chita UTC +09:00</fullName>
+                <default>false</default>
+                <label>RU  Asia/Chita UTC +09:00</label>
+            </value>
+            <value>
+                <fullName>RU  Asia/Irkutsk UTC +08:00</fullName>
+                <default>false</default>
+                <label>RU  Asia/Irkutsk UTC +08:00</label>
+            </value>
+            <value>
+                <fullName>RU  Asia/Kamchatka UTC +12:00</fullName>
+                <default>false</default>
+                <label>RU  Asia/Kamchatka UTC +12:00</label>
+            </value>
+            <value>
+                <fullName>RU  Asia/Khandyga UTC +09:00</fullName>
+                <default>false</default>
+                <label>RU  Asia/Khandyga UTC +09:00</label>
+            </value>
+            <value>
+                <fullName>RU  Asia/Krasnoyarsk UTC +07:00</fullName>
+                <default>false</default>
+                <label>RU  Asia/Krasnoyarsk UTC +07:00</label>
+            </value>
+            <value>
+                <fullName>RU  Asia/Magadan UTC +11:00</fullName>
+                <default>false</default>
+                <label>RU  Asia/Magadan UTC +11:00</label>
+            </value>
+            <value>
+                <fullName>RU  Asia/Novokuznetsk UTC +07:00</fullName>
+                <default>false</default>
+                <label>RU  Asia/Novokuznetsk UTC +07:00</label>
+            </value>
+            <value>
+                <fullName>RU  Asia/Novosibirsk UTC +07:00</fullName>
+                <default>false</default>
+                <label>RU  Asia/Novosibirsk UTC +07:00</label>
+            </value>
+            <value>
+                <fullName>RU  Asia/Omsk UTC +06:00</fullName>
+                <default>false</default>
+                <label>RU  Asia/Omsk UTC +06:00</label>
+            </value>
+            <value>
+                <fullName>RU  Asia/Sakhalin UTC +11:00</fullName>
+                <default>false</default>
+                <label>RU  Asia/Sakhalin UTC +11:00</label>
+            </value>
+            <value>
+                <fullName>RU  Asia/Srednekolymsk UTC +11:00</fullName>
+                <default>false</default>
+                <label>RU  Asia/Srednekolymsk UTC +11:00</label>
+            </value>
+            <value>
+                <fullName>RU  Asia/Tomsk UTC +07:00</fullName>
+                <default>false</default>
+                <label>RU  Asia/Tomsk UTC +07:00</label>
+            </value>
+            <value>
+                <fullName>RU  Asia/Ust-Nera UTC +10:00</fullName>
+                <default>false</default>
+                <label>RU  Asia/Ust-Nera UTC +10:00</label>
+            </value>
+            <value>
+                <fullName>RU  Asia/Vladivostok UTC +10:00</fullName>
+                <default>false</default>
+                <label>RU  Asia/Vladivostok UTC +10:00</label>
+            </value>
+            <value>
+                <fullName>RU  Asia/Yakutsk UTC +09:00</fullName>
+                <default>false</default>
+                <label>RU  Asia/Yakutsk UTC +09:00</label>
+            </value>
+            <value>
+                <fullName>RU  Asia/Yekaterinburg UTC +05:00</fullName>
+                <default>false</default>
+                <label>RU  Asia/Yekaterinburg UTC +05:00</label>
+            </value>
+            <value>
+                <fullName>RU  Europe/Astrakhan UTC +04:00</fullName>
+                <default>false</default>
+                <label>RU  Europe/Astrakhan UTC +04:00</label>
+            </value>
+            <value>
+                <fullName>RU  Europe/Kaliningrad UTC +02:00</fullName>
+                <default>false</default>
+                <label>RU  Europe/Kaliningrad UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>RU  Europe/Kirov UTC +03:00</fullName>
+                <default>false</default>
+                <label>RU  Europe/Kirov UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>RU  Europe/Moscow UTC +03:00</fullName>
+                <default>false</default>
+                <label>RU  Europe/Moscow UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>RU  Europe/Samara UTC +04:00</fullName>
+                <default>false</default>
+                <label>RU  Europe/Samara UTC +04:00</label>
+            </value>
+            <value>
+                <fullName>RU  Europe/Saratov UTC +04:00</fullName>
+                <default>false</default>
+                <label>RU  Europe/Saratov UTC +04:00</label>
+            </value>
+            <value>
+                <fullName>RU  Europe/Ulyanovsk UTC +04:00</fullName>
+                <default>false</default>
+                <label>RU  Europe/Ulyanovsk UTC +04:00</label>
+            </value>
+            <value>
+                <fullName>RU  Europe/Volgograd UTC +04:00</fullName>
+                <default>false</default>
+                <label>RU  Europe/Volgograd UTC +04:00</label>
+            </value>
+            <value>
+                <fullName>RW  Africa/Kigali UTC +02:00</fullName>
+                <default>false</default>
+                <label>RW  Africa/Kigali UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>SA  Asia/Riyadh UTC +03:00</fullName>
+                <default>false</default>
+                <label>SA  Asia/Riyadh UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>SB  Pacific/Guadalcanal UTC +11:00</fullName>
+                <default>false</default>
+                <label>SB  Pacific/Guadalcanal UTC +11:00</label>
+            </value>
+            <value>
+                <fullName>SC  Indian/Mahe UTC +04:00</fullName>
+                <default>false</default>
+                <label>SC  Indian/Mahe UTC +04:00</label>
+            </value>
+            <value>
+                <fullName>SD  Africa/Khartoum UTC +02:00</fullName>
+                <default>false</default>
+                <label>SD  Africa/Khartoum UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>SE  Europe/Stockholm UTC +01:00</fullName>
+                <default>false</default>
+                <label>SE  Europe/Stockholm UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>SG  Asia/Singapore UTC +08:00</fullName>
+                <default>false</default>
+                <label>SG  Asia/Singapore UTC +08:00</label>
+            </value>
+            <value>
+                <fullName>SH  Atlantic/St_Helena UTC</fullName>
+                <default>false</default>
+                <label>SH  Atlantic/St_Helena UTC</label>
+            </value>
+            <value>
+                <fullName>SI  Europe/Ljubljana UTC +01:00</fullName>
+                <default>false</default>
+                <label>SI  Europe/Ljubljana UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>SJ  Arctic/Longyearbyen UTC +01:00</fullName>
+                <default>false</default>
+                <label>SJ  Arctic/Longyearbyen UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>SK  Europe/Bratislava UTC +01:00</fullName>
+                <default>false</default>
+                <label>SK  Europe/Bratislava UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>SL  Africa/Freetown UTC</fullName>
+                <default>false</default>
+                <label>SL  Africa/Freetown UTC</label>
+            </value>
+            <value>
+                <fullName>SM  Europe/San_Marino UTC +01:00</fullName>
+                <default>false</default>
+                <label>SM  Europe/San_Marino UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>SN  Africa/Dakar UTC</fullName>
+                <default>false</default>
+                <label>SN  Africa/Dakar UTC</label>
+            </value>
+            <value>
+                <fullName>SO  Africa/Mogadishu UTC +03:00</fullName>
+                <default>false</default>
+                <label>SO  Africa/Mogadishu UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>SR  America/Paramaribo UTC -03:00</fullName>
+                <default>false</default>
+                <label>SR  America/Paramaribo UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>SS  Africa/Juba UTC +03:00</fullName>
+                <default>false</default>
+                <label>SS  Africa/Juba UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>ST  Africa/Sao_Tome UTC</fullName>
+                <default>false</default>
+                <label>ST  Africa/Sao_Tome UTC</label>
+            </value>
+            <value>
+                <fullName>SV  America/El_Salvador UTC -06:00</fullName>
+                <default>false</default>
+                <label>SV  America/El_Salvador UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>SX  America/Lower_Princes UTC -04:00</fullName>
+                <default>false</default>
+                <label>SX  America/Lower_Princes UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>SY  Asia/Damascus UTC +02:00</fullName>
+                <default>false</default>
+                <label>SY  Asia/Damascus UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>SZ  Africa/Mbabane UTC +02:00</fullName>
+                <default>false</default>
+                <label>SZ  Africa/Mbabane UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>TC  America/Grand_Turk UTC -05:00</fullName>
+                <default>false</default>
+                <label>TC  America/Grand_Turk UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>TD  Africa/Ndjamena UTC +01:00</fullName>
+                <default>false</default>
+                <label>TD  Africa/Ndjamena UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>TF  Indian/Kerguelen UTC +05:00</fullName>
+                <default>false</default>
+                <label>TF  Indian/Kerguelen UTC +05:00</label>
+            </value>
+            <value>
+                <fullName>TG  Africa/Lome UTC</fullName>
+                <default>false</default>
+                <label>TG  Africa/Lome UTC</label>
+            </value>
+            <value>
+                <fullName>TH  Asia/Bangkok UTC +07:00</fullName>
+                <default>false</default>
+                <label>TH  Asia/Bangkok UTC +07:00</label>
+            </value>
+            <value>
+                <fullName>TJ  Asia/Dushanbe UTC +05:00</fullName>
+                <default>false</default>
+                <label>TJ  Asia/Dushanbe UTC +05:00</label>
+            </value>
+            <value>
+                <fullName>TK  Pacific/Fakaofo UTC +13:00</fullName>
+                <default>false</default>
+                <label>TK  Pacific/Fakaofo UTC +13:00</label>
+            </value>
+            <value>
+                <fullName>TL  Asia/Dili UTC +09:00</fullName>
+                <default>false</default>
+                <label>TL  Asia/Dili UTC +09:00</label>
+            </value>
+            <value>
+                <fullName>TM  Asia/Ashgabat UTC +05:00</fullName>
+                <default>false</default>
+                <label>TM  Asia/Ashgabat UTC +05:00</label>
+            </value>
+            <value>
+                <fullName>TN  Africa/Tunis UTC +01:00</fullName>
+                <default>false</default>
+                <label>TN  Africa/Tunis UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>TO  Pacific/Tongatapu UTC +13:00</fullName>
+                <default>false</default>
+                <label>TO  Pacific/Tongatapu UTC +13:00</label>
+            </value>
+            <value>
+                <fullName>TR  Europe/Istanbul UTC +03:00</fullName>
+                <default>false</default>
+                <label>TR  Europe/Istanbul UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>TT  America/Port_of_Spain UTC -04:00</fullName>
+                <default>false</default>
+                <label>TT  America/Port_of_Spain UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>TV  Pacific/Funafuti UTC +12:00</fullName>
+                <default>false</default>
+                <label>TV  Pacific/Funafuti UTC +12:00</label>
+            </value>
+            <value>
+                <fullName>TW  Asia/Taipei UTC +08:00</fullName>
+                <default>false</default>
+                <label>TW  Asia/Taipei UTC +08:00</label>
+            </value>
+            <value>
+                <fullName>TZ  Africa/Dar_es_Salaam UTC +03:00</fullName>
+                <default>false</default>
+                <label>TZ  Africa/Dar_es_Salaam UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>UA  Europe/Kiev UTC +02:00</fullName>
+                <default>false</default>
+                <label>UA  Europe/Kiev UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>UA  Europe/Simferopol UTC +03:00</fullName>
+                <default>false</default>
+                <label>UA  Europe/Simferopol UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>UA  Europe/Uzhgorod UTC +02:00</fullName>
+                <default>false</default>
+                <label>UA  Europe/Uzhgorod UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>UA  Europe/Zaporozhye UTC +02:00</fullName>
+                <default>false</default>
+                <label>UA  Europe/Zaporozhye UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>UG  Africa/Kampala UTC +03:00</fullName>
+                <default>false</default>
+                <label>UG  Africa/Kampala UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>UM  Pacific/Midway UTC -11:00</fullName>
+                <default>false</default>
+                <label>UM  Pacific/Midway UTC -11:00</label>
+            </value>
+            <value>
+                <fullName>UM  Pacific/Wake UTC +12:00</fullName>
+                <default>false</default>
+                <label>UM  Pacific/Wake UTC +12:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Adak UTC -10:00</fullName>
+                <default>false</default>
+                <label>US  America/Adak UTC -10:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Anchorage UTC -09:00</fullName>
+                <default>false</default>
+                <label>US  America/Anchorage UTC -09:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Boise UTC -07:00</fullName>
+                <default>false</default>
+                <label>US  America/Boise UTC -07:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Chicago UTC -06:00</fullName>
+                <default>false</default>
+                <label>US  America/Chicago UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Denver UTC -07:00</fullName>
+                <default>false</default>
+                <label>US  America/Denver UTC -07:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Detroit UTC -05:00</fullName>
+                <default>false</default>
+                <label>US  America/Detroit UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Indiana/Indianapolis UTC -05:00</fullName>
+                <default>false</default>
+                <label>US  America/Indiana/Indianapolis UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Indiana/Knox UTC -06:00</fullName>
+                <default>false</default>
+                <label>US  America/Indiana/Knox UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Indiana/Marengo UTC -05:00</fullName>
+                <default>false</default>
+                <label>US  America/Indiana/Marengo UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Indiana/Petersburg UTC -05:00</fullName>
+                <default>false</default>
+                <label>US  America/Indiana/Petersburg UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Indiana/Tell_City UTC -06:00</fullName>
+                <default>false</default>
+                <label>US  America/Indiana/Tell_City UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Indiana/Vevay UTC -05:00</fullName>
+                <default>false</default>
+                <label>US  America/Indiana/Vevay UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Indiana/Vincennes UTC -05:00</fullName>
+                <default>false</default>
+                <label>US  America/Indiana/Vincennes UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Indiana/Winamac UTC -05:00</fullName>
+                <default>false</default>
+                <label>US  America/Indiana/Winamac UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Juneau UTC -09:00</fullName>
+                <default>false</default>
+                <label>US  America/Juneau UTC -09:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Kentucky/Louisville UTC -05:00</fullName>
+                <default>false</default>
+                <label>US  America/Kentucky/Louisville UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Kentucky/Monticello UTC -05:00</fullName>
+                <default>false</default>
+                <label>US  America/Kentucky/Monticello UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Los_Angeles UTC -08:00</fullName>
+                <default>false</default>
+                <label>US  America/Los_Angeles UTC -08:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Menominee UTC -06:00</fullName>
+                <default>false</default>
+                <label>US  America/Menominee UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Metlakatla UTC -09:00</fullName>
+                <default>false</default>
+                <label>US  America/Metlakatla UTC -09:00</label>
+            </value>
+            <value>
+                <fullName>US  America/New_York UTC -05:00</fullName>
+                <default>false</default>
+                <label>US  America/New_York UTC -05:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Nome UTC -09:00</fullName>
+                <default>false</default>
+                <label>US  America/Nome UTC -09:00</label>
+            </value>
+            <value>
+                <fullName>US  America/North_Dakota/Beulah UTC -06:00</fullName>
+                <default>false</default>
+                <label>US  America/North_Dakota/Beulah UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>US  America/North_Dakota/Center UTC -06:00</fullName>
+                <default>false</default>
+                <label>US  America/North_Dakota/Center UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>US  America/North_Dakota/New_Salem UTC -06:00</fullName>
+                <default>false</default>
+                <label>US  America/North_Dakota/New_Salem UTC -06:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Phoenix UTC -07:00</fullName>
+                <default>false</default>
+                <label>US  America/Phoenix UTC -07:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Sitka UTC -09:00</fullName>
+                <default>false</default>
+                <label>US  America/Sitka UTC -09:00</label>
+            </value>
+            <value>
+                <fullName>US  America/Yakutat UTC -09:00</fullName>
+                <default>false</default>
+                <label>US  America/Yakutat UTC -09:00</label>
+            </value>
+            <value>
+                <fullName>US  Pacific/Honolulu UTC -10:00</fullName>
+                <default>false</default>
+                <label>US  Pacific/Honolulu UTC -10:00</label>
+            </value>
+            <value>
+                <fullName>UY  America/Montevideo UTC -03:00</fullName>
+                <default>false</default>
+                <label>UY  America/Montevideo UTC -03:00</label>
+            </value>
+            <value>
+                <fullName>UZ  Asia/Samarkand UTC +05:00</fullName>
+                <default>false</default>
+                <label>UZ  Asia/Samarkand UTC +05:00</label>
+            </value>
+            <value>
+                <fullName>UZ  Asia/Tashkent UTC +05:00</fullName>
+                <default>false</default>
+                <label>UZ  Asia/Tashkent UTC +05:00</label>
+            </value>
+            <value>
+                <fullName>VA  Europe/Vatican UTC +01:00</fullName>
+                <default>false</default>
+                <label>VA  Europe/Vatican UTC +01:00</label>
+            </value>
+            <value>
+                <fullName>VC  America/St_Vincent UTC -04:00</fullName>
+                <default>false</default>
+                <label>VC  America/St_Vincent UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>VE  America/Caracas UTC -04:00</fullName>
+                <default>false</default>
+                <label>VE  America/Caracas UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>VG  America/Tortola UTC -04:00</fullName>
+                <default>false</default>
+                <label>VG  America/Tortola UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>VI  America/St_Thomas UTC -04:00</fullName>
+                <default>false</default>
+                <label>VI  America/St_Thomas UTC -04:00</label>
+            </value>
+            <value>
+                <fullName>VN  Asia/Ho_Chi_Minh UTC +07:00</fullName>
+                <default>false</default>
+                <label>VN  Asia/Ho_Chi_Minh UTC +07:00</label>
+            </value>
+            <value>
+                <fullName>VU  Pacific/Efate UTC +11:00</fullName>
+                <default>false</default>
+                <label>VU  Pacific/Efate UTC +11:00</label>
+            </value>
+            <value>
+                <fullName>WF  Pacific/Wallis UTC +12:00</fullName>
+                <default>false</default>
+                <label>WF  Pacific/Wallis UTC +12:00</label>
+            </value>
+            <value>
+                <fullName>WS  Pacific/Apia UTC +14:00</fullName>
+                <default>false</default>
+                <label>WS  Pacific/Apia UTC +14:00</label>
+            </value>
+            <value>
+                <fullName>YE  Asia/Aden UTC +03:00</fullName>
+                <default>false</default>
+                <label>YE  Asia/Aden UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>YT  Indian/Mayotte UTC +03:00</fullName>
+                <default>false</default>
+                <label>YT  Indian/Mayotte UTC +03:00</label>
+            </value>
+            <value>
+                <fullName>ZA  Africa/Johannesburg UTC +02:00</fullName>
+                <default>false</default>
+                <label>ZA  Africa/Johannesburg UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>ZM  Africa/Lusaka UTC +02:00</fullName>
+                <default>false</default>
+                <label>ZM  Africa/Lusaka UTC +02:00</label>
+            </value>
+            <value>
+                <fullName>ZW  Africa/Harare UTC +02:00</fullName>
+                <default>false</default>
+                <label>ZW  Africa/Harare UTC +02:00</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

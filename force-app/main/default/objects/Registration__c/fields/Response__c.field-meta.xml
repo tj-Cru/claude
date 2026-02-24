@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Response__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Salvation_Decision__c = TRUE, &quot;Salvation &quot;,&quot;&quot;) 
+&amp;
+IF(Recommitted_Life_to_Christ__c  = TRUE, &quot;Recommitted &quot;, &quot;&quot;)
+&amp;
+IF(Invite_Others__c = TRUE, &quot;Invite Others &quot;, &quot;&quot;)
+&amp;
+IF(Lead_Small_Group__c = TRUE, &quot;Small Group &quot;, &quot;&quot;)
+&amp;
+IF( Local_Interest__c   = TRUE, &quot;Local&quot;, &quot;&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Response</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

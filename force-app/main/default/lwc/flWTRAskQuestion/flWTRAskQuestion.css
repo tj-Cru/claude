@@ -1,0 +1,39 @@
+:host {
+    /* --- BRAND PALETTE --- */
+    --wtr-green: #006C5B;
+    --wtr-soft-black: #24272A;
+    --wtr-cool-grey: #898C8E;
+
+    /* --- SLDS OVERRIDES --- */
+    /* Primary Buttons -> Green, Square */
+    --slds-c-button-brand-color-background: var(--wtr-green);
+    --slds-c-button-brand-color-border: var(--wtr-green);
+    --slds-c-button-brand-color-background-hover: #005649;
+    --slds-c-button-brand-color-border-hover: #005649;
+    --slds-c-button-radius-border: 2px;
+    
+    /* Inputs -> Square corners, grey borders */
+    --slds-c-textarea-radius-border: 2px;
+    --slds-c-input-radius-border: 2px;
+    --slds-c-input-color-border: var(--wtr-cool-grey);
+}
+
+/* Submit Button Layout */
+.slds-button_stretch {
+    margin-top: 1rem;
+    width: 100%;
+    min-height: 45px;
+    font-weight: 700;
+    font-family: 'Akkurat', 'Roboto', sans-serif;
+}
+
+/* Input text color */
+lightning-textarea, lightning-input {
+    color: var(--wtr-soft-black);
+    --slds-c-textarea-text-color: var(--wtr-soft-black);
+}
+
+/* NEW: Increase height specifically for the Textarea */
+lightning-textarea {
+    --sds-c-textarea-sizing-min-height: 350px;
+}

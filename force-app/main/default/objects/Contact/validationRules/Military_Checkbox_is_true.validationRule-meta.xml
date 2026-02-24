@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Military_Checkbox_is_true</fullName>
+    <active>true</active>
+    <description>Once value is marked as true, value cannot be changed in SFDC</description>
+    <errorConditionFormula>AND
+(
+   $Profile.Name &lt;&gt; &apos;System Administrator&apos;, 
+   ISCHANGED( Military__c ), 
+   PRIORVALUE( Military__c ) = true
+)</errorConditionFormula>
+    <errorDisplayField>Military__c</errorDisplayField>
+    <errorMessage>Value cannot be changed in SFDC once marked as true. Please contact your system administrator if value needs to be updated.</errorMessage>
+</ValidationRule>

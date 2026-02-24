@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Next_Touch__c</fullName>
+    <description>Let the Rep know what month they need to touch the donor next</description>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL( Monthly_Touch__c , &quot;January&quot;), &quot;April&quot;, 
+IF( ISPICKVAL( Monthly_Touch__c , &quot;February&quot;), &quot;May&quot;, 
+IF( ISPICKVAL( Monthly_Touch__c , &quot;March&quot;), &quot;June&quot;, 
+IF( ISPICKVAL( Monthly_Touch__c , &quot;April&quot;), &quot;July&quot;, 
+IF( ISPICKVAL( Monthly_Touch__c , &quot;May&quot;), &quot;August&quot;, 
+IF( ISPICKVAL( Monthly_Touch__c , &quot;June&quot;), &quot;September&quot;, 
+IF( ISPICKVAL( Monthly_Touch__c , &quot;July&quot;), &quot;October&quot;, 
+IF( ISPICKVAL( Monthly_Touch__c , &quot;August&quot;), &quot;November&quot;, 
+IF( ISPICKVAL( Monthly_Touch__c , &quot;September&quot;), &quot;December&quot;, 
+IF( ISPICKVAL( Monthly_Touch__c , &quot;October&quot;), &quot;January&quot;, 
+IF( ISPICKVAL( Monthly_Touch__c , &quot;November&quot;), &quot;February&quot;, 
+IF( ISPICKVAL( Monthly_Touch__c , &quot;December&quot;), &quot;March&quot;,NULL))))))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This is the month that you need to touch/communicate with your donor next.</inlineHelpText>
+    <label>Next Touch</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

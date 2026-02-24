@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bill_s_Jan_Touches</fullName>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>ACCOUNT.SITE</columns>
+    <columns>ACCOUNT.ADDRESS1_STATE</columns>
+    <columns>ACCOUNT.PHONE1</columns>
+    <columns>ACCOUNT.TYPE</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Last_Touch_Date__c</columns>
+    <columns>Monthly_Touch__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Donor_Caseload_Lookup__c</field>
+        <operation>equals</operation>
+        <value>William Nelson</value>
+    </filters>
+    <filters>
+        <field>Monthly_Touch__c</field>
+        <operation>equals</operation>
+        <value>January</value>
+    </filters>
+    <filters>
+        <field>ACCOUNT.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Account.Household_Account</value>
+    </filters>
+    <label>Specified Donor Rep Monthly Touches</label>
+    <sharedTo></sharedTo>
+</ListView>

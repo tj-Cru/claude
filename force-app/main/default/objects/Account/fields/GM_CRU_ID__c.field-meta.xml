@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GM_CRU_ID__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>For Data Migration Purposes Only. CRU ID in the GM Company field.</inlineHelpText>
+    <label>GM CRU ID</label>
+    <length>255</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

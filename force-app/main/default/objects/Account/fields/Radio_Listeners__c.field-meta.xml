@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Radio_Listeners__c</fullName>
+    <description>Global Dept Use:  Radio Listeners in Country?</description>
+    <inlineHelpText>There is reasonable evidence that there are listeners to a FamilyLife radio broadcast.</inlineHelpText>
+    <label>Radio Listeners</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>N/A</fullName>
+                <default>true</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>1 - Strongly Disagree</fullName>
+                <default>false</default>
+                <label>1 - Strongly Disagree</label>
+            </value>
+            <value>
+                <fullName>2 - Disagree</fullName>
+                <default>false</default>
+                <label>2 - Disagree</label>
+            </value>
+            <value>
+                <fullName>3 - Neither Agree Nor Disagree</fullName>
+                <default>false</default>
+                <label>3 - Neither Agree Nor Disagree</label>
+            </value>
+            <value>
+                <fullName>4 - Agree</fullName>
+                <default>false</default>
+                <label>4 - Agree</label>
+            </value>
+            <value>
+                <fullName>5 - Strongly Agree</fullName>
+                <default>false</default>
+                <label>5 - Strongly Agree</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

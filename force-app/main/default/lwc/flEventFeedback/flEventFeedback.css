@@ -1,0 +1,106 @@
+:host {
+    --wtr-green: #006C5B; 
+    --wtr-white: #FFFFFF;
+    --wtr-off-white: #F1F1F1;
+    --wtr-soft-black: #24272A;
+    --wtr-cool-grey: #898C8E;
+    
+    --wtr-font-heading: 'Akkurat', 'Roboto', sans-serif; 
+    --wtr-font-body: 'Akkurat', 'Roboto', sans-serif; 
+}
+
+.child-container {
+    background-color: var(--wtr-white);
+    border-radius: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: var(--wtr-font-body);
+}
+
+.child-header {
+    background-color: var(--wtr-green); 
+    color: var(--wtr-white);
+    padding: 0.5rem 0.75rem;
+    flex-shrink: 0;
+}
+
+.child-header h2 {
+    font-family: var(--wtr-font-heading);
+    /* BRAND FIX: 20px */
+    font-size: 1.25rem; 
+    font-weight: 700;
+    margin: 0;
+    margin-right: 1rem;
+    color: var(--wtr-white);
+    letter-spacing: 0.5px;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+}
+
+.back-header-icon, .refresh-button {
+    --sds-c-icon-color-foreground: white;
+    --sds-c-icon-color-foreground-default: white;
+    --slds-c-icon-color-foreground: white;
+    --slds-c-icon-color-foreground-default: white;
+    --slds-c-button-text-color: white;
+    --slds-c-button-color-border: white; 
+    --slds-c-button-icon-color-foreground: white;
+}
+
+.child-body {
+    padding: 0.75rem; 
+    background-color: var(--wtr-white);
+    min-height: 300px; 
+    overflow-y: hidden; 
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.table-wrapper {
+    flex-grow: 1;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    border-radius: 0px;
+}
+
+.slds-table th {
+    background-color: var(--wtr-off-white);
+    color: var(--wtr-soft-black);
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-family: var(--wtr-font-heading);
+}
+
+.slds-table td {
+    font-size: 0.9rem;
+    color: var(--wtr-soft-black);
+}
+
+.status-badge {
+    background-color: var(--wtr-off-white);
+    color: var(--wtr-soft-black);
+    font-size: 0.75rem;
+    border-radius: 2px;
+    padding: 2px 8px;
+    font-weight: 700;
+}
+
+.wtr-link {
+    color: var(--wtr-green);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.wtr-link:hover {
+    text-decoration: underline;
+    color: var(--wtr-soft-black);
+}
+
+.text-weak { color: var(--wtr-cool-grey); }

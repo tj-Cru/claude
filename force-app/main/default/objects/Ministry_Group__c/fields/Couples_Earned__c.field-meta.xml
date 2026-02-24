@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Couples_Earned__c</fullName>
+    <externalId>false</externalId>
+    <formula>Couples_Eligible__c + Couples_Used__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Couples Earned = Couples Eligible + Couples Earned  You can also get to this number by taking All Registrations - Ineligible / 10 rounded down to the nearest 10</inlineHelpText>
+    <label>Couples Earned</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>
