@@ -77,11 +77,7 @@
         </div>
       </template>
       <template lwc:elseif={isFeedback}>
-        <c-fl-event-feedback
-          event-id={eventId}
-          event-name={eventName}
-          onback={handleBack}
-        >
+        <c-fl-event-feedback event-id={eventId} event-name={eventName}>
         </c-fl-event-feedback>
       </template>
       <template lwc:else>

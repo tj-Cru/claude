@@ -109,6 +109,13 @@ export default class FlEventTeamResponses extends NavigationMixin(
   }
 
   async handleRefresh() {
+    if (this.selectedType === "Feedback") {
+      const feedbackChild = this.template.querySelector("c-fl-event-feedback");
+      if (feedbackChild) {
+        await feedbackChild.refresh();
+      }
+      return;
+    }
     if (this.selectedType === "Question") {
       this._questionsLoaded = false;
     } else {
