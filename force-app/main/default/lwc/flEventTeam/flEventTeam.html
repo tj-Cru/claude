@@ -1,0 +1,158 @@
+<template>
+  <div class="wtr-container">
+    <template lwc:if={showParentHeader}>
+      <div class="wtr-header">
+        <h1>
+          <template lwc:if={selectedEventName}>{selectedEventName}</template>
+          <template lwc:else>Event Team</template>
+        </h1>
+        <div class="header-actions">
+          <template lwc:if={selectedEventId}>
+            <lightning-button-icon
+              icon-name="utility:change_record_type"
+              variant="border-filled"
+              alternative-text="Change Event"
+              onclick={clearSelection}
+              class="slds-m-right_x-small"
+            >
+            </lightning-button-icon>
+          </template>
+          <lightning-button-icon
+            icon-name="utility:refresh"
+            variant="border-filled"
+            alternative-text="Refresh"
+            onclick={handleRefresh}
+          >
+          </lightning-button-icon>
+        </div>
+      </div>
+    </template>
+
+    <div class="wtr-body">
+      <template lwc:if={error}>
+        <div class="wtr-content-pad">
+          <div
+            class="slds-notify slds-notify_alert slds-theme_error"
+            role="alert"
+          >
+            <h2>{error}</h2>
+          </div>
+        </div>
+      </template>
+
+      <template lwc:elseif={isLoading}>
+        <div class="wtr-content-pad">
+          <div
+            class="slds-align_absolute-center slds-is-relative loading-spinner-container"
+          >
+            <lightning-spinner
+              alternative-text="Loading"
+              size="medium"
+              variant="brand"
+            ></lightning-spinner>
+            <p class="loading-text">Locating Events...</p>
+          </div>
+        </div>
+      </template>
+
+      <template lwc:else>
+        <template lwc:if={selectedEventId}>
+          <template lwc:if={activeChild}>
+            <template lwc:if={isRegistrations}>
+              <c-fl-registrations
+                event-id={selectedEventId}
+                event-name={selectedEventName}
+                onback={handleBackToMenu}
+              >
+              </c-fl-registrations>
+            </template>
+            <template lwc:if={isResponses}>
+              <c-fl-event-team-responses
+                event-id={selectedEventId}
+                event-name={selectedEventName}
+                onback={handleBackToMenu}
+              >
+              </c-fl-event-team-responses>
+            </template>
+            <template lwc:if={isFeedback}>
+              <c-fl-event-feedback
+                event-id={selectedEventId}
+                event-name={selectedEventName}
+                onback={handleBackToMenu}
+              >
+              </c-fl-event-feedback>
+            </template>
+          </template>
+
+          <template lwc:else>
+            <div class="wtr-content-pad">
+              <div class="tile-grid">
+                <button class="menu-tile" onclick={openRegistrations}>
+                  <lightning-icon
+                    icon-name="utility:event"
+                    variant="inverse"
+                    size="small"
+                    class="slds-m-bottom_small"
+                  ></lightning-icon>
+                  <span>Registrations</span>
+                </button>
+                <button class="menu-tile" onclick={openResponses}>
+                  <lightning-icon
+                    icon-name="utility:list"
+                    variant="inverse"
+                    size="small"
+                    class="slds-m-bottom_small"
+                  ></lightning-icon>
+                  <span>Responses</span>
+                </button>
+                <button class="menu-tile" onclick={openFeedback}>
+                  <lightning-icon
+                    icon-name="utility:chat"
+                    variant="inverse"
+                    size="small"
+                    class="slds-m-bottom_small"
+                  ></lightning-icon>
+                  <span>Event Feedback</span>
+                </button>
+              </div>
+            </div>
+          </template>
+        </template>
+
+        <template lwc:elseif={showEventList}>
+          <div class="wtr-content-pad">
+            <div class="slds-p-bottom_small text-center">
+              <h3 class="slds-text-heading_small">Please select your event:</h3>
+            </div>
+            <ul class="event-list">
+              <template for:each={events} for:item="evt">
+                <li key={evt.Id}>
+                  <button
+                    class="event-button"
+                    value={evt.Id}
+                    onclick={handleEventSelect}
+                  >
+                    <strong>{evt.Name}</strong>
+                  </button>
+                </li>
+              </template>
+            </ul>
+          </div>
+        </template>
+
+        <template lwc:elseif={isNoEvents}>
+          <div class="wtr-content-pad">
+            <div class="text-center slds-p-around_large text-weak">
+              <lightning-icon
+                icon-name="utility:event"
+                size="medium"
+                class="slds-m-bottom_small"
+              ></lightning-icon>
+              <p>No active events found nearby.</p>
+            </div>
+          </div>
+        </template>
+      </template>
+    </div>
+  </div>
+</template>

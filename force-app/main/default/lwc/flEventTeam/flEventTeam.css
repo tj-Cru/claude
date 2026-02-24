@@ -1,0 +1,156 @@
+:host {
+  /* --- BRAND COLORS --- */
+  --wtr-green: #006c5b;
+  --wtr-white: #ffffff;
+  --wtr-off-white: #f1f1f1;
+  --wtr-soft-black: #24272a;
+  --wtr-cool-grey: #898c8e;
+  --wtr-orange: #e57e38;
+  --wtr-yellow: #f3bd48;
+  --wtr-blue: #7ca7ad;
+
+  /* --- TYPOGRAPHY --- */
+  --wtr-font-heading: "Akkurat", "Roboto", sans-serif;
+  --wtr-font-body: "Akkurat", "Roboto", sans-serif;
+}
+
+/* CONTAINER */
+.wtr-container {
+  background-color: var(--wtr-white);
+  border: 1px solid #ddd;
+  /* BRAND FIX: Sharp corners to match "Cards" style */
+  border-radius: 0px;
+  overflow: hidden;
+  font-family: var(--wtr-font-body);
+}
+
+/* BRAND HEADER */
+.wtr-header {
+  background-color: var(--wtr-green);
+  color: var(--wtr-white);
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wtr-header h1 {
+  font-family: var(--wtr-font-heading);
+  /* BRAND FIX: Headline 5/6 is 20px */
+  font-size: 1.25rem;
+  font-weight: 700; /* Bold */
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+/* HEADER BUTTONS */
+.wtr-header lightning-button-icon {
+  --slds-c-icon-color-foreground: var(--wtr-white);
+}
+
+/* BODY */
+.wtr-body {
+  padding: 0;
+}
+.wtr-content-pad {
+  padding: 0.5rem;
+}
+
+/* LOADING SPINNER */
+.loading-spinner-container {
+  height: 12rem;
+}
+
+.loading-text {
+  margin-top: 3rem;
+  font-weight: 700;
+  color: var(--wtr-cool-grey);
+}
+
+/* EVENT LIST */
+.event-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.event-list li {
+  border-bottom: 1px solid #eee;
+}
+.event-list li:last-child {
+  border-bottom: none;
+}
+
+.event-button {
+  width: 100%;
+  text-align: left;
+  padding: 0.75rem; /* Increased slightly for touch target */
+  background: none;
+  border: none;
+  color: var(--wtr-soft-black);
+  font-size: 1rem; /* Body 1 is 16px */
+  font-weight: 700; /* BRAND FIX: Buttons should be Bold */
+  cursor: pointer;
+  transition: background 0.2s;
+  font-family: var(--wtr-font-body);
+}
+
+.event-button:hover {
+  background-color: var(--wtr-off-white);
+  color: var(--wtr-green);
+}
+
+/* MENU TILES */
+.tile-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .tile-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.menu-tile {
+  background-color: var(--wtr-soft-black);
+  color: var(--wtr-white);
+  padding: 1rem;
+  border: none;
+  border-radius: 2px; /* Slight radius ok for buttons */
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80px;
+}
+
+.menu-tile lightning-icon {
+  --slds-c-icon-color-foreground: var(--wtr-white);
+  margin-bottom: 0.5rem;
+}
+
+.menu-tile:hover {
+  background-color: var(--wtr-green);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.menu-tile span {
+  font-family: var(--wtr-font-heading);
+  font-size: 1rem;
+  font-weight: 700; /* BRAND FIX: Bold */
+  pointer-events: none;
+}
+
+/* UTILS */
+.text-center {
+  text-align: center;
+}
+.text-weak {
+  color: var(--wtr-cool-grey);
+}
