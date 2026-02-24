@@ -14,34 +14,39 @@
             <button class={prayerButtonClass} onclick={selectPrayer}>
               Prayer
             </button>
+            <button class={feedbackButtonClass} onclick={selectFeedback}>
+              Feedback
+            </button>
           </div>
         </div>
         <!-- Right: filter/action buttons -->
         <div class="header-actions slds-grid slds-grid_vertical-align-center">
-          <lightning-button-icon-stateful
-            icon-name="utility:user"
-            selected={filterMine}
-            onclick={handleMyFilterChange}
-            variant="border-filled"
-            alternative-text="Filter by Mine"
-            class="slds-m-right_x-small filter-button"
-          >
-          </lightning-button-icon-stateful>
-          <lightning-button-menu
-            icon-name="utility:filterList"
-            variant="border-filled"
-            alternative-text="Filter by Status"
-            onselect={handleStatusChange}
-            class="slds-m-right_x-small menu-button-white"
-          >
-            <template for:each={statusOptions} for:item="opt">
-              <lightning-menu-item
-                key={opt.value}
-                value={opt.value}
-                label={opt.label}
-              ></lightning-menu-item>
-            </template>
-          </lightning-button-menu>
+          <template lwc:if={isNotFeedback}>
+            <lightning-button-icon-stateful
+              icon-name="utility:user"
+              selected={filterMine}
+              onclick={handleMyFilterChange}
+              variant="border-filled"
+              alternative-text="Filter by Mine"
+              class="slds-m-right_x-small filter-button"
+            >
+            </lightning-button-icon-stateful>
+            <lightning-button-menu
+              icon-name="utility:filterList"
+              variant="border-filled"
+              alternative-text="Filter by Status"
+              onselect={handleStatusChange}
+              class="slds-m-right_x-small menu-button-white"
+            >
+              <template for:each={statusOptions} for:item="opt">
+                <lightning-menu-item
+                  key={opt.value}
+                  value={opt.value}
+                  label={opt.label}
+                ></lightning-menu-item>
+              </template>
+            </lightning-button-menu>
+          </template>
           <lightning-button-icon
             icon-name="utility:back"
             variant="border-filled"
@@ -70,6 +75,14 @@
             size="medium"
           ></lightning-spinner>
         </div>
+      </template>
+      <template lwc:elseif={isFeedback}>
+        <c-fl-event-feedback
+          event-id={eventId}
+          event-name={eventName}
+          onback={handleBack}
+        >
+        </c-fl-event-feedback>
       </template>
       <template lwc:else>
         <div class="results-container scrollable-wrapper">

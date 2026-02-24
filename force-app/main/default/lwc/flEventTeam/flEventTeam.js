@@ -99,9 +99,6 @@ export default class FlEventTeam extends LightningElement {
   openResponses() {
     this.activeChild = "responses";
   }
-  openFeedback() {
-    this.activeChild = "feedback";
-  }
   handleBackToMenu() {
     this.activeChild = null;
   }
@@ -128,8 +125,5 @@ export default class FlEventTeam extends LightningElement {
   }
   get isResponses() {
     return this.activeChild === "responses";
-  }
-  get isFeedback() {
-    return this.activeChild === "feedback";
   }
 }

@@ -74,14 +74,6 @@
               >
               </c-fl-event-team-responses>
             </template>
-            <template lwc:if={isFeedback}>
-              <c-fl-event-feedback
-                event-id={selectedEventId}
-                event-name={selectedEventName}
-                onback={handleBackToMenu}
-              >
-              </c-fl-event-feedback>
-            </template>
           </template>
 
           <template lwc:else>
@@ -104,15 +96,6 @@
                     class="slds-m-bottom_small"
                   ></lightning-icon>
                   <span>Responses</span>
-                </button>
-                <button class="menu-tile" onclick={openFeedback}>
-                  <lightning-icon
-                    icon-name="utility:chat"
-                    variant="inverse"
-                    size="small"
-                    class="slds-m-bottom_small"
-                  ></lightning-icon>
-                  <span>Event Feedback</span>
                 </button>
               </div>
             </div>

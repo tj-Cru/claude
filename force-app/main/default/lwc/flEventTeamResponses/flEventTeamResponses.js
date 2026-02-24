@@ -72,6 +72,7 @@ export default class FlEventTeamResponses extends NavigationMixin(
   }
 
   get isLoading() {
+    if (this.selectedType === "Feedback") return false;
     return !this._questionsLoaded || !this._prayersLoaded;
   }
 
@@ -85,6 +86,26 @@ export default class FlEventTeamResponses extends NavigationMixin(
     this.selectedType = "Prayer";
     this.filterStatus = "New";
     this.filterMine = false;
+  }
+
+  selectFeedback() {
+    this.selectedType = "Feedback";
+    this.filterStatus = "New";
+    this.filterMine = false;
+  }
+
+  get isFeedback() {
+    return this.selectedType === "Feedback";
+  }
+
+  get isNotFeedback() {
+    return this.selectedType !== "Feedback";
+  }
+
+  get feedbackButtonClass() {
+    return this.selectedType === "Feedback"
+      ? "type-pill type-pill_active"
+      : "type-pill";
   }
 
   async handleRefresh() {
