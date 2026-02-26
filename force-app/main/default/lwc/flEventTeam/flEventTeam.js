@@ -12,6 +12,12 @@ export default class FlEventTeam extends LightningElement {
   activeChild = null;
   isLoading = true;
 
+  pendingRecordId;
+  pendingRecordObjectApiName;
+  pendingRecordEditFlow;
+  pendingRecordFieldList;
+  priorChild;
+
   connectedCallback() {
     this.initializeComponent();
   }
@@ -19,10 +25,13 @@ export default class FlEventTeam extends LightningElement {
   async initializeComponent() {
     const cachedId = localStorage.getItem(STORAGE_KEY);
     const cachedName = localStorage.getItem(STORAGE_KEY + "_NAME");
+    const cachedView = localStorage.getItem(STORAGE_KEY + "_VIEW");
 
     if (cachedId) {
       this.selectedEventId = cachedId;
       this.selectedEventName = cachedName;
+      // Never restore 'detail' on reload — pendingRecordId is not persisted
+      this.activeChild = cachedView === "detail" ? null : cachedView || null;
       this.isLoading = false;
       return;
     }
@@ -85,6 +94,7 @@ export default class FlEventTeam extends LightningElement {
     this.activeChild = null;
     localStorage.removeItem(STORAGE_KEY);
     localStorage.removeItem(STORAGE_KEY + "_NAME");
+    localStorage.removeItem(STORAGE_KEY + "_VIEW");
     this.fetchEvents(null, null);
   }
 
@@ -95,12 +105,46 @@ export default class FlEventTeam extends LightningElement {
 
   openRegistrations() {
     this.activeChild = "registrations";
+    localStorage.setItem(STORAGE_KEY + "_VIEW", "registrations");
   }
   openResponses() {
     this.activeChild = "responses";
+    localStorage.setItem(STORAGE_KEY + "_VIEW", "responses");
   }
   handleBackToMenu() {
     this.activeChild = null;
+    localStorage.removeItem(STORAGE_KEY + "_VIEW");
+  }
+
+  handleViewRecord(event) {
+    this.priorChild = this.activeChild;
+    this.pendingRecordId = event.detail.recordId;
+    this.pendingRecordObjectApiName = event.detail.objectApiName;
+    if (event.detail.objectApiName === "Registration__c") {
+      this.pendingRecordEditFlow = "Registration_Screen_Flow_Event_Team_Edit";
+      this.pendingRecordFieldList =
+        "Name,Registration_Status__c,Registration_Type__c,Registrant_Type__c,Contact_GC__c,Waiver__c,Last_Event__c,First_Name__c,Last_Name__c";
+    } else {
+      this.pendingRecordEditFlow = null;
+      this.pendingRecordFieldList =
+        "Name,Status__c,Prayer_Request__c,Question__c,CreatedDate";
+    }
+    this.activeChild = "detail";
+    // Do not persist 'detail' — pendingRecordId is memory-only and cannot be restored on reload
+  }
+
+  handleBackFromDetail() {
+    this.activeChild = this.priorChild;
+    if (this.priorChild) {
+      localStorage.setItem(STORAGE_KEY + "_VIEW", this.priorChild);
+    } else {
+      localStorage.removeItem(STORAGE_KEY + "_VIEW");
+    }
+    this.pendingRecordId = null;
+    this.pendingRecordObjectApiName = null;
+    this.pendingRecordEditFlow = null;
+    this.pendingRecordFieldList = null;
+    this.priorChild = null;
   }
 
   get isNoEvents() {
@@ -125,5 +169,8 @@ export default class FlEventTeam extends LightningElement {
   }
   get isResponses() {
     return this.activeChild === "responses";
+  }
+  get isDetail() {
+    return this.activeChild === "detail";
   }
 }

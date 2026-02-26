@@ -1,263 +1,332 @@
-import { LightningElement, api, wire, track } from 'lwc';
-import { refreshApex } from '@salesforce/apex';
-import { getObjectInfo, getPicklistValues } from 'lightning/uiObjectInfoApi';
-import { NavigationMixin } from 'lightning/navigation';
-import { ShowToastEvent } from 'lightning/platformShowToastEvent';
-import getRegistrations from '@salesforce/apex/flRegistrationsController.getRegistrations';
+import { LightningElement, api, wire, track } from "lwc";
+import { refreshApex } from "@salesforce/apex";
+import { getObjectInfo, getPicklistValues } from "lightning/uiObjectInfoApi";
+import { ShowToastEvent } from "lightning/platformShowToastEvent";
+import getRegistrations from "@salesforce/apex/flRegistrationsController.getRegistrations";
 
-import REGISTRATION_OBJECT from '@salesforce/schema/Registration__c';
-import STATUS_FIELD from '@salesforce/schema/Registration__c.Registration_Status__c';
+import REGISTRATION_OBJECT from "@salesforce/schema/Registration__c";
+import STATUS_FIELD from "@salesforce/schema/Registration__c.Registration_Status__c";
 
-export default class FlRegistrations extends NavigationMixin(LightningElement) {
-    @api eventId;
-    @api eventName; // NEW Input
+export default class FlRegistrations extends LightningElement {
+  @api eventId;
+  @api eventName; // NEW Input
 
-    wiredRegistrationsResult; 
-    
-    @track allRegistrations = [];
-    @track filteredRegistrations = [];
-    
-    // Filter State
-    filterFirstName = '';
-    filterLastName = '';
-    filterZip = '';
-    filterStatus = '';
+  wiredRegistrationsResult;
 
-    // Sort State
-    sortedBy;
-    sortDirection = 'asc';
+  @track allRegistrations = [];
+  @track filteredRegistrations = [];
 
-    // Flow Modal State
-    showCheckInModal = false;
-    selectedExternalId;
+  // Filter State
+  filterFirstName = "";
+  filterLastName = "";
+  filterZip = "";
+  filterStatus = "";
 
-    isLoading = true;
-    error;
-    
-    // Debounce Timer..
-    searchTimeout;
+  // Pagination State
+  pageSize = 25;
+  currentPage = 1;
 
-    @wire(getObjectInfo, { objectApiName: REGISTRATION_OBJECT })
-    objectInfo;
+  // Sort State
+  sortedBy;
+  sortDirection = "asc";
 
-    @wire(getPicklistValues, { 
-        recordTypeId: '$objectInfo.data.defaultRecordTypeId', 
-        fieldApiName: STATUS_FIELD 
-    })
-    statusPicklistValues;
+  // Flow Modal State
+  showCheckInModal = false;
+  selectedExternalId;
 
-    @wire(getRegistrations, { eventId: '$eventId' })
-    wiredRegistrations(result) {
-        this.wiredRegistrationsResult = result;
-        const { data, error } = result;
+  isLoading = true;
+  error;
 
-        if (data) {
-            this.allRegistrations = data.map(reg => {
-                const rawStatus = reg.Registration_Status__c || '';
-                const statusLower = rawStatus.toLowerCase();
-                const isAttended = statusLower.includes('attended');
+  @wire(getObjectInfo, { objectApiName: REGISTRATION_OBJECT })
+  objectInfo;
 
-                return {
-                    ...reg,
-                    CoupleName: reg.Couple_Registration__r ? reg.Couple_Registration__r.Name : null,
-                    CoupleId: reg.Couple_Registration__c,
-                    isCheckedIn: isAttended
-                };
-            });
-            
-            this.applyFilters();
-            this.error = undefined;
-            this.isLoading = false;
-        } else if (error) {
-            this.error = error;
-            this.allRegistrations = [];
-            this.filteredRegistrations = [];
-            this.isLoading = false;
-            console.error('Error fetching registrations:', error);
-        }
-    }
+  @wire(getPicklistValues, {
+    recordTypeId: "$objectInfo.data.defaultRecordTypeId",
+    fieldApiName: STATUS_FIELD
+  })
+  statusPicklistValues;
 
-    async handleRefresh() {
-        this.isLoading = true;
-        try {
-            await refreshApex(this.wiredRegistrationsResult);
-        } catch(e) {
-            console.error('Refresh failed', e);
-        } finally {
-            this.isLoading = false;
-        }
-    }
+  @wire(getRegistrations, { eventId: "$eventId" })
+  wiredRegistrations(result) {
+    this.wiredRegistrationsResult = result;
+    const { data, error } = result;
 
-    handleNameClick(event) {
-        event.preventDefault();
-        const recordId = event.target.dataset.recordId;
-        this.navigateToRecord(recordId, 'Registration__c');
-    }
+    if (data) {
+      this.allRegistrations = data.map((reg) => {
+        const rawStatus = reg.Registration_Status__c || "";
+        const statusLower = rawStatus.toLowerCase();
+        const isAttended = statusLower.includes("attended");
 
-    handleCoupleClick(event) {
-        event.preventDefault();
-        const recordId = event.target.dataset.recordId;
-        if (recordId) {
-            this.navigateToRecord(recordId, 'Couple_Registration__c');
-        }
-    }
-
-    handleCheckInClick(event) {
-        const extId = event.currentTarget.dataset.externalId;
-        if (extId) {
-            this.selectedExternalId = extId;
-            this.showCheckInModal = true;
+        let typeDisplay;
+        if (reg.Registrant_Type__c === "Couple") {
+          typeDisplay = (reg.Registration_Type__c || "") + " Primary";
+        } else if (reg.Registrant_Type__c === "Spouse") {
+          typeDisplay = (reg.Registration_Type__c || "") + " Spouse";
         } else {
-            this.dispatchEvent(
-                new ShowToastEvent({
-                    title: 'Error',
-                    message: 'Cannot check in: No External Registration ID found on this record.',
-                    variant: 'error'
-                })
-            );
-        }
-    }
-
-    closeCheckInModal() {
-        this.showCheckInModal = false;
-        this.selectedExternalId = null;
-    }
-
-    handleFlowStatusChange(event) {
-        if (event.detail.status === 'FINISHED') {
-            this.closeCheckInModal();
-            this.dispatchEvent(
-                new ShowToastEvent({
-                    title: 'Success',
-                    message: 'Check-in processed successfully.',
-                    variant: 'success'
-                })
-            );
-            setTimeout(() => {
-                this.handleRefresh();
-            }, 500);
-        }
-    }
-
-    get checkInFlowInputs() {
-        return [{ name: 'extRecordId', type: 'String', value: this.selectedExternalId }];
-    }
-
-    navigateToRecord(recordId, objectApiName) {
-        this[NavigationMixin.Navigate]({
-            type: 'standard__recordPage',
-            attributes: {
-                recordId: recordId,
-                objectApiName: objectApiName,
-                actionName: 'view'
-            }
-        });
-    }
-
-    handleFilterChange(event) {
-        if (this.searchTimeout) {
-            clearTimeout(this.searchTimeout);
+          typeDisplay = reg.Registration_Type__c || "";
         }
 
-        const field = event.target.dataset.filter;
-        const rawValue = event.detail.value;
-
-        if (field === 'firstName') this.filterFirstName = rawValue;
-        if (field === 'lastName') this.filterLastName = rawValue;
-        if (field === 'zip') this.filterZip = rawValue;
-        if (field === 'status') this.filterStatus = rawValue;
-
-        this.searchTimeout = setTimeout(() => {
-            this.applyFilters();
-        }, 300);
-    }
-
-    applyFilters() {
-        if (!this.allRegistrations) {
-            this.filteredRegistrations = [];
-            return;
+        let typeClass = "";
+        if (reg.Registration_Type__c === "Pastor") {
+          typeClass = "type-pastor";
+        } else if (reg.Registration_Type__c === "Military") {
+          typeClass = "type-military";
         }
 
-        const termFirst = (this.filterFirstName || '').trim().toLowerCase();
-        const termLast = (this.filterLastName || '').trim().toLowerCase();
-        const termZip = (this.filterZip || '').trim().toLowerCase();
-        const termStatus = this.filterStatus;
+        return {
+          ...reg,
+          CoupleName: reg.Couple_Registration__r
+            ? reg.Couple_Registration__r.Name
+            : null,
+          CoupleId: reg.Couple_Registration__c,
+          isCheckedIn: isAttended,
+          typeDisplay,
+          typeClass
+        };
+      });
 
-        let tempResults = this.allRegistrations.filter(reg => {
-            const valFirst = reg.First_Name__c ? reg.First_Name__c.toLowerCase() : '';
-            const matchFirst = !termFirst || valFirst.includes(termFirst);
+      this.applyFilters();
+      this.error = undefined;
+      this.isLoading = false;
+    } else if (error) {
+      this.error = error;
+      this.allRegistrations = [];
+      this.filteredRegistrations = [];
+      this.isLoading = false;
+      console.error("Error fetching registrations:", error);
+    }
+  }
 
-            const valLast = reg.Last_Name__c ? reg.Last_Name__c.toLowerCase() : '';
-            const matchLast = !termLast || valLast.includes(termLast);
+  async handleRefresh() {
+    this.isLoading = true;
+    try {
+      await refreshApex(this.wiredRegistrationsResult);
+    } catch (e) {
+      console.error("Refresh failed", e);
+    } finally {
+      this.isLoading = false;
+    }
+  }
 
-            const valZip = reg.Contact_Zip__c ? reg.Contact_Zip__c.toLowerCase() : '';
-            const matchZip = !termZip || valZip.includes(termZip);
+  handleNameClick(event) {
+    event.preventDefault();
+    const recordId = event.currentTarget.dataset.recordId;
+    this.dispatchEvent(
+      new CustomEvent("viewrecord", {
+        bubbles: true,
+        composed: true,
+        detail: { recordId, objectApiName: "Registration__c" }
+      })
+    );
+  }
 
-            const matchStatus = !termStatus || (reg.Registration_Status__c === termStatus);
+  handleCheckInClick(event) {
+    const extId = event.currentTarget.dataset.externalId;
+    if (extId) {
+      this.selectedExternalId = extId;
+      this.showCheckInModal = true;
+    } else {
+      this.dispatchEvent(
+        new ShowToastEvent({
+          title: "Error",
+          message:
+            "Cannot check in: No External Registration ID found on this record.",
+          variant: "error"
+        })
+      );
+    }
+  }
 
-            return matchFirst && matchLast && matchZip && matchStatus;
-        });
+  closeCheckInModal() {
+    this.showCheckInModal = false;
+    this.selectedExternalId = null;
+  }
 
-        if (this.sortedBy) {
-            this.sortData(tempResults);
-        } else {
-            this.filteredRegistrations = tempResults;
-        }
+  handleFlowStatusChange(event) {
+    if (event.detail.status === "FINISHED") {
+      this.closeCheckInModal();
+      this.dispatchEvent(
+        new ShowToastEvent({
+          title: "Success",
+          message: "Check-in processed successfully.",
+          variant: "success"
+        })
+      );
+      this.handleRefresh();
+    }
+  }
+
+  get checkInFlowInputs() {
+    return [
+      { name: "extRecordId", type: "String", value: this.selectedExternalId }
+    ];
+  }
+
+  handleFilterChange(event) {
+    const field = event.target.dataset.filter;
+    const rawValue = event.detail.value;
+
+    if (field === "firstName") this.filterFirstName = rawValue;
+    if (field === "lastName") this.filterLastName = rawValue;
+    if (field === "zip") this.filterZip = rawValue;
+    if (field === "status") this.filterStatus = rawValue;
+
+    this.applyFilters();
+  }
+
+  applyFilters() {
+    this.currentPage = 1;
+    if (!this.allRegistrations) {
+      this.filteredRegistrations = [];
+      return;
     }
 
-    handleSort(event) {
-        event.preventDefault(); 
+    const termFirst = (this.filterFirstName || "").trim().toLowerCase();
+    const termLast = (this.filterLastName || "").trim().toLowerCase();
+    const termZip = (this.filterZip || "").trim().toLowerCase();
+    const termStatus = this.filterStatus;
 
-        const fieldName = event.currentTarget.dataset.id;
-        const isReverse = this.sortedBy === fieldName && this.sortDirection === 'asc';
-        
-        this.sortedBy = fieldName;
-        this.sortDirection = isReverse ? 'desc' : 'asc';
-        
-        this.sortData(this.filteredRegistrations);
+    let tempResults = this.allRegistrations.filter((reg) => {
+      const valFirst = reg.First_Name__c ? reg.First_Name__c.toLowerCase() : "";
+      const matchFirst = !termFirst || valFirst.includes(termFirst);
+
+      const valLast = reg.Last_Name__c ? reg.Last_Name__c.toLowerCase() : "";
+      const matchLast = !termLast || valLast.includes(termLast);
+
+      const valZip = reg.Contact_Zip__c ? reg.Contact_Zip__c.toLowerCase() : "";
+      const matchZip = !termZip || valZip.includes(termZip);
+
+      const matchStatus =
+        !termStatus || reg.Registration_Status__c === termStatus;
+
+      return matchFirst && matchLast && matchZip && matchStatus;
+    });
+
+    if (this.sortedBy) {
+      this.sortData(tempResults);
+    } else {
+      this.filteredRegistrations = tempResults;
     }
+  }
 
-    sortData(incomingData) {
-        const cloneData = [...incomingData];
-        const reverse = this.sortDirection === 'desc' ? -1 : 1;
-        const key = this.sortedBy;
+  handleSort(event) {
+    event.preventDefault();
 
-        cloneData.sort((a, b) => {
-            let valA = a[key] ? String(a[key]).toLowerCase() : '';
-            let valB = b[key] ? String(b[key]).toLowerCase() : '';
-            return reverse * ((valA > valB) - (valB > valA));
-        });
+    const fieldName = event.currentTarget.dataset.id;
+    const isReverse =
+      this.sortedBy === fieldName && this.sortDirection === "asc";
 
-        this.filteredRegistrations = cloneData;
+    this.sortedBy = fieldName;
+    this.sortDirection = isReverse ? "desc" : "asc";
+
+    this.sortData(this.filteredRegistrations);
+  }
+
+  sortData(incomingData) {
+    const cloneData = [...incomingData];
+    const reverse = this.sortDirection === "desc" ? -1 : 1;
+    const key = this.sortedBy;
+
+    cloneData.sort((a, b) => {
+      let valA = a[key] ? String(a[key]).toLowerCase() : "";
+      let valB = b[key] ? String(b[key]).toLowerCase() : "";
+      return reverse * ((valA > valB) - (valB > valA));
+    });
+
+    this.filteredRegistrations = cloneData;
+  }
+
+  handleBack() {
+    this.dispatchEvent(new CustomEvent("back"));
+  }
+
+  get hasResults() {
+    return this.filteredRegistrations && this.filteredRegistrations.length > 0;
+  }
+
+  get statusOptions() {
+    if (!this.statusPicklistValues || !this.statusPicklistValues.data) {
+      return [];
     }
+    return [
+      { label: "All Statuses", value: "" },
+      ...this.statusPicklistValues.data.values
+    ];
+  }
 
-    handleBack() {
-        this.dispatchEvent(new CustomEvent('back'));
+  get sortIconName() {
+    return this.sortDirection === "asc"
+      ? "utility:arrowup"
+      : "utility:arrowdown";
+  }
+
+  get isNameSort() {
+    return this.sortedBy === "Name";
+  }
+  get isTypeSort() {
+    return this.sortedBy === "typeDisplay";
+  }
+  get isStatusSort() {
+    return this.sortedBy === "Registration_Status__c";
+  }
+  get isGroupOwnerSort() {
+    return this.sortedBy === "Contact_GC__c";
+  }
+  get isWaiverSort() {
+    return this.sortedBy === "Waiver__c";
+  }
+  get isLastEventSort() {
+    return this.sortedBy === "Last_Event__c";
+  }
+
+  get paginatedRegistrations() {
+    const start = (this.currentPage - 1) * this.pageSize;
+    return this.filteredRegistrations.slice(start, start + this.pageSize);
+  }
+
+  get totalPages() {
+    if (
+      !this.filteredRegistrations ||
+      this.filteredRegistrations.length === 0
+    ) {
+      return 1;
     }
+    return Math.ceil(this.filteredRegistrations.length / this.pageSize);
+  }
 
-    get hasResults() {
-        return this.filteredRegistrations && this.filteredRegistrations.length > 0;
+  get hasPrevPage() {
+    return this.currentPage > 1;
+  }
+
+  get hasNextPage() {
+    return this.currentPage < this.totalPages;
+  }
+
+  get paginationLabel() {
+    return `Page ${this.currentPage} of ${this.totalPages}`;
+  }
+
+  get showPagination() {
+    return this.totalPages > 1;
+  }
+
+  get disablePrevPage() {
+    return !this.hasPrevPage;
+  }
+
+  get disableNextPage() {
+    return !this.hasNextPage;
+  }
+
+  handleNextPage() {
+    if (this.currentPage < this.totalPages) {
+      this.currentPage++;
     }
+  }
 
-    get statusOptions() {
-        if (!this.statusPicklistValues || !this.statusPicklistValues.data) {
-            return [];
-        }
-        return [
-            { label: 'All Statuses', value: '' },
-            ...this.statusPicklistValues.data.values
-        ];
+  handlePrevPage() {
+    if (this.currentPage > 1) {
+      this.currentPage--;
     }
-
-    get sortIconName() {
-        return this.sortDirection === 'asc' ? 'utility:arrowup' : 'utility:arrowdown';
-    }
-
-    get isNameSort() { return this.sortedBy === 'Name'; }
-    get isRegistrantTypeSort() { return this.sortedBy === 'Registrant_Type__c'; }
-    get isRegistrationTypeSort() { return this.sortedBy === 'Registration_Type__c'; }
-    get isStatusSort() { return this.sortedBy === 'Registration_Status__c'; }
-    get isGroupOwnerSort() { return this.sortedBy === 'Contact_GC__c'; }
-    get isWaiverSort() { return this.sortedBy === 'Waiver__c'; }
-    get isLastEventSort() { return this.sortedBy === 'Last_Event__c'; }
+  }
 }

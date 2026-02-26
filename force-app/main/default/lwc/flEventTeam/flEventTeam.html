@@ -63,16 +63,28 @@
                 event-id={selectedEventId}
                 event-name={selectedEventName}
                 onback={handleBackToMenu}
+                onviewrecord={handleViewRecord}
               >
               </c-fl-registrations>
             </template>
-            <template lwc:if={isResponses}>
+            <template lwc:elseif={isResponses}>
               <c-fl-event-team-responses
                 event-id={selectedEventId}
                 event-name={selectedEventName}
                 onback={handleBackToMenu}
+                onviewrecord={handleViewRecord}
               >
               </c-fl-event-team-responses>
+            </template>
+            <template lwc:elseif={isDetail}>
+              <c-fl-record-detail
+                record-id={pendingRecordId}
+                object-api-name={pendingRecordObjectApiName}
+                field-list={pendingRecordFieldList}
+                edit-flow-name={pendingRecordEditFlow}
+                show-back-button
+                onback={handleBackFromDetail}
+              ></c-fl-record-detail>
             </template>
           </template>
 

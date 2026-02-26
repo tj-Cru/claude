@@ -1,5 +1,4 @@
 import { LightningElement, api, wire } from "lwc";
-import { NavigationMixin } from "lightning/navigation";
 import { refreshApex } from "@salesforce/apex";
 import { ShowToastEvent } from "lightning/platformShowToastEvent";
 import { getObjectInfo, getPicklistValues } from "lightning/uiObjectInfoApi";
@@ -12,9 +11,7 @@ import USER_ID from "@salesforce/user/Id";
 import SURVEY_RESPONSE_OBJECT from "@salesforce/schema/Survey_Response__c";
 import STATUS_FIELD from "@salesforce/schema/Survey_Response__c.Status__c";
 
-export default class FlEventTeamResponses extends NavigationMixin(
-  LightningElement
-) {
+export default class FlEventTeamResponses extends LightningElement {
   @api eventId;
   @api eventName;
 
@@ -73,7 +70,8 @@ export default class FlEventTeamResponses extends NavigationMixin(
 
   get isLoading() {
     if (this.selectedType === "Feedback") return false;
-    return !this._questionsLoaded || !this._prayersLoaded;
+    if (this.selectedType === "Question") return !this._questionsLoaded;
+    return !this._prayersLoaded;
   }
 
   selectQuestions() {
@@ -128,7 +126,10 @@ export default class FlEventTeamResponses extends NavigationMixin(
         await refreshApex(this.wiredPrayersResult);
       }
     } catch {
-      // refreshApex errors are surfaced through the wire handler
+      // wire handler surfaces errors
+    } finally {
+      this._questionsLoaded = true;
+      this._prayersLoaded = true;
     }
   }
 
@@ -187,14 +188,13 @@ export default class FlEventTeamResponses extends NavigationMixin(
     event.preventDefault();
     const recordId = event.currentTarget.dataset.recordId;
     if (recordId) {
-      this[NavigationMixin.Navigate]({
-        type: "standard__recordPage",
-        attributes: {
-          recordId,
-          objectApiName: "Survey_Response__c",
-          actionName: "view"
-        }
-      });
+      this.dispatchEvent(
+        new CustomEvent("viewrecord", {
+          bubbles: true,
+          composed: true,
+          detail: { recordId, objectApiName: "Survey_Response__c" }
+        })
+      );
     }
   }
 
