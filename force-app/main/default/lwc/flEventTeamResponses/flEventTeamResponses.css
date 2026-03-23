@@ -100,6 +100,78 @@
   color: white;
 }
 
+/* STATS BAR — dual-group layout for Questions and Prayer response rates */
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0;
+  padding: 0.4rem 0.75rem;
+  background-color: var(--wtr-soft-black);
+  flex-shrink: 0;
+}
+
+.stat-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 0 0.5rem;
+}
+
+.stat-group-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.75px;
+  color: var(--wtr-yellow);
+  margin-bottom: 0.2rem;
+}
+
+.stat-group-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stat-value {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--wtr-white);
+  font-family: var(--wtr-font-heading);
+  line-height: 1.2;
+}
+
+.stat-label {
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--wtr-cool-grey);
+  letter-spacing: 0.5px;
+}
+
+.stat-divider {
+  width: 1px;
+  height: 1.75rem;
+  background-color: var(--wtr-cool-grey);
+  opacity: 0.4;
+}
+
+.stat-group-divider {
+  width: 1px;
+  height: 2.5rem;
+  background-color: var(--wtr-yellow);
+  opacity: 0.5;
+  align-self: center;
+}
+
 .child-body {
   padding: 0.75rem;
   background-color: var(--wtr-white);
@@ -139,9 +211,42 @@
   margin-bottom: 0.25rem;
 }
 
-.date-stamp {
-  font-size: 0.7rem;
+.detail-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  font-size: 0.95rem;
+  color: var(--wtr-soft-black);
+  margin-top: 0.2rem;
+}
+
+.detail-event {
+  font-weight: 700;
+  color: var(--wtr-soft-black);
+}
+
+.detail-type {
+  font-weight: 700;
+  color: var(--wtr-soft-black);
+}
+
+.detail-date {
+  font-weight: 600;
+}
+
+.detail-separator {
   color: var(--wtr-cool-grey);
+}
+
+.detail-status {
+  font-weight: 700;
+  color: var(--wtr-green);
+}
+
+.detail-owner {
+  font-weight: 700;
+  color: var(--wtr-soft-black);
 }
 
 .response-text {
@@ -156,6 +261,11 @@
   border-left: 3px solid var(--wtr-yellow);
 }
 
+.edit-icon {
+  --slds-c-icon-color-foreground: var(--wtr-green);
+  --slds-c-icon-color-foreground-default: var(--wtr-green);
+}
+
 .wtr-link {
   color: var(--wtr-green);
   font-weight: 700;
@@ -166,6 +276,62 @@
 .wtr-link:hover {
   text-decoration: underline;
   color: var(--wtr-soft-black);
+}
+
+.responded-badge {
+  display: inline-block;
+  background-color: var(--wtr-green);
+  color: var(--wtr-white);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.15rem 0.5rem;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-left: 0.5rem;
+}
+
+.reorder-arrows {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.arrow-touch-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0;
+  border: 1px solid #d8dde6;
+  border-radius: 4px;
+  background: var(--wtr-white);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.arrow-touch-button:hover {
+  background: var(--wtr-off-white);
+}
+
+.arrow-touch-button:active {
+  background: #e0e0e0;
+}
+
+.arrow-icon {
+  --slds-c-icon-color-foreground: var(--wtr-green);
+  --slds-c-icon-color-foreground-default: var(--wtr-green);
+}
+
+.arrow-placeholder {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
 }
 
 .text-weak {

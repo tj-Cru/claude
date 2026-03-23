@@ -1,9 +1,11 @@
-import { LightningElement } from "lwc";
+import { LightningElement, api } from "lwc";
 import getRelevantEvents from "@salesforce/apex/flWTRLiveEventController.getRelevantEvents";
 
 const STORAGE_KEY = "FL_EVENT_TEAM_LAST_EVENT_ID";
 
 export default class FlEventTeam extends LightningElement {
+  @api refreshInterval = 0; // seconds; 0 = off. Exposed in App Builder.
+
   events = [];
   error;
 
@@ -16,6 +18,7 @@ export default class FlEventTeam extends LightningElement {
   pendingRecordObjectApiName;
   pendingRecordEditFlow;
   pendingRecordFieldList;
+  pendingRecordLongTextFieldList;
   priorChild;
 
   connectedCallback() {
@@ -123,11 +126,27 @@ export default class FlEventTeam extends LightningElement {
     if (event.detail.objectApiName === "Registration__c") {
       this.pendingRecordEditFlow = "Registration_Screen_Flow_Event_Team_Edit";
       this.pendingRecordFieldList =
-        "Name,Registration_Status__c,Registration_Type__c,Registrant_Type__c,Contact_GC__c,Waiver__c,Last_Event__c,First_Name__c,Last_Name__c";
+        "First_Name__c,Last_Name__c,Registration_Status__c,Mobile_Phone__c,Email__c,Waiver__c,Street__c,City__c,State__c,Zip_Code__c";
+      this.pendingRecordLongTextFieldList = "";
     } else {
-      this.pendingRecordEditFlow = null;
-      this.pendingRecordFieldList =
-        "Name,Status__c,Prayer_Request__c,Question__c,CreatedDate";
+      this.pendingRecordEditFlow =
+        "Survey_Response_Screen_Flow_Event_Team_Edit";
+      const responseType = event.detail.type;
+      if (responseType === "Prayer") {
+        this.pendingRecordFieldList =
+          "Name,Status__c,Claimed_By__c,Sort_Order__c,Comment_Log__c,Prayer_Request__c";
+        this.pendingRecordLongTextFieldList =
+          "Comment_Log__c,Prayer_Request__c";
+      } else if (responseType === "Question") {
+        this.pendingRecordFieldList =
+          "Name,Status__c,Claimed_By__c,Sort_Order__c,Comment_Log__c,Question__c";
+        this.pendingRecordLongTextFieldList = "Comment_Log__c,Question__c";
+      } else {
+        this.pendingRecordFieldList =
+          "Name,Status__c,Claimed_By__c,Sort_Order__c,Comment_Log__c,Prayer_Request__c,Question__c";
+        this.pendingRecordLongTextFieldList =
+          "Comment_Log__c,Prayer_Request__c,Question__c";
+      }
     }
     this.activeChild = "detail";
     // Do not persist 'detail' — pendingRecordId is memory-only and cannot be restored on reload
@@ -144,6 +163,7 @@ export default class FlEventTeam extends LightningElement {
     this.pendingRecordObjectApiName = null;
     this.pendingRecordEditFlow = null;
     this.pendingRecordFieldList = null;
+    this.pendingRecordLongTextFieldList = null;
     this.priorChild = null;
   }
 

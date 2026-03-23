@@ -14,58 +14,107 @@
             <button class={prayerButtonClass} onclick={selectPrayer}>
               Prayer
             </button>
-            <button class={feedbackButtonClass} onclick={selectFeedback}>
-              Feedback
-            </button>
           </div>
         </div>
         <!-- Right: filter/action buttons -->
         <div class="header-actions slds-grid slds-grid_vertical-align-center">
-          <template lwc:if={isNotFeedback}>
-            <lightning-button-icon-stateful
-              icon-name="utility:user"
-              selected={filterMine}
-              onclick={handleMyFilterChange}
-              variant="border-filled"
-              alternative-text="Filter by Mine"
-              class="slds-m-right_x-small filter-button"
-            >
-            </lightning-button-icon-stateful>
-            <lightning-button-menu
-              icon-name="utility:filterList"
-              variant="border-filled"
-              alternative-text="Filter by Status"
-              onselect={handleStatusChange}
-              class="slds-m-right_x-small menu-button-white"
-            >
-              <template for:each={statusOptions} for:item="opt">
-                <lightning-menu-item
-                  key={opt.value}
-                  value={opt.value}
-                  label={opt.label}
-                ></lightning-menu-item>
-              </template>
-            </lightning-button-menu>
-          </template>
+          <lightning-button-icon-stateful
+            icon-name="utility:user"
+            selected={filterMine}
+            onclick={handleMyFilterChange}
+            variant="border-inverse"
+            alternative-text="Filter by Mine"
+            class="slds-m-right_x-small filter-button"
+          >
+          </lightning-button-icon-stateful>
+          <lightning-button-menu
+            icon-name="utility:filterList"
+            variant="border-inverse"
+            alternative-text="Filter by Status"
+            onselect={handleStatusChange}
+            class="slds-m-right_x-small menu-button-white"
+          >
+            <template for:each={statusOptions} for:item="opt">
+              <lightning-menu-item
+                key={opt.value}
+                value={opt.value}
+                label={opt.label}
+              ></lightning-menu-item>
+            </template>
+          </lightning-button-menu>
           <lightning-button-icon
-            icon-name="utility:back"
-            variant="border-filled"
-            alternative-text="Back"
-            onclick={handleBack}
-            class="slds-m-right_x-small back-header-icon"
+            icon-name="utility:download"
+            variant="border-inverse"
+            alternative-text="Export CSV"
+            onclick={handleExport}
+            disabled={isExportDisabled}
+            class="slds-m-right_x-small export-button"
           >
           </lightning-button-icon>
           <lightning-button-icon
             icon-name="utility:refresh"
-            variant="border-filled"
+            variant="border-inverse"
             alternative-text="Refresh List"
             onclick={handleRefresh}
-            class="refresh-button"
+            class="slds-m-right_x-small refresh-button"
+          >
+          </lightning-button-icon>
+          <lightning-button-icon
+            icon-name="utility:back"
+            variant="border-inverse"
+            alternative-text="Back"
+            onclick={handleBack}
+            class="back-header-icon"
           >
           </lightning-button-icon>
         </div>
       </div>
     </div>
+
+    <!-- Stats Bar — shows Question and Prayer response rates from unfiltered data -->
+    <template lwc:if={hasStatsData}>
+      <div class="stats-bar" role="status" aria-label="Response statistics">
+        <div class="stat-group">
+          <span class="stat-group-label">Questions</span>
+          <div class="stat-group-items">
+            <div class="stat-item">
+              <span class="stat-value">{questionTotal}</span>
+              <span class="stat-label">Total</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-value">{questionRespondedCount}</span>
+              <span class="stat-label">Responded</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-value">{questionRespondedPercent}%</span>
+              <span class="stat-label">Rate</span>
+            </div>
+          </div>
+        </div>
+        <div class="stat-group-divider"></div>
+        <div class="stat-group">
+          <span class="stat-group-label">Prayer</span>
+          <div class="stat-group-items">
+            <div class="stat-item">
+              <span class="stat-value">{prayerTotal}</span>
+              <span class="stat-label">Total</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-value">{prayerRespondedCount}</span>
+              <span class="stat-label">Responded</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-value">{prayerRespondedPercent}%</span>
+              <span class="stat-label">Rate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </template>
 
     <div class="child-body">
       <template lwc:if={isLoading}>
@@ -76,10 +125,6 @@
           ></lightning-spinner>
         </div>
       </template>
-      <template lwc:elseif={isFeedback}>
-        <c-fl-event-feedback event-id={eventId} event-name={eventName}>
-        </c-fl-event-feedback>
-      </template>
       <template lwc:else>
         <div class="results-container scrollable-wrapper">
           <template lwc:if={hasResults}>
@@ -89,18 +134,12 @@
                   <div
                     class="response-header slds-grid slds-grid_vertical-align-center slds-grid_align-spread"
                   >
-                    <div class="slds-truncate">
-                      <a
-                        href="javascript:void(0)"
-                        onclick={handleNameClick}
-                        data-record-id={item.Id}
-                        class="wtr-link slds-text-heading_small"
-                      >
-                        {item.Name}
-                      </a>
-                      <div
-                        class="date-stamp slds-text-color_weak slds-m-top_xx-small"
-                      >
+                    <div class="detail-row">
+                      <span class="detail-event">{eventName}</span>
+                      <span class="detail-separator">&bull;</span>
+                      <span class="detail-type">{selectedType}</span>
+                      <span class="detail-separator">&bull;</span>
+                      <span class="detail-date">
                         <lightning-formatted-date-time
                           value={item.CreatedDate}
                           year="2-digit"
@@ -109,15 +148,70 @@
                           hour="2-digit"
                           minute="2-digit"
                         ></lightning-formatted-date-time>
-                        <span class="slds-m-horizontal_xx-small">&bull;</span>
-                        <span>{item.Status__c}</span>
-                        <template lwc:if={item.Owner}>
-                          <span class="slds-m-horizontal_xx-small">&bull;</span>
-                          <span>{item.Owner.Name}</span>
-                        </template>
-                      </div>
+                      </span>
+                      <span class="detail-separator">&bull;</span>
+                      <span class="detail-status">{item.statusLabel}</span>
+                      <template lwc:if={item.Claimed_By__r}>
+                        <span class="detail-separator">&bull;</span>
+                        <span class="detail-owner"
+                          >{item.Claimed_By__r.Name}</span
+                        >
+                      </template>
+                      <template lwc:if={item.isResponded}>
+                        <span class="responded-badge">Responded</span>
+                      </template>
                     </div>
-                    <div class="slds-no-flex">
+                    <div
+                      class="slds-no-flex slds-grid slds-grid_vertical-align-center"
+                    >
+                      <template lwc:if={item.showArrows}>
+                        <div class="reorder-arrows slds-m-right_x-small">
+                          <template lwc:if={item.showUpArrow}>
+                            <button
+                              class="arrow-touch-button"
+                              data-id={item.Id}
+                              onclick={handleMoveUp}
+                              aria-label="Move Up"
+                            >
+                              <lightning-icon
+                                icon-name="utility:arrowup"
+                                size="x-small"
+                                class="arrow-icon"
+                              ></lightning-icon>
+                            </button>
+                          </template>
+                          <template lwc:else>
+                            <span class="arrow-placeholder"></span>
+                          </template>
+                          <template lwc:if={item.showDownArrow}>
+                            <button
+                              class="arrow-touch-button"
+                              data-id={item.Id}
+                              onclick={handleMoveDown}
+                              aria-label="Move Down"
+                            >
+                              <lightning-icon
+                                icon-name="utility:arrowdown"
+                                size="x-small"
+                                class="arrow-icon"
+                              ></lightning-icon>
+                            </button>
+                          </template>
+                          <template lwc:else>
+                            <span class="arrow-placeholder"></span>
+                          </template>
+                        </div>
+                      </template>
+                      <lightning-button
+                        label="Edit"
+                        variant="neutral"
+                        icon-name="utility:edit"
+                        icon-position="left"
+                        onclick={handleNameClick}
+                        data-record-id={item.Id}
+                        class="edit-button slds-m-right_x-small"
+                      >
+                      </lightning-button>
                       <lightning-button
                         label="Claim"
                         variant="neutral"
@@ -125,6 +219,7 @@
                         icon-position="left"
                         onclick={handleClaim}
                         data-id={item.Id}
+                        disabled={item.isClaimed}
                         class="claim-button"
                       >
                       </lightning-button>

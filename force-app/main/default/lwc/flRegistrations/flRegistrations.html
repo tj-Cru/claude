@@ -8,25 +8,45 @@
 
         <div class="header-actions">
           <lightning-button-icon
-            icon-name="utility:back"
-            variant="border-filled"
-            alternative-text="Back"
-            onclick={handleBack}
-            class="slds-m-right_x-small"
+            icon-name="utility:refresh"
+            variant="border-inverse"
+            alternative-text="Refresh List"
+            onclick={handleRefresh}
+            class="slds-m-right_x-small refresh-button"
           >
           </lightning-button-icon>
 
           <lightning-button-icon
-            icon-name="utility:refresh"
-            variant="border-filled"
-            alternative-text="Refresh List"
-            onclick={handleRefresh}
-            class="refresh-button"
+            icon-name="utility:back"
+            variant="border-inverse"
+            alternative-text="Back"
+            onclick={handleBack}
+            class="back-header-icon"
           >
           </lightning-button-icon>
         </div>
       </div>
     </div>
+
+    <!-- Stats Bar — uses allRegistrations (unfiltered) so numbers reflect full event -->
+    <template lwc:if={hasRegistrationData}>
+      <div class="stats-bar" role="status" aria-label="Registration statistics">
+        <div class="stat-item">
+          <span class="stat-value">{totalCount}</span>
+          <span class="stat-label">Registered</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-value">{checkedInCount}</span>
+          <span class="stat-label">Checked In</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-value">{checkedInPercent}%</span>
+          <span class="stat-label">Attendance</span>
+        </div>
+      </div>
+    </template>
 
     <div class="child-body">
       <div
@@ -278,8 +298,9 @@
                         size="small"
                         onclick={handleCheckInClick}
                         data-external-id={reg.External_Registration_Id__c}
-                        disabled={reg.isCheckedIn}
+                        disabled={reg.isCheckInDisabled}
                         alternative-text="Check In"
+                        class={reg.checkInClass}
                       >
                       </lightning-button-icon>
                     </td>
@@ -360,7 +381,7 @@
     </div>
   </div>
 
-  <template if:true={showCheckInModal}>
+  <template lwc:if={showCheckInModal}>
     <section
       role="dialog"
       tabindex="-1"

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description
+  >After-save flow on Survey_Response__c. When the Status changes away from Pending, clears the Claimed_By__c field so the record is no longer marked as claimed.</description>
+    <environments>Default</environments>
+    <interviewLabel
+  >Survey Response - Clear Claimed By on Release {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Survey Response - Clear Claimed By on Release</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Clear_Claimed_By</name>
+        <label>Clear Claimed By</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Claimed_By__c</field>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Sort_Order__c</field>
+        </inputAssignments>
+        <object>Survey_Response__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Clear_Claimed_By</targetReference>
+        </connector>
+        <filterFormula
+    >TEXT({!$Record__Prior.Status__c}) = &apos;Pending&apos; &amp;&amp;
+TEXT({!$Record.Status__c}) != &apos;Pending&apos;</filterFormula>
+        <object>Survey_Response__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

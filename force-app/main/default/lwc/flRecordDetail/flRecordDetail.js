@@ -6,7 +6,7 @@ export default class FlRecordDetail extends LightningElement {
   @api objectApiName;
   @api fieldList;
   @api title;
-  @api columns = 2;
+  @api longTextFieldList;
   @api showBackButton = false;
   @api editFlowName;
 
@@ -25,16 +25,32 @@ export default class FlRecordDetail extends LightningElement {
     return this.fieldList.split(",").map((field) => field.trim());
   }
 
+  get longTextFields() {
+    if (!this.longTextFieldList) {
+      return new Set();
+    }
+    return new Set(this.longTextFieldList.split(",").map((f) => f.trim()));
+  }
+
+  get fieldLayout() {
+    const wideFields = this.longTextFields;
+    return this.fields.map((apiName) => ({
+      apiName,
+      containerClass: wideFields.has(apiName)
+        ? "field-item field-wide"
+        : "field-item"
+    }));
+  }
+
   // Logic to determine the Header Title
   get headerTitle() {
+    if (!this.record || !this.record.data) {
+      return this.title || "Record Detail";
+    }
     const data = this.record.data;
 
-    // 1. If we have record data, try to find the Name
-    if (data) {
-      // Try standard 'Name' field
-      if (data.fields && data.fields.Name && data.fields.Name.value) {
-        return data.fields.Name.value;
-      }
+    if (data.fields && data.fields.Name && data.fields.Name.value) {
+      return data.fields.Name.value;
     }
 
     // 2. Default to the Title property set in Builder, or "Record Detail"
@@ -77,8 +93,8 @@ export default class FlRecordDetail extends LightningElement {
       // 2. Notify LDS that the record has changed to refresh the rest of the page
       try {
         await notifyRecordUpdateAvailable([{ recordId: this.recordId }]);
-      } catch (error) {
-        console.error("Error refreshing record:", error);
+      } catch {
+        /* refreshKey++ already handled UI update */
       }
     }
   }

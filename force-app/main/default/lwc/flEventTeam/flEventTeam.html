@@ -10,7 +10,7 @@
           <template lwc:if={selectedEventId}>
             <lightning-button-icon
               icon-name="utility:change_record_type"
-              variant="border-filled"
+              variant="border-inverse"
               alternative-text="Change Event"
               onclick={clearSelection}
               class="slds-m-right_x-small"
@@ -19,7 +19,7 @@
           </template>
           <lightning-button-icon
             icon-name="utility:refresh"
-            variant="border-filled"
+            variant="border-inverse"
             alternative-text="Refresh"
             onclick={handleRefresh}
           >
@@ -62,6 +62,7 @@
               <c-fl-registrations
                 event-id={selectedEventId}
                 event-name={selectedEventName}
+                refresh-interval={refreshInterval}
                 onback={handleBackToMenu}
                 onviewrecord={handleViewRecord}
               >
@@ -81,6 +82,7 @@
                 record-id={pendingRecordId}
                 object-api-name={pendingRecordObjectApiName}
                 field-list={pendingRecordFieldList}
+                long-text-field-list={pendingRecordLongTextFieldList}
                 edit-flow-name={pendingRecordEditFlow}
                 show-back-button
                 onback={handleBackFromDetail}

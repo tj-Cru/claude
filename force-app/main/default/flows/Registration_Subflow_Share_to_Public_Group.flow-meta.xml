@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>65.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
-    <description>This can be called from any other flow to create a sharing record if one does not exist. it should be part of any create or update registration flow</description>
+    <description
+  >This can be called from any other flow to create a sharing record if one does not exist. Creates a Registration__Share record directly with Manual RowCause.</description>
     <environments>Default</environments>
-    <interviewLabel>Registration | Subflow | Share to Public Group {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Registration | Subflow | Share to Public Group {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Registration | Subflow | Share to Public Group</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -30,7 +32,6 @@
         <label>Create Share</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <assignRecordIdToReference>shareId</assignRecordIdToReference>
         <connector>
             <targetReference>UpdateRegistration</targetReference>
         </connector>
@@ -59,6 +60,7 @@
             </value>
         </inputAssignments>
         <object>Registration__Share</object>
+        <assignRecordIdToReference>shareId</assignRecordIdToReference>
     </recordCreates>
     <recordUpdates>
         <name>UpdateRegistration</name>
@@ -108,6 +110,6 @@
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
-        <isOutput>false</isOutput>
+        <isOutput>true</isOutput>
     </variables>
 </Flow>

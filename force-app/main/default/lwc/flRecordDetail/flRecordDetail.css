@@ -1,80 +1,135 @@
 :host {
-    /* --- BRAND COLORS --- */
-    --wtr-green: #006C5B; 
-    --wtr-white: #FFFFFF;
-    --wtr-off-white: #F1F1F1;
-    --wtr-soft-black: #24272A;
-    --wtr-cool-grey: #898C8E;
-    
-    /* --- TYPOGRAPHY --- */
-    --wtr-font-heading: 'Akkurat', 'Roboto', sans-serif; 
-    --wtr-font-body: 'Akkurat', 'Roboto', sans-serif; 
+  /* --- BRAND COLORS --- */
+  --wtr-green: #006c5b;
+  --wtr-white: #ffffff;
+  --wtr-off-white: #f1f1f1;
+  --wtr-soft-black: #24272a;
+  --wtr-cool-grey: #898c8e;
+
+  /* --- TYPOGRAPHY --- */
+  --wtr-font-heading: "Akkurat", "Roboto", sans-serif;
+  --wtr-font-body: "Akkurat", "Roboto", sans-serif;
 }
 
 /* Layout Container */
 .child-container {
-    background-color: var(--wtr-white);
-    border-radius: 0px; /* Sharp corners */
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    font-family: var(--wtr-font-body);
-    border: 1px solid #ddd; 
+  background-color: var(--wtr-white);
+  border-radius: 0px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  font-family: var(--wtr-font-body);
 }
 
 /* HEADER */
 .child-header {
-    background-color: var(--wtr-green); 
-    color: var(--wtr-white);
-    padding: 0.5rem 0.75rem;
-    flex-shrink: 0;
+  background-color: var(--wtr-green);
+  color: var(--wtr-white);
+  padding: 0.5rem 0.75rem;
+  flex-shrink: 0;
 }
 
 .child-header h2 {
-    font-family: var(--wtr-font-heading);
-    font-size: 1.125rem; 
-    font-weight: 700; 
-    margin: 0;
-    margin-right: 1rem;
-    color: var(--wtr-white);
-    letter-spacing: 0.5px;
+  font-family: var(--wtr-font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+  margin-right: 0.5rem;
+  color: var(--wtr-white);
+  letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .header-actions {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-/* --- FIX: Force Header Icons to White --- */
-.header-icon, 
+/* --- Force Header Icons to White --- */
+.header-icon,
 .header-actions lightning-button-icon {
-    --sds-c-icon-color-foreground: white;
-    --sds-c-icon-color-foreground-default: white;
-    --slds-c-icon-color-foreground: white;
-    --slds-c-icon-color-foreground-default: white;
-    
-    /* Force Button Border & Text (for border-filled variant) */
-    --slds-c-button-text-color: white;
-    --slds-c-button-color-border: white; 
-    --slds-c-button-icon-color-foreground: white;
+  --sds-c-icon-color-foreground: white;
+  --sds-c-icon-color-foreground-default: white;
+  --slds-c-icon-color-foreground: white;
+  --slds-c-icon-color-foreground-default: white;
+  --slds-c-button-text-color: white;
+  --slds-c-button-color-border: white;
+  --slds-c-button-icon-color-foreground: white;
 }
 
 /* BODY */
 .child-body {
-    /* UPDATED: Reduced padding from 0.75rem to 0.5rem for compactness */
-    padding: 0.5rem; 
-    background-color: var(--wtr-white);
-    min-height: 200px; 
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1; 
-    overflow: hidden; 
+  padding: 0.75rem;
+  background-color: var(--wtr-white);
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow: hidden;
 }
 
 .scrollable-wrapper {
-    flex-grow: 1;
-    overflow-y: auto; 
-    -webkit-overflow-scrolling: touch; 
-    padding-right: 4px;
+  flex-grow: 1;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  padding-right: 4px;
+}
+
+/* FIELD GRID LAYOUT */
+.field-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.25rem 1rem;
+}
+
+.field-item {
+  min-width: 0;
+  padding: 0.25rem 0;
+}
+
+.field-wide {
+  grid-column: 1 / -1;
+}
+
+/* Tighten output field spacing */
+.field-item lightning-output-field {
+  --slds-c-output-font-size: 0.875rem;
+}
+
+/* Style output field labels */
+.field-grid lightning-output-field {
+  font-family: var(--wtr-font-body);
+}
+
+@media (max-width: 767px) {
+  .field-grid {
+    grid-template-columns: 1fr;
+  }
+  .field-wide {
+    grid-column: auto;
+  }
+}
+
+/* ── MODAL ── */
+.slds-modal__header {
+  background-color: var(--wtr-green);
+  border-bottom: none;
+}
+
+.slds-modal__header h2 {
+  color: var(--wtr-white);
+  font-family: var(--wtr-font-heading);
+  font-weight: 700;
+}
+
+.slds-modal__close {
+  --sds-c-icon-color-foreground: white;
+  --sds-c-icon-color-foreground-default: white;
+  --slds-c-icon-color-foreground: white;
+  --slds-c-icon-color-foreground-default: white;
+}
+
+.slds-modal__content {
+  padding: 1rem;
 }

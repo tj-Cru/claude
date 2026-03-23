@@ -1,10 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>65.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
-    <description>Can be called from and survey processing flow to make sure the record is shared to the public group on the event</description>
+    <description
+  >Can be called from any survey processing flow to share the record to the public group on the event. Creates a Survey_Response__Share record directly with Manual RowCause, then updates Share_Id__c.</description>
     <environments>Default</environments>
-    <interviewLabel>Survey Response | Subflow | Share to Public Group {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Survey Response | Subflow | Share to Public Group {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Survey Response | Subflow | Share to Public Group</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -30,7 +32,6 @@
         <label>Create Share</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <assignRecordIdToReference>shareId</assignRecordIdToReference>
         <connector>
             <targetReference>Update_Share_Id</targetReference>
         </connector>
@@ -59,6 +60,7 @@
             </value>
         </inputAssignments>
         <object>Survey_Response__Share</object>
+        <assignRecordIdToReference>shareId</assignRecordIdToReference>
     </recordCreates>
     <recordUpdates>
         <name>Update_Share_Id</name>
@@ -101,7 +103,7 @@
         <dataType>String</dataType>
         <isCollection>false</isCollection>
         <isInput>false</isInput>
-        <isOutput>false</isOutput>
+        <isOutput>true</isOutput>
     </variables>
     <variables>
         <name>surveyresponseId</name>

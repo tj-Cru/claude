@@ -10,7 +10,7 @@
           <template lwc:if={editFlowName}>
             <lightning-button-icon
               icon-name="utility:edit"
-              variant="border-filled"
+              variant="border-inverse"
               alternative-text="Edit"
               onclick={handleEdit}
               class="header-icon slds-m-right_x-small"
@@ -21,7 +21,7 @@
           <template lwc:if={showBackButton}>
             <lightning-button-icon
               icon-name="utility:back"
-              variant="border-filled"
+              variant="border-inverse"
               alternative-text="Back"
               onclick={handleBack}
               class="header-icon"
@@ -35,16 +35,21 @@
     <div class="child-body">
       <template lwc:if={hasRecordContext}>
         <div class="scrollable-wrapper">
-          <lightning-record-form
+          <lightning-record-view-form
             key={refreshKey}
             record-id={recordId}
             object-api-name={objectApiName}
-            fields={fields}
-            columns={columns}
-            density="compact"
-            mode="readonly"
           >
-          </lightning-record-form>
+            <div class="field-grid">
+              <template for:each={fieldLayout} for:item="fld">
+                <div key={fld.apiName} class={fld.containerClass}>
+                  <lightning-output-field
+                    field-name={fld.apiName}
+                  ></lightning-output-field>
+                </div>
+              </template>
+            </div>
+          </lightning-record-view-form>
         </div>
       </template>
       <template lwc:else>
@@ -66,6 +71,7 @@
       tabindex="-1"
       class="slds-modal slds-fade-in-open slds-modal_small"
       aria-modal="true"
+      aria-labelledby="editModalHeading"
     >
       <div class="slds-modal__container">
         <header class="slds-modal__header">
@@ -77,7 +83,10 @@
             alternative-text="Close"
           >
           </lightning-button-icon>
-          <h2 class="slds-text-heading_medium slds-hyphenate">
+          <h2
+            id="editModalHeading"
+            class="slds-text-heading_medium slds-hyphenate"
+          >
             Edit {headerTitle}
           </h2>
         </header>

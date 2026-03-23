@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <Flow xmlns="http://soap.sforce.com/2006/04/metadata">
     <apiVersion>65.0</apiVersion>
     <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
@@ -32,7 +32,8 @@
         </rules>
     </decisions>
     <environments>Default</environments>
-    <interviewLabel>Registration PE | Subscriber | Create Record Share {!$Flow.CurrentDateTime}</interviewLabel>
+    <interviewLabel
+  >Registration PE | Subscriber | Create Record Share {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Registration PE | Subscriber | Create Record Share</label>
     <processMetadataValues>
         <name>BuilderType</name>
@@ -58,7 +59,6 @@
         <label>Record Share</label>
         <locationX>0</locationX>
         <locationY>0</locationY>
-        <assignRecordIdToReference>varRecordShareId</assignRecordIdToReference>
         <connector>
             <targetReference>Un_Publish</targetReference>
         </connector>
@@ -87,6 +87,7 @@
             </value>
         </inputAssignments>
         <object>Registration__Share</object>
+        <assignRecordIdToReference>varRecordShareId</assignRecordIdToReference>
     </recordCreates>
     <recordUpdates>
         <name>Un_Publish</name>

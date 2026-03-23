@@ -43,9 +43,24 @@
   letter-spacing: 0.5px;
 }
 
-/* HEADER BUTTONS */
-.wtr-header lightning-button-icon {
-  --slds-c-icon-color-foreground: var(--wtr-white);
+/* HEADER ACTIONS */
+.header-actions {
+  display: flex;
+  align-items: center;
+}
+
+/* HEADER BUTTONS — full token set for cross-version SLDS compatibility */
+.wtr-header lightning-button-icon,
+.header-actions lightning-button-icon {
+  --sds-c-icon-color-foreground: white;
+  --sds-c-icon-color-foreground-default: white;
+  --slds-c-icon-color-foreground: white;
+  --slds-c-icon-color-foreground-default: white;
+  --slds-c-button-text-color: white;
+  --slds-c-button-color-border: white;
+  --slds-c-button-icon-color-foreground: white;
+  --slds-c-button-neutral-color-background: transparent;
+  --slds-c-button-neutral-color-border: white;
 }
 
 /* BODY */

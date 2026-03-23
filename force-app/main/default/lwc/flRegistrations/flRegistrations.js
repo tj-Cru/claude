@@ -9,9 +9,11 @@ import STATUS_FIELD from "@salesforce/schema/Registration__c.Registration_Status
 
 export default class FlRegistrations extends LightningElement {
   @api eventId;
-  @api eventName; // NEW Input
+  @api eventName;
+  @api refreshInterval = 0; // seconds; 0 = off. Configurable via parent.
 
   wiredRegistrationsResult;
+  _refreshTimer;
 
   @track allRegistrations = [];
   @track filteredRegistrations = [];
@@ -73,6 +75,9 @@ export default class FlRegistrations extends LightningElement {
           typeClass = "type-military";
         }
 
+        const isDisabled =
+          isAttended || !statusLower.startsWith("c - confirmed");
+
         return {
           ...reg,
           CoupleName: reg.Couple_Registration__r
@@ -80,11 +85,14 @@ export default class FlRegistrations extends LightningElement {
             : null,
           CoupleId: reg.Couple_Registration__c,
           isCheckedIn: isAttended,
+          isCheckInDisabled: isDisabled,
+          checkInClass: isDisabled ? "checkin-disabled" : "",
           typeDisplay,
           typeClass
         };
       });
 
+      this._computeStats();
       this.applyFilters();
       this.error = undefined;
       this.isLoading = false;
@@ -94,6 +102,47 @@ export default class FlRegistrations extends LightningElement {
       this.filteredRegistrations = [];
       this.isLoading = false;
       console.error("Error fetching registrations:", error);
+    }
+  }
+
+  // ── Lifecycle ──────────────────────────────────────────
+
+  connectedCallback() {
+    // Deferred refresh on mount — wait one microtask so the wire delivers
+    // cached data first, then force a server round-trip for fresh data.
+    Promise.resolve().then(() => {
+      if (this.wiredRegistrationsResult) {
+        refreshApex(this.wiredRegistrationsResult).catch(() => {});
+      }
+    });
+
+    // Start interval if admin configured a positive refresh rate
+    if (this.refreshInterval > 0) {
+      const intervalMs = Math.max(this.refreshInterval, 15) * 1000;
+      // eslint-disable-next-line @lwc/lwc/no-async-operation -- timer is cleared in disconnectedCallback
+      this._refreshTimer = setInterval(() => this._silentRefresh(), intervalMs);
+    }
+  }
+
+  disconnectedCallback() {
+    if (this._refreshTimer) {
+      clearInterval(this._refreshTimer);
+      this._refreshTimer = undefined;
+    }
+  }
+
+  /**
+   * Refreshes the wired registration data without showing the loading spinner.
+   * Used by auto-refresh interval and initial mount.
+   */
+  async _silentRefresh() {
+    if (!this.wiredRegistrationsResult) {
+      return;
+    }
+    try {
+      await refreshApex(this.wiredRegistrationsResult);
+    } catch (e) {
+      console.error("Silent refresh failed", e);
     }
   }
 
@@ -242,6 +291,44 @@ export default class FlRegistrations extends LightningElement {
 
   get hasResults() {
     return this.filteredRegistrations && this.filteredRegistrations.length > 0;
+  }
+
+  // ── Stats (computed once in wire handler, getters are O(1)) ──
+
+  _totalCount = 0;
+  _checkedInCount = 0;
+  _checkedInPercent = 0;
+
+  _computeStats() {
+    if (!this.allRegistrations || this.allRegistrations.length === 0) {
+      this._totalCount = 0;
+      this._checkedInCount = 0;
+      this._checkedInPercent = 0;
+      return;
+    }
+    this._totalCount = this.allRegistrations.length;
+    this._checkedInCount = this.allRegistrations.filter(
+      (reg) => reg.isCheckedIn === true
+    ).length;
+    this._checkedInPercent = Math.round(
+      (this._checkedInCount / this._totalCount) * 100
+    );
+  }
+
+  get hasRegistrationData() {
+    return !this.isLoading && this._totalCount > 0;
+  }
+
+  get totalCount() {
+    return this._totalCount;
+  }
+
+  get checkedInCount() {
+    return this._checkedInCount;
+  }
+
+  get checkedInPercent() {
+    return this._checkedInPercent;
   }
 
   get statusOptions() {

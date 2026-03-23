@@ -11,4 +11,24 @@
         <target>lightningCommunity__Page</target>
         <target>lightningCommunity__Default</target>
     </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__AppPage,lightning__HomePage">
+            <property
+        name="refreshInterval"
+        type="Integer"
+        default="0"
+        label="Auto-refresh (seconds, 0=off)"
+        description="How often the Registrations list silently refreshes. Set to 0 to disable."
+      />
+        </targetConfig>
+        <targetConfig targets="lightningCommunity__Default">
+            <property
+        name="refreshInterval"
+        type="Integer"
+        default="0"
+        label="Auto-refresh (seconds, 0=off)"
+        description="How often the Registrations list silently refreshes. Set to 0 to disable."
+      />
+        </targetConfig>
+    </targetConfigs>
 </LightningComponentBundle>
